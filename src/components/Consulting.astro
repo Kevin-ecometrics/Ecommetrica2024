@@ -1,0 +1,66 @@
+---
+let consultings = [
+  {
+    src: "/programacion.webp",
+    text: "Programación",
+    description: "Páginas Web, rápida y segura.",
+    background: "bg-gradient-to-t from-[#1FBCFF] to-[#1FBCFF]",
+  },
+  {
+    src: "/marketing.webp",
+    text: "Marketing",
+    description: "Tenemos el mejor S.S.L. con NameCheap",
+    background: "bg-gradient-to-t from-[#861453] to-[#861453]",
+  },
+  {
+    src: "/SEO.webp",
+    text: "SEO",
+    description: "Tu sitio estará mejor estructurado para Google©",
+    background: "bg-gradient-to-t from-[#59A29E] to-[#5DA9A6]",
+  },
+  {
+    src: "/webMaster.webp",
+    text: "Web Master",
+    description: "Hospedaje rápido, seguro y confiable.",
+    background: "bg-gradient-to-t from-[#9747FF] to-[#9747FF]",
+  },
+];
+---
+
+<section
+  class="md:h-screen py-8 flex justify-center flex-col items-center px-8 bg-gradient-to-l from-[#BD155C] to-[#1E171E]"
+>
+  <h1 class="text-4xl text-white font-bold mb-4">
+    ¿Qué hay Dentro de la Consultoría de Ecommetrica?
+  </h1>
+  <h2 class="text-white text-3xl font-medium mb-12">
+    En cualquier paquete tienes:
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    {
+      consultings.map((item) => (
+        <div class="relative flex flex-col md:items-center group">
+          <div class="relative group">
+            <img
+              src={item.src}
+              alt="consultoria"
+              class="object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+            />
+            <div
+              class={`absolute inset-0 opacity-0 group-hover:opacity-80 group-hover:scale-110 rounded-2xl transition-opacity duration-500 ${item.background}`}
+            />
+          </div>
+          <div class="absolute inset-0 w-full flex-col flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <span class="text-white text-3xl font-bold px-4 py-2 w-full text-center">
+              {item.text}
+            </span>
+            <span class="text-white text-xl font-bold px-4 py-2 w-full text-center">
+              {item.description}
+            </span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

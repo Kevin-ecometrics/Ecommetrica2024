@@ -1,0 +1,76 @@
+---
+const skills = [
+  { name: "Website Design", percentage: 100 },
+  { name: "Mobile Application", percentage: 100 },
+  { name: "Game Programming", percentage: 100 },
+];
+---
+
+<section
+  class="md:h-screen py-8 flex justify-center items-center bg-white px-8"
+  id="skills"
+>
+  <div class="grid grid-cols-1 md:grid-cols-2 px-8 gap-8">
+    <div>
+      <h1 class="text-[#3C3C3C] text-2xl font-bold mb-2">My Skills</h1>
+      <h2 class="md:w-[80%] text-2xl md:text-6xl text-[#515151] mb-8 font-bold">
+        You Can Imagine I Can Do
+      </h2>
+      <p class="md:w-[70%]">
+        I am working on a professional, visually sophisticated and
+        technologically proficient, responsive and multi-functional creative
+        personal resume portolio template Aali.
+      </p>
+    </div>
+    <div class="md:p-4">
+      {
+        skills.map((skill) => (
+          <div class="mb-6">
+            <div class="flex justify-between items-center">
+              <h2 class="text-2xl font-bold mb-2 text-[#3C3C3C]">
+                {skill.name}
+              </h2>
+              <span class="text-gray-700">{skill.percentage}%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-4">
+              <div
+                class="bg-[#515151] h-4 rounded-full skill-bar"
+                style="width: 0%;"
+                data-percentage={skill.percentage}
+              />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const skillBars = entry.target.querySelectorAll(".skill-bar");
+            skillBars.forEach((bar) => {
+              (bar as HTMLElement).style.width =
+                (bar as HTMLElement).getAttribute("data-percentage") + "%";
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const skillsSection = document.getElementById("skills");
+    observer.observe(skillsSection);
+  });
+</script>
+
+<style>
+  .skill-bar {
+    transition: width 2s;
+  }
+</style>

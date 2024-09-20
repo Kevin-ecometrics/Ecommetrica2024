@@ -1,0 +1,188 @@
+---
+let education = [
+  {
+    id: 1,
+    title: "Diseño Web",
+  },
+  {
+    id: 2,
+    title: "Desarrollo Web",
+  },
+  {
+    id: 3,
+    title: "Marketing Digital",
+  },
+];
+
+let certification = [
+  {
+    id: 1,
+    title: "Diseño Web",
+  },
+  {
+    id: 2,
+    title: "Desarrollo Web",
+  },
+  {
+    id: 3,
+    title: "Marketing Digital",
+  },
+];
+
+let images = [
+  {
+    img: "/partner1.webp",
+  },
+  {
+    img: "/partner2.webp",
+  },
+  {
+    img: "/partner3.webp",
+  },
+  {
+    img: "/partner4.webp",
+  },
+  {
+    img: "/partner5.webp",
+  },
+  {
+    img: "/partner6.webp",
+  },
+  {
+    img: "/partner7.webp",
+  },
+];
+
+let currentIndex = 0;
+---
+
+<div class="relative md:h-screen p-16">
+  <h1 class="text-[#861453] text-2xl mb-4 font-bold">
+    Conoce más de nuestro equipo
+  </h1>
+  <h2 class="text-3xl md:text-5xl text-[#515151] font-bold mb-8">
+    Certificaciónes
+  </h2>
+  <p class="md:w-[40%] mb-8">
+    Nuestro equipo esta preparado con todas las herramientas para encaminar tu
+    página web al éxito
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-12">
+    <div class="items-start flex flex-col gap-4 col-span-2">
+      <div class="items-center flex gap-4">
+        <hr class="w-12 h-2 border bg-[#861453]" />
+        <h1 class="text-2xl text-[#201A48] font-bold">Educación</h1>
+      </div>
+      <div class="flex flex-col gap-8">
+        {
+          education.map((item) => (
+            <div class="flex gap-4">
+              <svg
+                width="44"
+                height="44"
+                viewBox="0 0 44 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="22" cy="22" r="22" fill="#861453" />
+              </svg>
+              <div>
+                <div class="flex justify-between">
+                  <h2 class="text-2xl text-[#201A48] font-bold mb-2">
+                    {item.title}
+                  </h2>
+                  <p>2018-2020</p>
+                </div>
+                <h3 class="text-[#201A48] font-bold mb-4">
+                  University of Maine
+                </h3>
+                <p>
+                  Aali is leading web design agency with an award-winning
+                  design.
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="items-start flex flex-col gap-4 col-span-2">
+      <div class="items-center flex gap-4">
+        <hr class="w-12 h-2 border bg-[#861453]" />
+        <h1 class="text-2xl text-[#201A48] font-bold">Certificación</h1>
+      </div>
+      <div class="flex flex-col gap-8">
+        {
+          certification.map((item) => (
+            <div class="flex gap-4">
+              <svg
+                width="44"
+                height="44"
+                viewBox="0 0 44 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="22" cy="22" r="22" fill="#861453" />
+              </svg>
+              <div>
+                <div class="flex justify-between">
+                  <h2 class="text-2xl text-[#201A48] font-bold mb-2">
+                    {item.title}
+                  </h2>
+                  <p>2018-2020</p>
+                </div>
+
+                <h3 class="text-[#201A48] font-bold mb-4">
+                  University of Maine
+                </h3>
+                <p>
+                  Aali is leading web design agency with an award-winning
+                  design.
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="w-64 z-20 md:absolute right-0 top-0">
+      <img
+        id="dynamic-image"
+        src={images[currentIndex].img}
+        alt="Partner Image"
+      />
+    </div>
+    <div
+      class="w-24 h-24 bg-[#861453] absolute right-44 top-0 z-20 animate-div-2"
+    >
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = [
+      { img: "/partner2.webp" },
+      { img: "/partner3.webp" },
+      { img: "/partner4.webp" },
+      { img: "/partner5.webp" },
+      { img: "/partner6.webp" },
+      { img: "/partner7.webp" },
+    ];
+
+    let currentIndex = 0;
+
+    function changeImage() {
+      const imgElement = document.getElementById(
+        "dynamic-image"
+      ) as HTMLImageElement;
+      currentIndex = (currentIndex + 1) % images.length;
+      imgElement.src = images[currentIndex].img;
+    }
+
+    setInterval(changeImage, 400);
+  });
+</script>

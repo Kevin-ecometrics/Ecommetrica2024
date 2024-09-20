@@ -1,0 +1,31 @@
+@keyframes slideX {
+    0% {
+      transform: translateX(-50%) translateY(-50px);
+    }
+    50% {
+      transform: translateX(25%) translateY(-50px);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50px);
+    }
+  }
+
+    @keyframes slideY {
+        0% {
+        transform: translateY(-10%) translateX(-50px);
+        }
+        50% {
+        transform: translateY(130%) translateX(-50px);
+        }
+        100% {
+        transform: translateY(-10%) translateX(-50px);
+        }
+    }
+
+  .animate-div {
+    animation: slideX 5s infinite;
+  }
+
+  .animate-div-2 {
+    animation: slideY 5s infinite;
+  }

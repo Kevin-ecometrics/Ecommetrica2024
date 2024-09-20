@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import Insta from "@components/icons/logo-instagram.astro";
+import Face from "@components/icons/logo-facebook.astro";
+import Twit from "@components/icons/logo-twitter.astro";
+import Tags from "@components/Tags";
+import HeroImage from "@public/profile.webp";
+
+const words = ["Innova", "Eleva", "Simplifica"];
+---
+
+<section
+  class="items-center h-screen flex"
+  id="home"
+  style="background-image: url('/background.webp'); background-size: cover; background-position: center;"
+>
+  <div class="grid grid-cols-1 md:grid-cols-2 px-16">
+    <div class="flex flex-col text-white">
+      <h1 class="font-bold text-2xl mb-8">Hola, somos</h1>
+      <img src="/logocompleto.webp" alt="logo" title="logo" class="mb-4" />
+      <span class="text-5xl font-bold mb-8">
+        <Tags client:visible tags={words} />
+      </span>
+      <div class="flex gap-4 mb-8 font-bold">
+        <button
+          class="px-8 py-2 hover:bg-white hover:text-black bg-[#861453] text-white
+            transition rounded-lg duration-300 ease-in-out"
+          >Comienza</button
+        >
+        <button
+          class="px-8 py-2 text-white hover:bg-white hover:text-black
+        transition rounded-lg duration-300 ease-in-out"
+          >Nosotros</button
+        >
+      </div>
+      <div class="flex md:flex-col gap-4 mb-8">
+        <Insta class="w-8 h-8" />
+        <Face class="w-8 h-8" />
+        <Twit class="w-8 h-8" />
+      </div>
+      <a
+        href="mailto:juanmanuel@ecommetrics.com"
+        class="relative inline-block text-white md:text-2xl mt-4 before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-96 before:h-0.5 before:bg-white before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
+      >
+        juanmanuel@ecommetrics.com
+      </a>
+    </div>
+    <div class="hidden md:block absolute right-0">
+      <Image
+        src={HeroImage}
+        alt="Hero Image"
+        title="Hero Image"
+        class="object-cover w-full z-10 relative h-full"
+      />
+      <div class="absolute top-16 border-8 border-white h-96 w-72"></div>
+    </div>
+  </div>
+</section>

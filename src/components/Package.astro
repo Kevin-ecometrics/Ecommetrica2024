@@ -1,0 +1,66 @@
+---
+let packages = [
+  {
+    title: "Plan Inicial",
+    description: "Para aquellos que recién comienzan",
+    price: "$100",
+    time: "por 3 meses",
+    info: "Incluye: Diseño Web, Desarrollo Web, Marketing Digital",
+  },
+  {
+    title: "Plan Pro",
+    description: "Para aquellos que buscan crecer",
+    price: "$200",
+    time: "por 6 meses",
+    info: "Incluye: Diseño Web, Desarrollo Web, Marketing Digital",
+  },
+  {
+    title: "Empresa",
+    description: "Para aquellos que buscan expandirse",
+    price: "$300",
+    time: "por 12 meses",
+    info: "Incluye: Diseño Web, Desarrollo Web, Marketing Digital",
+  },
+  {
+    title: "Personalizado",
+    description: "Para aquellos que buscan algo único",
+    price: "$300",
+    time: "por 12 meses",
+    info: "Incluye: Diseño Web, Desarrollo Web, Marketing Digital",
+  },
+];
+---
+
+<section class="bg-[#F4F4FF] flex text-center p-16 flex-col">
+  <h1 class="text-[#861453] text-2xl font-normal mb-4">
+    Conoce nuestros paquetes
+  </h1>
+  <h2 class="text-[#861453] font-bold text-4xl mb-16">
+    E-commerce Meticulosamente Valorado
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-4 py-8 px-4 gap-8">
+    {
+      packages.map((item) => (
+        <div class=" p-4 bg-white w-72 rounded-xl border">
+          <div class="border border-[#861453]  py-4 px-2">
+            <h1 class="text-[#861453] mb-2 text-2xl font-bold py-4">
+              {item.title}
+            </h1>
+            <p class="mb-4">{item.description}</p>
+            <p class="font-bold text-5xl">{item.price}</p>
+            <p class=" mb-8">{item.time}</p>
+
+            <button
+              class="border font-bold border-[#861453] px-12 py-1 mb-4 rounded-lg
+            hover:bg-[#861453] hover:text-white
+            "
+            >
+              Ver
+            </button>
+            <p>{item.info}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

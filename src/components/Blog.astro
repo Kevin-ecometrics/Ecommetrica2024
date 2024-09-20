@@ -1,0 +1,62 @@
+---
+let blogs = [
+  {
+    title: "¿Qué es el ecommerce?",
+    description:
+      "Descubre qué es el ecommerce y cómo puede beneficiar a tu negocio.",
+    image: "/Blog.webp",
+    date: "12 de Octubre de 2021",
+    link: "/blog/que-es-el-ecommerce",
+  },
+  {
+    title: "Marketing Digital",
+    description:
+      "Aprende las mejores estrategias de marketing digital para tu empresa.",
+    image: "/Blog.webp",
+    date: "15 de Noviembre de 2021",
+    link: "/blog/marketing-digital",
+  },
+];
+---
+
+<section
+  class="flex justify-center relative flex-col items-center p-16"
+  id="blog"
+>
+  <div
+    class="w-36 h-36 bg-[#515151] top-[-300px] right-[400px] absolute animate-div-2 hidden xl:block"
+  >
+  </div>
+  <h1 class="text-[#861453] font-bold text-2xl mb-4">
+    Todo lo que debes saber del ecommerce y un poco más
+  </h1>
+  <h2 class="text-[#861453] font-bold text-5xl mb-8">
+    Estos Blogs son para Ti
+  </h2>
+  <p class="mb-12 md:w-[40%] text-center">
+    Encontrarás videoblogs y blogs sobre lo último en: marketing Digital,
+    Programación, Diseño UX/UI y Voz para tu marca
+  </p>
+  <div class="flex flex-col justify-between px-8 gap-8">
+    {
+      blogs.map((item) => (
+        <div class="md:flex items-center gap-8">
+          <img src={item.image} alt={item.title} class="object-cover" />
+          <div>
+            <h3 class="text-[#861453] font-bold text-xl mt-4">{item.title}</h3>
+            <p class="text-[#201A48] font-bold w-[70%] mt-2">
+              {item.description}
+            </p>
+            <p class="mt-8 mb-4 md:mb-0">{item.date}</p>
+          </div>
+          <a
+            href={item.link}
+            class="border border-[#861453] px-12 py-2 mt-2 hover:text-white hover:bg-[#861453] font-bold transition-all"
+          >
+            Leer más
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>
