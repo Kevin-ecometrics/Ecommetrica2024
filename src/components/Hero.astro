@@ -10,11 +10,11 @@ const words = ["Innova", "Eleva", "Simplifica"];
 ---
 
 <section
-  class="items-center h-screen flex"
+  class="items-center flex h-screen"
   id="home"
   style="background-image: url('/background.webp'); background-size: cover; background-position: center;"
 >
-  <div class="grid grid-cols-1 md:grid-cols-2 px-16">
+  <div class="flex justify-between items-center px-16">
     <div class="flex flex-col text-white">
       <h1 class="font-bold text-2xl mb-8">Hola, somos</h1>
       <img src="/logocompleto.webp" alt="logo" title="logo" class="mb-4" />
@@ -22,10 +22,11 @@ const words = ["Innova", "Eleva", "Simplifica"];
         <Tags client:visible tags={words} />
       </span>
       <div class="flex gap-4 mb-8 font-bold">
-        <button
+        <a
+          href="#package"
           class="px-8 py-2 hover:bg-white hover:text-black bg-[#861453] text-white
             transition rounded-lg duration-300 ease-in-out"
-          >Comienza</button
+          >Comienza</a
         >
         <button
           class="px-8 py-2 text-white hover:bg-white hover:text-black
@@ -45,14 +46,8 @@ const words = ["Innova", "Eleva", "Simplifica"];
         juanmanuel@ecommetrics.com
       </a>
     </div>
-    <div class="hidden md:block absolute right-0">
-      <Image
-        src={HeroImage}
-        alt="Hero Image"
-        title="Hero Image"
-        class="object-cover w-full z-10 relative h-full"
-      />
-      <div class="absolute top-16 border-8 border-white h-96 w-72"></div>
+    <div class="hidden md:flex items-center justify-center">
+      <Image src={HeroImage} alt="Hero" class="rounded-lg object-cover" />
     </div>
   </div>
 </section>

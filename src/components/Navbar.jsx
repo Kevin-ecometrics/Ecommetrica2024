@@ -21,7 +21,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
       if (currentScrollPos > 400) {
         setTextClass("text-black");
         setBgClass("bg-white");

@@ -62,10 +62,10 @@ function Testimonial() {
       <div className="grid grid-cols-1 md:grid-cols-2 px-8">
         <div className="hidden md:block">
           <img
-            src="/profile .webp"
+            src="/profile.webp"
             loading="lazy"
             alt="testimonials"
-            className="z-10 relative"
+            className="z-10 relative md:h-[800px]"
           />
         </div>
         <div className="flex justify-center items-start flex-col">
