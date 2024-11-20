@@ -10,13 +10,13 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const year = new Date().getFullYear();
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#service", label: "Service" },
-    { href: "#testimonial", label: "Testimonial" },
+    { href: "#home", label: "Inicio" },
+    { href: "#about", label: "Acerca de" },
+    { href: "#skills", label: "Habilidades" },
+    { href: "#service", label: "Servicio" },
+    { href: "#testimonial", label: "Testimonio" },
     { href: "#blog", label: "Blog" },
-    { href: "#contact", label: "Contact" },
+    { href: "#contact", label: "Contacto" },
   ];
 
   useEffect(() => {

@@ -1,6 +1,30 @@
-import React from "react";
+import { useState } from "react";
+import axios from "axios";
 import "@components/KeyFrames.css";
 function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("/api/contact", {
+        name,
+        email,
+        message,
+      });
+      console.log("Message sent successfully:", response.data);
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Error sending message");
+    }
+  };
+
   return (
     <section
       className=" flex justify-center items-center flex-col px-8 py-16 mb-16 relative"
@@ -28,10 +52,10 @@ function Contact() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-phone"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="icon icon-tabler icons-tabler-outline icon-tabler-phone"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
@@ -41,8 +65,10 @@ function Contact() {
               <h2 className="text-[#861453] text-xl font-bold">
                 Llama o agenda
               </h2>
-              <p className="text-[#861453] text-2xl font-bold mb-8  ">
-                +55 664 6429 633
+              <p className="text-[#861453] text-2xl font-bold mb-8">
+                <a className="hover:underline" href="tel:+556646429633">
+                  +55 664 6429 633
+                </a>
               </p>
             </div>
           </div>
@@ -55,10 +81,10 @@ function Contact() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="icon icon-tabler icons-tabler-outline icon-tabler-mail"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
@@ -67,31 +93,42 @@ function Contact() {
             <div className="flex flex-col">
               <h2 className="text-[#861453] text-xl font-bold">Correo</h2>
               <p className="text-[#861453] text-2xl font-bold">
-                juanmanuel@e-commetrics.com
+                <a
+                  className="hover:underline"
+                  href="mailto:juanmanuel@e-commetrics.com"
+                >
+                  juanmanuel@e-commetrics.com
+                </a>
               </p>
             </div>
           </div>
         </div>
         <div>
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Nombre"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
               className="w-full  p-2 border shadow-xl rounded-lg mb-6"
             />
             <input
               type="email"
               placeholder="Correo"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
               className="w-full stroke-none p-2 border shadow-xl rounded-lg mb-6"
             />
             <textarea
               type="text"
               placeholder="Mensaje"
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
               className="w-full stroke-none p-2 border shadow-xl rounded-lg mb-6"
             />
             <button className="bg-[#861453] text-white rounded-lg">
               <div className="flex gap-4 items-center font-bold px-6 py-2">
-                <h1>Submit Message</h1>
+                <h1>Enviar Mensaje </h1>
                 <svg
                   width="19"
                   height="19"
@@ -102,8 +139,8 @@ function Contact() {
                   <path
                     d="M17.8374 1.16259L8.31563 10.6863M1.20982 7.20953L17.5563 1.02158C17.6152 0.999018 17.6795 0.99402 17.7412 1.00719C17.803 1.02035 17.8596 1.05112 17.9042 1.09577C17.9489 1.14043 17.9797 1.19705 17.9928 1.25881C18.006 1.32057 18.001 1.38483 17.9784 1.44381L11.7917 17.7935C11.7671 17.8556 11.7241 17.9087 11.6684 17.9456C11.6128 17.9825 11.5471 18.0014 11.4804 17.9999C11.4136 17.9984 11.3489 17.9765 11.295 17.9371C11.2411 17.8977 11.2005 17.8427 11.1787 17.7796L8.42433 10.9908C8.39222 10.8946 8.33818 10.8072 8.26647 10.7355C8.19476 10.6637 8.10736 10.6097 8.01117 10.5776L1.22372 7.82509C1.15977 7.80382 1.10397 7.76329 1.06394 7.70907C1.02391 7.65486 1.0016 7.58959 1.00008 7.5222C0.998562 7.45482 1.0179 7.38861 1.05544 7.33264C1.09299 7.27667 1.14691 7.23367 1.20982 7.20953Z"
                     stroke="white"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>

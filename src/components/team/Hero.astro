@@ -1,0 +1,52 @@
+---
+const { team } = Astro.props;
+---
+
+<section id="team" transition:animate="fade">
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h1 class="text-[#861453] font-medium mb-4 text-2xl">¡Hola!</h1>
+        <h3 class="text-[#861453] font-bold text-4xl">Conoce al Equipo</h3>
+      </div>
+    </div>
+  </section>
+  <div class="container mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {
+        team.map((member) => (
+          <div class="flex justify-center items-center flex-col">
+            <div
+              class="px-4 relative h-64 transform transition-all duration-500 hover:h-80
+            rounded-3xl bg-[#861453] w-80"
+            >
+              <a href={`/team/${member.name}`}>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  transition:name={member.transition}
+                  class="absolute bottom-0 left-0 right-0 w-full rounded-3xl "
+                />
+              </a>
+            </div>
+            <div class="py-4 text-center">
+              <h2
+                class="text-2xl font-bold text-[#861453] mb-4"
+                transition:name={member.fullName}
+              >
+                {member.fullName}
+              </h2>
+              <p
+                class="text-[#861453] mb-4 font-semibold"
+                transition:name={member.role}
+              >
+                {member.role}
+              </p>
+              <p class="text-[#861453]">{member.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

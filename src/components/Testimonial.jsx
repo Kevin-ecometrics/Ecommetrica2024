@@ -6,37 +6,37 @@ function Testimonial() {
     {
       id: 1,
       description:
-        "I had a problem finding some something, asked the support team, got a reply and a solution within a few minutes. Brilliant support! Very happy with website I bought.",
-      autor: "Tom Anderson.",
-      job: "Customer",
+        "El diseño de nuestra nueva página web es impresionante. El equipo capturó exactamente lo que queríamos y el resultado final superó nuestras expectativas.",
+      autor: "Carlos Pérez.",
+      job: "Gerente de Marketing",
     },
     {
       id: 2,
       description:
-        "The service was excellent. The team was very responsive and helped me with all my queries. Highly recommend!",
-      autor: "Sarah Johnson.",
-      job: "Client",
+        "La campaña publicitaria que desarrollaron para nosotros fue un éxito rotundo. Aumentamos nuestras ventas en un 30% en solo un mes.",
+      autor: "María Gómez.",
+      job: "Directora de Ventas",
     },
     {
       id: 3,
       description:
-        "Amazing experience! The website is user-friendly and the support team is very helpful. Will definitely use their services again.",
-      autor: "Michael Brown.",
-      job: "User",
+        "Las publicaciones en redes sociales que crearon para nuestra empresa son creativas y atractivas. Hemos visto un aumento significativo en la interacción con nuestros seguidores.",
+      autor: "Luis Rodríguez.",
+      job: "Community Manager",
     },
     {
       id: 4,
       description:
-        "Great service and support. The team was very helpful and the website is fantastic. Highly recommend!",
-      autor: "Emily Davis.",
-      job: "Customer",
+        "El equipo de soporte fue muy útil y rápido en responder a nuestras consultas. La página web es fácil de usar y ha mejorado nuestra presencia en línea.",
+      autor: "Ana Martínez.",
+      job: "Propietaria de Negocio",
     },
     {
       id: 5,
       description:
-        "The best experience I've had with a web development company. The team is very professional and the support is top-notch.",
-      autor: "John Smith.",
-      job: "Client",
+        "La estrategia de redes sociales que implementaron ha sido clave para aumentar nuestra visibilidad y atraer nuevos clientes. ¡Muy recomendable!",
+      autor: "Jorge Fernández.",
+      job: "CEO",
     },
   ];
 
@@ -65,7 +65,7 @@ function Testimonial() {
             src="/profile.webp"
             loading="lazy"
             alt="testimonials"
-            className="z-10 relative md:h-[800px]"
+            className="z-10 absolute bottom-0 md:h-[800px]"
           />
         </div>
         <div className="flex justify-center items-start flex-col">
@@ -76,7 +76,7 @@ function Testimonial() {
               key={currentTestimonial}
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
+              exit={{ opacity: 0, y: 100 }}
               transition={{ duration: 0.5 }}
               className="font-light w-[70%] mb-12"
             >
@@ -105,9 +105,9 @@ function Testimonial() {
               <path
                 d="M19.3236 21.7905L10.0678 15.9793L19.2733 10.0887M11.3498 15.9738L30.0676 15.8933"
                 stroke="white"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <svg
@@ -122,9 +122,9 @@ function Testimonial() {
               <path
                 d="M20.6764 10.2095L29.9322 16.0207L20.7267 21.9113M28.6502 16.0262L9.9324 16.1067"
                 stroke="white"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </div>

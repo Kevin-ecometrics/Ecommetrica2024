@@ -1,8 +1,29 @@
 ---
 const skills = [
-  { name: "Website Design", percentage: 100 },
-  { name: "Mobile Application", percentage: 100 },
-  { name: "Game Programming", percentage: 100 },
+  {
+    name: "Consultoría Estratégica",
+    description:
+      "Nuestra receta para el éxito garantiza una planificación segura sobre proyecciones y resultados.",
+    percentage: 100,
+  },
+  {
+    name: "Optimización de Google y Meta",
+    description:
+      "GOOGLE posee más del 93% de la intención de búsqueda y Instagram es donde todos están.",
+    percentage: 100,
+  },
+  {
+    name: "Automatización de Marketing y Ventas",
+    description:
+      "Mejora la adquisición de leads y conversiones con técnicas de growth hacking de primer nivel.",
+    percentage: 100,
+  },
+  {
+    name: "Análisis Corporativo",
+    description:
+      "Obtén conocimiento preciso y tiempo para captar leads entrantes y vender sin parar.",
+    percentage: 100,
+  },
 ];
 ---
 
@@ -12,14 +33,21 @@ const skills = [
 >
   <div class="grid grid-cols-1 md:grid-cols-2 px-8 gap-8">
     <div>
-      <h1 class="text-[#3C3C3C] text-2xl font-bold mb-2">My Skills</h1>
+      <h1 class="text-[#3C3C3C] text-2xl font-bold mb-2">
+        ¿Cómo hacerlo bien en línea?
+      </h1>
       <h2 class="md:w-[80%] text-2xl md:text-6xl text-[#515151] mb-8 font-bold">
-        You Can Imagine I Can Do
+        ¡Una receta para todo lo que has imaginado!
       </h2>
+      <p class="md:w-[70%] mb-8">
+        En más de 10 años de experiencia en eCommerce hemos acompañado a marcas
+        y empresas a lo largo de su transformación digital creando sitios web y
+        aplicaciones web visualmente sofisticados, tecnológicamente innovadores
+        y multifuncionales.
+      </p>
       <p class="md:w-[70%]">
-        I am working on a professional, visually sophisticated and
-        technologically proficient, responsive and multi-functional creative
-        personal resume portolio template Aali.
+        Caminarás en tu propio ecosistema digital poniendo tu negocio al lado de
+        las Visas y Mastercards de tus Clientes y Consumidores.
       </p>
     </div>
     <div class="md:p-4">
@@ -32,6 +60,7 @@ const skills = [
               </h2>
               <span class="text-gray-700">{skill.percentage}%</span>
             </div>
+            <div class="mb-4">{skill.description}</div>
             <div class="w-full bg-gray-200 rounded-full h-4">
               <div
                 class="bg-[#515151] h-4 rounded-full skill-bar"

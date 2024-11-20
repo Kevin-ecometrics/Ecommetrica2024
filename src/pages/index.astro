@@ -11,6 +11,8 @@ import Testimonial from "@components/Testimonial";
 import Blog from "@components/Blog.astro";
 import Consulting from "@components/Consulting.astro";
 import Contact from "@components/Contact";
+import Team from "@components/team/Hero.astro";
+import teamMembers from "@components/team/TeamMembers";
 ---
 
 <Layout title="Ecommetrica - Innova - Eleva - Simplifica">
@@ -19,7 +21,8 @@ import Contact from "@components/Contact";
   <Skills />
   <Portfolio client:visible />
   <Service />
-  <Certification />
+  <!-- <Certification /> -->
+  <Team team={teamMembers} />
   <Package />
   <Testimonial client:visible />
   <Blog />

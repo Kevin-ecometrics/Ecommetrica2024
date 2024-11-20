@@ -1,0 +1,137 @@
+---
+import Layout from "@layouts/Layout.astro";
+import teamMembers from "@components/team/TeamMembers";
+
+export function getStaticPaths() {
+  return [
+    { params: { id: "Juan" } },
+    { params: { id: "Karen" } },
+    { params: { id: "Yaz" } },
+    { params: { id: "Kevin" } },
+  ];
+}
+
+const { id } = Astro.params;
+
+const member = teamMembers.find((member) => {
+  const memberMap = {
+    Kevin: 1,
+    Karen: 2,
+    Yaz: 3,
+    Juan: 4,
+  };
+  return member.id === memberMap[id];
+});
+---
+
+<Layout title={`Team - ${id}`}>
+  <section
+    class="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 px-8 gap-8"
+  >
+    <div class="col-span-3 mb-4">
+      <a
+        href="javascript:history.back()"
+        class="flex items-center text-[#861453] hover:text-[#861453]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Volver
+      </a>
+    </div>
+    <div
+      class="col-span-1 flex flex-col items-center space-y-4 border-2 border-[#861453] p-4 rounded-lg shadow-md"
+    >
+      <img
+        src={member.image}
+        transition:name={member.transition}
+        class="h-80 w-80 object-cover rounded-full shadow-lg border-2 border-[#861453]"
+      />
+      <h1 class="text-3xl font-bold text-center text-[#861453]">
+        {member.fullName}
+      </h1>
+      <div class="text-lg">
+        <strong>Puesto:</strong>
+        <span class="text-[#861453] font-semibold">{member.role}</span>
+      </div>
+      <div class="text-lg">
+        <strong>Habilidades principales:</strong>
+        <span class="text-[#861453] font-semibold">{member.skills}</span>
+      </div>
+      <div class="text-lg">
+        <strong>Experiencia:</strong>
+        <span class="text-[#861453] font-semibold">{member.experience}</span>
+      </div>
+      <div class="text-lg">
+        <strong>Educación:</strong>
+        <span class="text-[#861453] font-semibold">{member.education}</span>
+      </div>
+      <div class="text-lg">
+        <strong>Contacto:</strong>
+        <span class="text-[#861453] font-semibold">{member.contact}</span>
+      </div>
+    </div>
+    <div class="col-span-2 space-y-8">
+      <div>
+        <h2 class="font-bold text-lg mb-2">Acerca de {member.fullName}</h2>
+        <p class="text-justify">{member.bio}</p>
+      </div>
+      <div>
+        <h2 class="font-bold text-lg mb-2">Proyectos Recientes</h2>
+        <ul class="list-disc list-inside">
+          <li class="text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </li>
+          <li class="text-justify">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </li>
+          <li class="text-justify">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-bold text-lg mb-2">Certificaciones</h2>
+        <ul class="list-disc list-inside">
+          <li class="text-justify">Certified Professional in Lorem Ipsum</li>
+          <li class="text-justify">Advanced Dolor Sit Amet Certification</li>
+          <li class="text-justify">Eiusmod Tempor Incididunt Certification</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-bold text-lg mb-2">Testimonios</h2>
+        <blockquote
+          class="border-l-4 border-[#861453] pl-4 italic text-justify"
+        >
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          posuere erat a ante."
+        </blockquote>
+        <blockquote
+          class="border-l-4 border-[#861453] pl-4 italic text-justify mt-4"
+        >
+          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam."
+        </blockquote>
+      </div>
+      <div>
+        <h2 class="font-bold text-lg mb-2">Publicaciones</h2>
+        <ul class="list-disc list-inside">
+          <li class="text-justify">Lorem Ipsum: Dolor Sit Amet</li>
+          <li class="text-justify">Consectetur Adipiscing Elit</li>
+          <li class="text-justify">Eiusmod Tempor Incididunt</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</Layout>

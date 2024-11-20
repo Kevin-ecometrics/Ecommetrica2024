@@ -2,31 +2,31 @@
 let packages = [
   {
     title: "Plan Inicial",
-    description: "Para aquellos que recién comienzan",
-    price: "$100",
+    description: "Para los recien llegados",
+    price: "$675",
     time: "por 3 meses",
-    info: "Incluye: Diseño Web, Desarrollo Web, Marketing Digital",
+    info: "Consultoría de e-commerce Página web de plantilla, Email-Whatsapp Tienda en Facebook, Análisis de META SEO.",
   },
   {
     title: "Plan Pro",
-    description: "Para aquellos que buscan crecer",
-    price: "$200",
-    time: "por 6 meses",
-    info: "Incluye: Diseño Web, Desarrollo Web, Marketing Digital",
+    description: "Para pequeñas empresas y emprendedores ",
+    price: "$995",
+    time: "por 4 meses",
+    info: "Consulta avanzada, gestión de proyecto,página web que vende, campañas de email, anuncios en META",
   },
   {
     title: "Empresa",
-    description: "Para aquellos que buscan expandirse",
-    price: "$300",
-    time: "por 12 meses",
-    info: "Incluye: Diseño Web, Desarrollo Web, Marketing Digital",
+    description: "Para empresas pequeñas con ambiciones",
+    price: "$1185",
+    time: "por 6  meses",
+    info: "Todo Pro, más coaching, Análisis, automatizaciones paquete  de bonificacion para cuidado ",
   },
   {
     title: "Personalizado",
-    description: "Para aquellos que buscan algo único",
-    price: "$300",
-    time: "por 12 meses",
-    info: "Incluye: Diseño Web, Desarrollo Web, Marketing Digital",
+    description: "Empresa grandes y corporativos ",
+    price: "$1555",
+    time: "por 8 meses",
+    info: "Productos y servicios ilimitados en tu página personalizada ",
   },
 ];
 ---
@@ -53,14 +53,15 @@ let packages = [
             <p class="font-bold text-5xl">{item.price}</p>
             <p class=" mb-8">{item.time}</p>
 
-            <button
+            <a
+              href="#contact"
               class="border font-bold border-[#861453] px-12 py-1 mb-4 rounded-lg
             hover:bg-[#861453] hover:text-white
             "
             >
               Ver
-            </button>
-            <p>{item.info}</p>
+            </a>
+            <p class="py-4">{item.info}</p>
           </div>
         </div>
       ))

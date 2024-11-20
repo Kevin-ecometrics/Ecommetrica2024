@@ -2,27 +2,27 @@
 let services = [
   {
     id: 0,
-    name: "Video Production",
+    name: "Video producción ",
     description:
-      "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam vero natus facilis laudantium provident ut fugiat quod repellendus. Ex molestiae libero odit veniam unde.",
+      "  Diseñamos y ejecutamos todos los procesos clave de preproducción, producción y post producción para trasformar la visión de nuestros clientes en realidad, adaptándonos al formato que se requiera.",
   },
   {
     id: 1,
-    name: "Brand Identity",
+    name: "Identidad de marca ",
     description:
-      "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam vero natus facilis laudantium provident ut fugiat quod repellendus. Ex molestiae libero odit veniam unde.",
+      "Mas allá de un logo unificamos nombre, colores y estrategia de marketing para lograr una coherencia visual poderosa que tenga presencia para los consumidores.  ",
   },
   {
     id: 2,
-    name: "Creative Writing",
+    name: "Escritura creativa ",
     description:
-      "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam vero natus facilis laudantium provident ut fugiat quod repellendus. Ex molestiae libero odit veniam unde.",
+      "Le damos alma y personalidad a tu marca o negocio mientras jugamos con la imaginación y creatividad para crear narrativas e historias que conecten con la gente. ",
   },
   {
     id: 3,
-    name: "Digital Marketing",
+    name: "Marketing Digital ",
     description:
-      "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quisquam vero natus facilis laudantium provident ut fugiat quod repellendus. Ex molestiae libero odit veniam unde.",
+      "Impulsamos tu negocio en motores de búsqueda. Diseñamos estrategias integrales que maximizan la retención de leads y la conversión. Creamos ecosistemas digitales conectando tu página web con redes sociales, producimos y distribuimos contenido de alto valor, y ejecutamos campañas de email marketing altamente efectivas.  ",
   },
 ];
 ---
@@ -48,12 +48,8 @@ let services = [
       <!-- Servicios -->
       {
         services.map((service) => (
-          <div class="service-card mb-4 p-4 border border-gray-300 rounded bg-white h-[280px] md:w-[670px] relative z-10">
+          <div class="service-card mb-4 p-4 border border-gray-300 rounded bg-white md:h-[230px] md:w-[670px] relative z-10">
             <h2 class="text-2xl mb-4 font-semibold">{service.name}</h2>
-            <p class="text-xl font-bold mb-2">
-              The price starts from:{" "}
-              <span class="text-[#861453] font-bold">$49</span>
-            </p>
             <p class="text-gray-700">{service.description}</p>
           </div>
         ))
@@ -101,6 +97,26 @@ let services = [
   </div>
 </section>
 
+<script>
+  document.querySelectorAll(".service-card").forEach((card) => {
+    card.addEventListener("mousemove", (e: MouseEvent) => {
+      const rect = (card as HTMLElement).getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / 10;
+      const rotateY = (x - centerX) / 10;
+      (card as HTMLElement).style.transform =
+        `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      (card as HTMLElement).style.transform = "rotateX(0) rotateY(0)";
+    });
+  });
+</script>
+
 <style>
   .service-card {
     perspective: 1000px;
@@ -108,7 +124,7 @@ let services = [
   }
 
   .service-card:hover {
-    transform: rotateY(15deg) rotateX(15deg);
+    transform: rotateY(15deg) rotateX(15deg) translateZ(20px);
   }
 
   @keyframes slideX {
