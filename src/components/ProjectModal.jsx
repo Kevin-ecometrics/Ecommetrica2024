@@ -7,7 +7,7 @@ const ProjectModal = ({ isOpen, onClose, project, onOpenOldWebsite }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <motion.div
-        className="bg-white p-8 rounded-lg w-[500px]"
+        className="bg-white p-8 rounded-lg w-[400px] md:w-[800px]"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
@@ -16,9 +16,11 @@ const ProjectModal = ({ isOpen, onClose, project, onOpenOldWebsite }) => {
         <img
           src={project.img}
           alt={project.nombre}
-          className="w-full  object-cover mb-4"
+          className="object-cover mb-4"
         />
-        <h2 className="text-2xl font-bold mb-4 text-black">{project.nombre}</h2>
+        <h2 className="text-lg md:text-2xl font-bold mb-4 text-black">
+          {project.nombre}
+        </h2>
 
         <div className="flex justify-between mb-4">
           {project.old && (

@@ -5,7 +5,6 @@ import LogoFacebook from "@components/icons/FacebookFooter.astro";
 import LogoInstagram from "@components/icons/InstagramFooter.astro";
 import LogoTwitter from "@components/icons/TwitterFooter.astro";
 import { ViewTransitions } from "astro:transitions";
-
 import "@fontsource-variable/montserrat";
 import { Image } from "astro:assets";
 
@@ -41,71 +40,73 @@ const isHomePage = URL.pathname === "/";
   <body class="overflow-x-hidden">
     {isHomePage && <Navbar client:load />}
     <slot />
-    <footer class="bg-[#3C3C3C] p-12 text-white relative overflow-x-hidden">
-      <div
-        class="flex md:flex-row flex-col md:justify-between md:items-center mb-16"
-      >
-        <div class="mb-8 md:mb-24">
-          <Image src={Footer} alt="Logo" class="w-64" />
-        </div>
-        <div class="flex space-x-4 items-center">
-          <h1 class="font-bold">Siguenos</h1>
-          <a
-            href="#"
-            class="text-[#861453] bg-[#D9D9D9] rounded-full px-4 py-4"
-          >
-            <LogoFacebook />
-          </a>
-          <a
-            href="https://twitter.com/SrGenial"
-            class="text-[#861453] bg-[#D9D9D9] rounded-full px-4 py-4"
-          >
-            <LogoTwitter />
-          </a>
-          <a
-            href="https://www.instagram.com/ecommetrica/"
-            class="text-[#861453] bg-[#D9D9D9] rounded-full px-4 py-4"
-          >
-            <LogoInstagram />
-          </a>
-        </div>
-      </div>
-      <div class="flex flex-col md:flex-row md:justify-between">
-        <div class="mb-8 md:mb-0">
-          <h1 class="text-[#D9D9D9]">
-            Esta página web fue simplificada, innovada y elevada por <a
-              href="https://ecommetrica.com/"
-              target="_blank"
-              class="relative text-white font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
-              >Ecommetrica</a
-            > &copy; {new Date().getFullYear()}
-          </h1>
-        </div>
-        <div class="md:space-x-2 flex flex-col md:flex-row gap-4">
-          <a
-            href="/terminos"
-            class="relative font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-[#D9D9D9]"
-            >Términos y Condiciones</a
-          >
-          <a
-            href="/politicas"
-            class="relative font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-[#D9D9D9]"
-            >Política de privacidad</a
-          >
-          <a
-            href="/soporte"
-            class="relative font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-[#D9D9D9]"
-            >Soporte</a
-          >
-
-          <a
-            href="/team"
-            class="relative font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-[#D9D9D9]"
-            >Equipo</a
-          >
-        </div>
-      </div>
-    </footer>
+    {
+      isHomePage && (
+        <footer class="bg-[#3C3C3C] p-12 text-white relative overflow-x-hidden">
+          <div class="flex md:flex-row flex-col md:justify-between md:items-center mb-16">
+            <div class="mb-8 md:mb-24">
+              <Image src={Footer} alt="Logo" class="w-64" />
+            </div>
+            <div class="flex space-x-4 items-center">
+              <h1 class="font-bold">Siguenos</h1>
+              <a
+                href="#"
+                class="text-[#861453] bg-[#D9D9D9] rounded-full px-4 py-4"
+              >
+                <LogoFacebook />
+              </a>
+              <a
+                href="https://twitter.com/SrGenial"
+                class="text-[#861453] bg-[#D9D9D9] rounded-full px-4 py-4"
+              >
+                <LogoTwitter />
+              </a>
+              <a
+                href="https://www.instagram.com/ecommetrica/"
+                class="text-[#861453] bg-[#D9D9D9] rounded-full px-4 py-4"
+              >
+                <LogoInstagram />
+              </a>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row md:justify-between">
+            <div class="mb-8 md:mb-0">
+              <h1 class="text-[#D9D9D9]">
+                Esta página web fue simplificada, innovada y elevada por{" "}
+                <a
+                  href="https://ecommetrica.com/"
+                  target="_blank"
+                  class="relative text-white font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+                >
+                  Ecommetrica
+                </a>{" "}
+                &copy; {new Date().getFullYear()}
+              </h1>
+            </div>
+            <div class="md:space-x-2 flex flex-col md:flex-row gap-4">
+              <a
+                href="/terminos"
+                class="relative font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-[#D9D9D9]"
+              >
+                Términos y Condiciones
+              </a>
+              <a
+                href="/politicas"
+                class="relative font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-[#D9D9D9]"
+              >
+                Política de privacidad
+              </a>
+              <a
+                href="/soporte"
+                class="relative font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-[#D9D9D9]"
+              >
+                Soporte
+              </a>
+            </div>
+          </div>
+        </footer>
+      )
+    }
   </body>
 </html>
 <style is:global>

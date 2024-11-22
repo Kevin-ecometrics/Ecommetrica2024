@@ -4,25 +4,25 @@ const skills = [
     name: "Consultoría Estratégica",
     description:
       "Nuestra receta para el éxito garantiza una planificación segura sobre proyecciones y resultados.",
-    percentage: 100,
+    percentage: 0,
   },
   {
     name: "Optimización de Google y Meta",
     description:
       "GOOGLE posee más del 93% de la intención de búsqueda y Instagram es donde todos están.",
-    percentage: 100,
+    percentage: 0,
   },
   {
     name: "Automatización de Marketing y Ventas",
     description:
       "Mejora la adquisición de leads y conversiones con técnicas de growth hacking de primer nivel.",
-    percentage: 100,
+    percentage: 0,
   },
   {
     name: "Análisis Corporativo",
     description:
       "Obtén conocimiento preciso y tiempo para captar leads entrantes y vender sin parar.",
-    percentage: 100,
+    percentage: 0,
   },
 ];
 ---
@@ -52,15 +52,19 @@ const skills = [
     </div>
     <div class="md:p-4">
       {
-        skills.map((skill) => (
-          <div class="mb-6">
+        skills.map((skill, index) => (
+          <div class="mb-6 skill-container" data-index={index}>
             <div class="flex justify-between items-center">
-              <h2 class="text-2xl font-bold mb-2 text-[#3C3C3C]">
+              <h2 class="hover:cursor-pointer text-2xl font-bold mb-2 text-[#3C3C3C] skill-title">
                 {skill.name}
               </h2>
-              <span class="text-gray-700">{skill.percentage}%</span>
+              <span class="text-gray-700 skill-percentage">
+                {skill.percentage}%
+              </span>
             </div>
-            <div class="mb-4">{skill.description}</div>
+            <div class="mb-4 skill-description hover:cursor-pointer">
+              {skill.description}
+            </div>
             <div class="w-full bg-gray-200 rounded-full h-4">
               <div
                 class="bg-[#515151] h-4 rounded-full skill-bar"
@@ -77,29 +81,46 @@ const skills = [
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const skillBars = entry.target.querySelectorAll(".skill-bar");
-            skillBars.forEach((bar) => {
-              (bar as HTMLElement).style.width =
-                (bar as HTMLElement).getAttribute("data-percentage") + "%";
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+    const skillContainers = document.querySelectorAll(".skill-container");
 
-    const skillsSection = document.getElementById("skills");
-    observer.observe(skillsSection);
+    skillContainers.forEach((container) => {
+      const title = container.querySelector(".skill-title");
+      const description = container.querySelector(".skill-description");
+      const skillBars = container.querySelectorAll(".skill-bar");
+      const percentageText = container.querySelector(".skill-percentage");
+
+      const animateBars = (start, end, increment) => {
+        let currentPercentage = start;
+        const update = () => {
+          if (
+            (increment && currentPercentage <= end) ||
+            (!increment && currentPercentage >= end)
+          ) {
+            skillBars.forEach((bar) => {
+              (bar as HTMLElement).style.width = currentPercentage + "%";
+            });
+            percentageText.textContent = currentPercentage + "%";
+            currentPercentage += increment ? 1 : -1;
+            requestAnimationFrame(update);
+          }
+        };
+        update();
+      };
+
+      title.addEventListener("mouseover", () => animateBars(0, 100, true));
+      description.addEventListener("mouseover", () =>
+        animateBars(0, 100, true)
+      );
+      title.addEventListener("mouseout", () => animateBars(100, 0, false));
+      description.addEventListener("mouseout", () =>
+        animateBars(100, 0, false)
+      );
+    });
   });
 </script>
 
 <style>
   .skill-bar {
-    transition: width 2s;
+    transition: width 1s linear;
   }
 </style>

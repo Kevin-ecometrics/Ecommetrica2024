@@ -4,5 +4,19 @@ import Form from "@components/calendar/Form";
 ---
 
 <Layout title="Ecommetrica - Calendario">
-  <Form client:load />
+  <div class="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-lg">
+    <div class="mb-6">
+      <a href="/" class="text-blue-600 hover:text-blue-800 font-semibold">
+        &larr; Volver a la página principal
+      </a>
+    </div>
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-6">
+      Calendario de Ecommetrica
+    </h1>
+    <p class="text-lg text-gray-700 mb-8">
+      Por favor, complete el formulario a continuación para agregar eventos a su
+      calendario.
+    </p>
+    <Form client:load />
+  </div>
 </Layout>

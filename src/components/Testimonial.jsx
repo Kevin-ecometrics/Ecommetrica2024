@@ -65,12 +65,12 @@ function Testimonial() {
             src="/profile.webp"
             loading="lazy"
             alt="testimonials"
-            className="z-10 absolute bottom-0 md:h-[800px]"
+            className="z-10 absolute bottom-0"
           />
         </div>
         <div className="flex justify-center items-start flex-col">
           <h1 className="text-2xl font-bold mb-4">Historias de éxito</h1>
-          <h2 className="text-6xl font-bold mb-8">Testimonios</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-8">Testimonios</h2>
           <AnimatePresence mode="popLayout">
             <motion.div
               key={currentTestimonial}

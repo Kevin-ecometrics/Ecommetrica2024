@@ -3,17 +3,14 @@ import { Image } from "astro:assets";
 import Insta from "@components/icons/logo-instagram.astro";
 import Face from "@components/icons/logo-facebook.astro";
 import Twit from "@components/icons/logo-twitter.astro";
+import Mail from "@components/icons/Mail.astro";
 import Tags from "@components/Tags";
 import HeroImage from "@public/JuanHero2.webp";
 
 const words = ["Innova", "Eleva", "Simplifica"];
 ---
 
-<section
-  id="home"
-  style="background-image: url('/background.webp'); background-size: cover; background-position: center;"
-  class="relative bg-cover bg-center"
->
+<section id="home" class="relative bg-cover bg-center bg-[#33244C]">
   <div class="flex justify-between items-center px-16 h-screen">
     <div class="flex flex-col text-white">
       <h1 class="font-bold text-2xl mb-8">Hola, somos</h1>
@@ -28,10 +25,11 @@ const words = ["Innova", "Eleva", "Simplifica"];
             transition rounded-lg duration-300 ease-in-out"
           >Comienza</a
         >
-        <button
+        <a
+          href="#team"
           class="px-8 py-2 text-white hover:bg-white hover:text-black
         transition rounded-lg duration-300 ease-in-out"
-          >Nosotros</button
+          >Nosotros</a
         >
       </div>
       <div class="flex md:flex-col gap-4 mb-8">
@@ -50,22 +48,79 @@ const words = ["Innova", "Eleva", "Simplifica"];
         >
           <Twit class="w-8 h-8" />
         </a>
+        <a href="mailto:juanmanuel@ecommetrics.com">
+          <Mail class="w-10 h-10" />
+        </a>
       </div>
-      <a
-        href="mailto:juanmanuel@ecommetrics.com"
-        class="relative inline-block text-white md:text-2xl mt-4 before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-96 before:h-0.5 before:bg-white before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100"
-      >
-        juanmanuel@ecommetrics.com
-      </a>
     </div>
     <div
-      class="hidden lg:flex items-center justify-center absolute bottom-0 right-0"
+      class="hidden
+            lg:flex
+            items-center
+            justify-center
+            absolute
+            bottom-0
+            right-20"
     >
       <Image
         src={HeroImage}
         alt="Hero"
-        class="flex justify-center items-center"
+        class="flex justify-center items-center z-10"
       />
     </div>
   </div>
+  <div class="hidden lg:block">
+    <div
+      class="border-l-8 border-t-8 border-b-8 absolute top-[25%] border-[#D9D9D9] right-48 w-[300px] h-[500px]"
+      style="animation: moveLeftRight 3s infinite;"
+    >
+    </div>
+    <div
+      class="absolute bottom-[15%] right-0 h-[600px] w-96 bg-[#C2155C]"
+      style="animation: moveLeftRight 5s infinite;"
+    >
+    </div>
+    <div
+      class="absolute bottom-[5%] right-[420px] h-40 w-40 bg-[#C2155C]"
+      style="animation: moveUpDown 3s infinite;"
+    >
+    </div>
+    <div
+      class="absolute top-[40%] right-[30%] h-28 w-20 bg-[#C2155C]"
+      style="animation: moveDownUp 3s infinite;"
+    >
+    </div>
+  </div>
+
+  <style>
+    @keyframes moveUpDown {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-60px);
+      }
+    }
+
+    @keyframes moveLeftRight {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(20px);
+      }
+    }
+
+    @keyframes moveDownUp {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+    }
+  </style>
 </section>

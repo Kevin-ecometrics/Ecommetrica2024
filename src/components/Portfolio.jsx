@@ -29,6 +29,14 @@ const Portfolio = () => {
   const proyectosFiltrados =
     categoriaSeleccionada === "Todos"
       ? proyectos
+          .sort((a, b) => b.prioridad - a.prioridad)
+          .sort((a, b) =>
+            b.prioridad === a.prioridad
+              ? b.prioridad - a.prioridad
+              : b.prioridad
+              ? 1
+              : -1
+          )
       : proyectos.filter(
           (proyecto) => proyecto.categoria === categoriaSeleccionada
         );
@@ -68,14 +76,14 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="portfolio-section bg-gradient-to-l from-[#BD155C] to-[#1E171E] py-16 text-white">
+    <section className="portfolio-section bg-gradient-to-l from-[#BD155C] to-[#1E171E] py-16 text-white md:px-0 px-8">
       <h1 className="text-center font-normal text-xl md:text-2xl">
         Portafolio
       </h1>
       <p className="text-3xl md:text-5xl font-bold text-center mb-16">
         Dale un Vistazo a Nuestro Trabajo
       </p>
-      <div className="flex justify-center mb-8">
+      <div className="md:flex justify-center mb-8 hidden">
         <div className="flex space-x-4">
           {lista.map((item) => (
             <button
@@ -92,7 +100,20 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-8">
+      <div className="md:hidden mb-8">
+        <select
+          onChange={(e) => filtrarProyectos(e.target.value)}
+          className="px-4 py-2 rounded-lg font-bold bg-white text-black w-full"
+          value={categoriaSeleccionada}
+        >
+          {lista.map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:px-8">
         <AnimatePresence>
           {currentProjects.map((proyecto) => (
             <motion.div
@@ -106,7 +127,7 @@ const Portfolio = () => {
               <img
                 src={proyecto.img}
                 alt={proyecto.nombre}
-                className="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-125"
+                className="w-full h-full transition-transform duration-300 group-hover:scale-125"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <button

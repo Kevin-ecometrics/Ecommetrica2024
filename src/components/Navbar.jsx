@@ -14,6 +14,7 @@ function Navbar() {
     { href: "#about", label: "Acerca de" },
     { href: "#skills", label: "Habilidades" },
     { href: "#service", label: "Servicio" },
+    { href: "#team", label: "Equipo" },
     { href: "#testimonial", label: "Testimonio" },
     { href: "#blog", label: "Blog" },
     { href: "#contact", label: "Contacto" },
@@ -31,7 +32,7 @@ function Navbar() {
         setTextClass("text-white");
         setBgClass("bg-transparent");
         setBorder("border-transparent");
-        setLogoSrc("/logo.webp");
+        setLogoSrc(""); // No mostrar ninguna imagen
       }
 
       // Actualizar el enlace activo
@@ -60,12 +61,13 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed flex h-16 w-full items-center justify-between border ${border} z-30 ${bgClass}`}
+      className={`fixed flex h-20 md:h-16 w-full items-center justify-between border ${border} z-30 ${bgClass}`}
     >
-      <div className="pl-8">
-        <img src={logoSrc} alt="logo" title="logo" />
+      <div className="md:pl-14 pl-4">
+        {logoSrc && <img src={logoSrc} alt="logo" title="logo" />}{" "}
+        {/* Renderizar solo si logoSrc no está vacío */}
       </div>
-      <div className="pr-8 flex space-x-4">
+      <div className="pr-8 flex md:space-x-4">
         <button
           className="md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -93,7 +95,7 @@ function Navbar() {
               href={item.href}
               aria-label={item.label}
               className={`transition-colors ${textClass} duration-300 hover:text-blue-400 font-semibold ${
-                activeLink === item.href ? "text-blue-500" : ""
+                activeLink === item.href ? "text-[#C2155C]" : ""
               }`}
             >
               {item.label}
@@ -150,9 +152,9 @@ function Navbar() {
                   {item.label}
                 </a>
               ))}
-              <button className="block w-full py-2 text-white bg-black">
-                Get Started
-              </button>
+              {/* <button className="block w-full py-2 text-white bg-black">
+                
+              </button> */}
               <footer className="text-gray-500 absolute bottom-10">
                 <h1>&copy; {year} Ecommetrica</h1>
               </footer>
