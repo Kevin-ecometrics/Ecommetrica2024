@@ -4,7 +4,8 @@ const proyectos = [
     categoria: "Dentistas",
     img: "/projects/bitespage.webp",
     url: "https://bitescreadoresdesonrisas.com",
-    description: "Descripción del proyecto Bitescreadoresdesonrisas.com",
+    description:
+      "Es un centro de alta estética dental, que requería renovar su página web y optimizar su UX UI con una imagen que refleje el estilo distintivo de Bites. Incorporamos el calendario que genera citas y pagos directamente desde la página brindando una experiencia fluida y eficiente en la que pueden tener el control mediante una web App.",
     old: true,
     oldImage: "/projects/bites.webp",
     prioridad: true,
@@ -14,7 +15,8 @@ const proyectos = [
     categoria: "Dentistas",
     img: "/projects/reformapage.webp",
     url: "https://reformadental.com",
-    description: "Descripción del proyecto Reformadental.com",
+    description:
+      "Consultorio dental familiar que deseaba situarse como una alternativa con servicios completos con precios competitivos en zona centro. Diseñamos y desarrollamos una página funcional para agendar citas de forma sencilla, con un diseño moderno que destaque la competitividad y variedad de su servicio.  ",
     old: true,
     oldImage: "/projects/reforma.webp",
   },
@@ -23,7 +25,8 @@ const proyectos = [
     categoria: "Dentistas",
     img: "/projects/dentalpage.webp",
     url: "https://dentalreforma.com",
-    description: "Descripción del proyecto dentalreforma",
+    description:
+      "Consultorio dental familiar con más de 35 años en Tijuana busca seguir siendo vigente y tener presencia en motores de búsqueda. Diseñamos una página para destacar sus valores, experiencia y servicios. ",
     old: false,
     oldImage: "/old-dentalreforma.webp",
   },
@@ -32,7 +35,8 @@ const proyectos = [
     categoria: "Médicos",
     img: "/projects/mongepage.webp",
     url: "https://mongeortopedia.com",
-    description: "Descripción del proyecto Mongeortopedia.com",
+    description:
+      "Es un traumatólogo ortopedista que buscaba una página moderna y minimalista, para destacar frente a los sitios convencionales en el ámbito de la traumatología. Logramos proyectar profesionalismo y un diseño sencillo.",
     old: true,
     oldImage: "/projects/monge.webp",
     prioridad: true,
@@ -42,7 +46,8 @@ const proyectos = [
     categoria: "Médicos",
     img: "/projects/cesiapage.png",
     url: "https://cesiaborjon.com",
-    description: "Descripción del proyecto Cesiaborjon.com",
+    description:
+      "Es una ginecoobstetra feminista con más de 15 años de experiencia que buscaba crear una página web inclusiva y dinámica. Creamos una experiencia llamativa y reactiva que reflejara su esencia y valores, así mismo que permitiera al paciente tener una experiencia agradable de navegación. ",
     old: false,
     oldImage: "/old-cesiaborjon.webp",
     prioridad: true,
@@ -52,7 +57,8 @@ const proyectos = [
     categoria: "Médicos",
     img: "/projects/arturopage.webp",
     url: "https://doctorarturlopez.com",
-    description: "Descripción del proyecto Doctorarturlopez.com",
+    description:
+      "Cirujano plástico requería una landing page efectiva que resaltara sus servicios de rejuvenecimiento facial, como fillers,y otros tratamientos antiedad. El diseño fue pensado para ser breve pero llamativo, llevando de la mano la simplicidad y elegancia de un video y un breve mensaje con sus datos de contacto a la mano. ",
     old: false,
     oldImage: "/old-doctorarturlopez.webp",
     prioridad: true,
@@ -62,7 +68,8 @@ const proyectos = [
     categoria: "Médicos",
     img: "/projects/pamelapage.webp",
     url: "https://doctorapamelaperez.com",
-    description: "Descripción del proyecto doctorapamelaperez.com",
+    description:
+      "Otorrinolaringóloga con especialidad en cirugía plástica nasal, que aspiraba a tener una página centrada en resaltar los resultados de sus pacientes y explicar cada procedimiento mediante videoblogs. Por ello, desarrollamos un inicio reactivo y una sección de procedimientos con videos, centrándonos en formatos breves y fotografías de su labor.  ",
     old: false,
     oldImage: "/old-doctorapamelaperez.webp",
   },
@@ -71,7 +78,8 @@ const proyectos = [
     categoria: "Industria",
     img: "/projects/carboneticspage.webp",
     url: "https://carboneticsinc.com",
-    description: "Descripción del proyecto Carboneticsinc.com",
+    description:
+      "Tienda que vende accesorios y partes de fibra de carbono para carros de carrera, que requería optimizar su sistema de compra, acomodo de productos e interfaz en general. Nosotros implementamos un nuevo sistema de inventariado y logística que permita un flujo optimo de productos, selección y compra de forma ágil al mismo tiempo que se mejoró la apariencia general de la tienda con UI UX. ",
     old: true,
     oldImage: "/projects/carbonetics.png",
     prioridad: true,
@@ -81,7 +89,8 @@ const proyectos = [
     categoria: "Industria",
     img: "/projects/cocinamxpage.webp",
     url: "https://lacocina.mx",
-    description: "Descripción del proyecto Lacocina.mx",
+    description:
+      "Marca de consomés y sazonadores que deseaba tener presencia en línea y lanzar sus productos para venta internacional. De esta manera desarrollamos una tienda en Shopify con un diseño que resaltara cada producto y elaboramos un discurso persuasivo y cálido acorde al mensaje de la marca, con el objetivo de construir una tienda simple con un mensaje fuerte. ",
     old: false,
     oldImage: "/old-lacocina.webp",
   },
@@ -90,7 +99,8 @@ const proyectos = [
     categoria: "Industria",
     img: "/projects/wislinpage.webp",
     url: "https://wislinfarm.com",
-    description: "Descripción del proyecto Wislinfarm.com",
+    description:
+      "Es una empresa familiar que comercializa y distribuye productos lácteos y embutidos a escala local, con el objetivo de alcanzar diversos mercados. Por ello, desarrollamos una página de inicio que refleja la esencia de su marca y producto, y en la que fusionamos imágenes del producto con un discurso atractivo. ",
     old: true,
     oldImage: "/projects/wislin.webp",
   },
@@ -99,7 +109,8 @@ const proyectos = [
     categoria: "Industria",
     img: "/projects/sylindustrialpage.webp",
     url: "https://sylindustrial.com/",
-    description: "Descripción del proyecto Sylindustrial.com",
+    description:
+      "Distribuidora de productos para industrias maquiladoras que deseaba tener una landing page para dar a conocer sus servicios y datos de contacto. Nos enfocamos en diseñar una página sencilla pero efectiva, que presenta de forma clara sus servicios y datos esenciales. Integramos múltiples formas de contacto accesibles ",
     old: false,
     oldImage: "/old-sylsuinistros.webp",
   },
@@ -108,7 +119,8 @@ const proyectos = [
     categoria: "Industria",
     img: "/projects/kamilipage.webp",
     url: "https://kamili.com",
-    description: "Descripción del proyecto kamili.com",
+    description:
+      "Es un salón de uñas y spa que buscaba crear una página web que permitiera reservar en cualquiera de sus dos sucursales y elegir los servicios. Implementamos una interfaz intuitiva que permite a los clientes explorar el catálogo de servicios, seleccionar tratamientos, reservar y pagar todo con un enfoque en una experiencia eficiente y fluida.  ",
     old: false,
     oldImage: "/old-kamili.webp",
   },
@@ -117,7 +129,8 @@ const proyectos = [
     categoria: "Industria",
     img: "/projects/condorpage.webp",
     url: "https://thecondorvision.com",
-    description: "Descripción del proyecto thecondorvision.com",
+    description:
+      "Agencia de viajes inmersivos en drone buscaba una página web que destacara la experiencia de un vuelo. Diseñamos una página cuyo landing page estuviera dominado por un video inmersivo en alta calidad, transportando al usuario. Además, integramos secciones con más videos inmersivos, fotografías que refuerzan la narrativa visual de la marca.  ",
     old: false,
     oldImage: "/old-thecondorvision.webp",
   },
@@ -126,7 +139,8 @@ const proyectos = [
     categoria: "Consultorías",
     img: "/projects/gpepage.webp",
     url: "https://gpeconsultores.com.mx",
-    description: "Descripción del proyecto gpeconsultores.com.mx",
+    description:
+      "Consultoría legal y contable que buscaba posicionarse y distinguirse del sector con una página web moderna, así como tener una mejor administración de correos corporativos. Desarrollamos una página novedosa y funcional, optimizada para posicionarse, además, brindamos una web App que centraliza la gestión y cantidad de correos e información, facilitando la eficiencia general. ",
     old: true,
     oldImage: "/projects/gpe.webp",
     prioridad: true,
@@ -136,7 +150,8 @@ const proyectos = [
     categoria: "Consultorías",
     img: "/projects/sylpage.webp",
     url: "https://syltalento.com",
-    description: "Descripción del proyecto syltalento.com",
+    description:
+      "Agencia de reclutamiento que deseaba tener su página web donde brindar información, de sus servicios, tener su propia bolsa de trabajo y una web app para empleados. Creamos una página web optimizada para ofrecer una experiencia de navegación intuitiva, permitiendo a los usuarios explorar los valores, servicios y blogs de la agencia. Además, implementamos una bolsa de trabajo funcional donde los candidatos pueden aplicar directamente a vacantes, y desarrollamos una web app  para que el equipo administre correos internos y gestione datos relacionados con las vacantes ",
     old: false,
     oldImage: "/old-syltalento.webp",
   },
@@ -145,7 +160,7 @@ const proyectos = [
     categoria: "Consultorías",
     img: "/projects/eommetrica.webp",
     url: "https://e-commetrics.com",
-    description: "Descripción del proyecto e-commetrics.com",
+    description: "",
     old: true,
     oldImage: "/projects/ecommetrics.png",
   },
@@ -163,7 +178,8 @@ const proyectos = [
     categoria: "Comercializadoras",
     img: "/projects/chikpage.webp",
     url: "https://chik.mx",
-    description: "Descripción del proyecto Chik.mx",
+    description:
+      "Distribuidora de productos de belleza que deseaba modernizar, y robustecer su tienda en Shopify. Realizamos un rebranding, restructuramos la tienda,optimizamos la distribución y presentación de productos, asegurando una navegación intuitiva y coherente. Enfocándonos en la cohesión del mensaje visual y verbal permitió crear una tienda llamativa. ",
     old: false,
     oldImage: "/old-chik.webp",
   },
@@ -177,11 +193,12 @@ const proyectos = [
     oldImage: "/old-labodegasolar.webp",
   },
   {
-    nombre: "ziggiz.world",
+    nombre: "ziggiz",
     categoria: "Comercializadoras",
     img: "/projects/ziggizpage.webp",
     url: "https://ziggiz.world",
-    description: "Descripción del proyecto ziggiz.world",
+    description:
+      "Marca de papeles para liar que deseaba tener una tienda en línea sencilla y directa para el comprador, Desarrollamos una tienda en Shopify con un diseño limpio con navegación intuitiva, permitiendo a los clientes conocer el mensaje y asegurando una experiencia de compra rápida y eficiente.   ",
     old: false,
     oldImage: "/projects/ziggiz.png",
   },
@@ -190,7 +207,8 @@ const proyectos = [
     categoria: "Otros",
     img: "/projects/centraltoreopage.webp",
     url: "https://centraltoreo.com",
-    description: "Descripción del proyecto centraltoreo.com",
+    description:
+      "Oficinas administrativas, sector médico y general que deseaban mejorar su landing page con un diseño más moderno con una navegación más fluida. La nueva página se centró en mejorar la experiencia del usuario con una navegación más fluida, un diseño más atractivo y una estructura optimizada para destacar la oferta y mensaje, además integramos herramientas para facilitar el contacto y centralizar la gestión de correos.   ",
     old: true,
     oldImage: "/projects/central.png",
   },

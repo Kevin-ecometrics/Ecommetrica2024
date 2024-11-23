@@ -6,7 +6,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Configuración de la conexión a la base de datos
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -31,7 +30,6 @@ app.post("/api/saveData", (req, res) => {
   res.status(200).send("Email sent successfully");
 });
 
-// Nueva ruta para manejar la solicitud de asesorías
 app.post("/asesorias", (req, res) => {
   const { time, code, type } = req.body;
   const query = "INSERT INTO asesorias (time, code, type) VALUES ( ?, ?, ?)";
@@ -47,7 +45,6 @@ app.post("/asesorias", (req, res) => {
   });
 });
 
-// Nueva ruta para obtener las asesorías
 app.get("/asesorias", (req, res) => {
   const query = "SELECT * FROM asesorias";
   db.query(query, (err, results) => {
@@ -58,6 +55,19 @@ app.get("/asesorias", (req, res) => {
         .send({ message: "Error al obtener las asesorías" });
     }
     res.status(200).send(results);
+  });
+});
+
+app.post("/api/contact", (req, res) => {
+  const { name, email, message } = req.body;
+  const query = "INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)";
+  db.query(query, [name, email, message], (err, result) => {
+    if (err) {
+      console.error("Error saving contact to the database:", err);
+      return res.status(500).send({ message: "Error al guardar el contacto" });
+    }
+    console.log("Contacto guardado:", result);
+    res.status(200).send({ message: "Contacto guardado exitosamente" });
   });
 });
 
