@@ -15,8 +15,8 @@ function Navbar() {
     { href: "#skills", label: "Habilidades" },
     { href: "#service", label: "Servicio" },
     { href: "#team", label: "Equipo" },
-    { href: "#testimonial", label: "Testimonio" },
-    { href: "#blog", label: "Blog" },
+    // { href: "#testimonial", label: "Testimonio" },
+    // { href: "#blog", label: "Blog" },
     { href: "#contact", label: "Contacto" },
   ];
 

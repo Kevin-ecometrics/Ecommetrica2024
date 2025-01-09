@@ -9,6 +9,7 @@ function Calendar() {
     time: "",
     code: "",
     type: "",
+    email: "", // Nuevo campo de correo electrónico
   });
   const [showModal, setShowModal] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
@@ -18,7 +19,7 @@ function Calendar() {
 
   const fetchReservations = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/asesorias");
+      const response = await axios.get("https://ecommetrica.com/asesorias");
       setReservations(response.data);
     } catch (error) {
       console.error("Error al obtener las asesorías:", error);
@@ -110,7 +111,7 @@ function Calendar() {
       const [hours, minutes] = formData.time.split(":");
       dateTime.setHours(hours, minutes);
 
-      await axios.post("http://localhost:5000/asesorias", {
+      await axios.post("https://ecommetrica.com/asesorias", {
         ...formData,
         time: dateTime.toISOString(),
         date: selectedDate.toISOString().split("T")[0],
@@ -121,6 +122,7 @@ function Calendar() {
         time: "",
         code: "",
         type: "",
+        email: "", // Restablecer el campo de correo electrónico
       });
 
       await fetchReservations();
@@ -249,6 +251,18 @@ function Calendar() {
                 <p className="text-green-500 mt-2">{promoMessage}</p>
               )}
             </div>
+            <div>
+              <label className="block mb-1">Correo electrónico:</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="Ingresa tu correo electrónico"
+                className="w-full p-2 border border-gray-300 rounded-md"
+                required
+              />
+            </div>
             <button
               type="submit"
               className="bg-blue-500 text-white px-4 py-2 rounded-md"
@@ -275,6 +289,9 @@ function Calendar() {
             </p>
             <p className="mb-2">
               <strong>Tipo de asesoría:</strong> {formData.type}
+            </p>
+            <p className="mb-2">
+              <strong>Correo electrónico:</strong> {formData.email}
             </p>
             {promoMessage && (
               <p className="text-green-500 mt-2">{promoMessage}</p>

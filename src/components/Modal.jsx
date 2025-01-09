@@ -48,7 +48,7 @@ function Modal({ isOpen, onClose, onSubmit }) {
     setIsSubmitting(true);
 
     try {
-      await axios.post("http://localhost:5000/api/saveData", {
+      await axios.post("https://ecommetrica.com/api/saveData", {
         email,
         phone,
         businessType,

@@ -1,39 +1,67 @@
 const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2");
+const path = require("path");
+const indexPath = path.join(__dirname, "..", "index.html");
+const nodeMailer = require("nodemailer");
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname, "..")));
+
 const db = mysql.createConnection({
   host: "localhost",
-  user: "root",
-  password: "",
-  database: "ecommetrica",
-  port: 3306,
+  user: "srgenial_admin",
+  password: "wb_VEK(]]tD$",
+  database: "srgenial_ecommetrica",
 });
 
-db.connect((err) => {
-  if (err) {
-    console.error("Error connecting to the database:", err);
-    return;
+db.connect((error) => {
+  if (error) {
+    console.error("Error al conectar a la base de datos:", error);
+    process.exit(1); // Termina la aplicación si no se puede conectar a la base de datos
   }
-  console.log("Connected to the database");
+  console.log("Conexión a la base de datos exitosa");
+});
+
+let transporter = nodeMailer.createTransport({
+  host: "e-commetrics.com",
+  port: 465,
+  secure: true,
+  auth: {
+    user: "admin@e-commetrics.com",
+    pass: "Wain@Cushy26",
+  },
 });
 
 app.post("/api/saveData", (req, res) => {
   const { email, phone, businessType } = req.body;
-  console.log("Email:", email);
-  console.log("Phone:", phone);
-  console.log("Business Type:", businessType);
-  res.status(200).send("Email sent successfully");
+
+  if (!email || !phone || !businessType) {
+    return res
+      .status(400)
+      .send({ message: "Todos los campos son obligatorios" });
+  }
+
+  // Inserta los datos en la base de datos
+  const query =
+    "INSERT INTO business_contacts (email, phone, businessType) VALUES (?, ?, ?)";
+  db.query(query, [email, phone, businessType], (err, result) => {
+    if (err) {
+      console.error("Error saving data to the database:", err);
+      return res.status(500).send({ message: "Error al guardar los datos" });
+    }
+    res.status(200).send({ message: "Datos guardados correctamente" });
+  });
 });
 
 app.post("/asesorias", (req, res) => {
-  const { time, code, type } = req.body;
-  const query = "INSERT INTO asesorias (time, code, type) VALUES ( ?, ?, ?)";
-  db.query(query, [time, code, type], (err, result) => {
+  const { time, code, type, email } = req.body;
+  const query =
+    "INSERT INTO asesorias (time, code, type, email) VALUES (?, ?, ?, ?)";
+  db.query(query, [time, code, type, email], (err, result) => {
     if (err) {
       console.error("Error saving data to the database:", err);
       return res
@@ -41,7 +69,30 @@ app.post("/asesorias", (req, res) => {
         .send({ message: "Error al confirmar la asesoría" });
     }
     console.log("Asesoría guardada:", result);
-    res.status(200).send({ message: "Asesoría confirmada exitosamente" });
+
+    // Configuración del correo electrónico
+    const mailOptions = {
+      from: '"E-commetrics" <admin@e-commetrics.com>', // remitente
+      to: email, // destinatario
+      cc: "admin@e-commetrics.com", // copia del correo
+      subject: "Confirmación de Asesoría", // asunto
+      text: `Hola,\n\nGracias por solicitar una asesoría. Nos pondremos en contacto contigo pronto.\n\nSaludos,\nE-commetrics`, // cuerpo del correo en texto plano
+      html: `<p>Hola,</p><p>Gracias por solicitar una asesoría. Nos pondremos en contacto contigo pronto.</p><p>Saludos,<br>E-commetrics</p>`, // cuerpo del correo en HTML
+    };
+
+    // Envía el correo electrónico
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error("Error sending email:", error);
+        return res
+          .status(500)
+          .send({ message: "Error al enviar el correo electrónico" });
+      }
+      console.log("Email sent:", info.response);
+      res
+        .status(200)
+        .send({ message: "Asesoría confirmada exitosamente y correo enviado" });
+    });
   });
 });
 
@@ -60,17 +111,53 @@ app.get("/asesorias", (req, res) => {
 
 app.post("/api/contact", (req, res) => {
   const { name, email, message } = req.body;
+
+  if (!name || !email || !message) {
+    return res
+      .status(400)
+      .send({ message: "Todos los campos son obligatorios" });
+  }
+
+  // Inserta los datos en la base de datos
   const query = "INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)";
   db.query(query, [name, email, message], (err, result) => {
     if (err) {
-      console.error("Error saving contact to the database:", err);
+      console.error("Error saving data to the database:", err);
       return res.status(500).send({ message: "Error al guardar el contacto" });
     }
-    console.log("Contacto guardado:", result);
-    res.status(200).send({ message: "Contacto guardado exitosamente" });
+
+    // Configuración del correo electrónico
+    const mailOptions = {
+      from: '"E-commetrics" <admin@e-commetrics.com>', // remitente
+      to: email, // destinatario
+      cc: "admin@e-commetrics.com", // copia del correo
+      subject: "Confirmación de Contacto", // asunto
+      text: `Hola ${name},\n\nGracias por contactarnos. Hemos recibido tu mensaje:\n\n"${message}"\n\nNos pondremos en contacto contigo pronto.\n\nSaludos,\nE-commetrics`, // cuerpo del correo en texto plano
+      html: `<p>Hola ${name},</p><p>Gracias por contactarnos. Hemos recibido tu mensaje:</p><p>"${message}"</p><p>Nos pondremos en contacto contigo pronto.</p><p>Saludos,<br>E-commetrics</p>`, // cuerpo del correo en HTML
+    };
+
+    // Envía el correo electrónico
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error("Error sending email:", error);
+        return res
+          .status(500)
+          .send({ message: "Error al enviar el correo electrónico" });
+      }
+      console.log("Email sent:", info.response);
+      res
+        .status(200)
+        .send({ message: "Contacto guardado y correo enviado correctamente" });
+    });
   });
 });
 
-app.listen(5000, () => {
-  console.log("Server is running on port 5000");
+app.get("*", (req, res) => {
+  res.sendFile(indexPath);
+});
+
+// Iniciar el servidor
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
