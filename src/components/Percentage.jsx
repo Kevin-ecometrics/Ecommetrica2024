@@ -93,7 +93,9 @@ const Percentage = () => {
           </div>
           <div className="w-full bg-gray-200 rounded-full h-4">
             <div
-              className="bg-[#C2155C] h-4 rounded-full skill-bar"
+              className={`bg-[#C2155C] h-4 rounded-full skill-bar ${
+                skill.percentage > 0 ? "border border-black" : ""
+              } `}
               style={{ width: `${skill.percentage}%` }}
             />
           </div>

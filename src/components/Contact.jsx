@@ -98,9 +98,9 @@ function Contact() {
               <p className="text-[#861453] text-2xl font-bold">
                 <a
                   className="hover:underline"
-                  href="mailto:juanmanuel@e-commetrics.com"
+                  href="mailto:juanmanuel@ecommetrica.com"
                 >
-                  juanmanuel@e-commetrics.com
+                  juanmanuel@ecommetrica.com{" "}
                 </a>
               </p>
             </div>

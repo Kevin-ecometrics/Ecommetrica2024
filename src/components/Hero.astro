@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import Insta from "@components/icons/logo-instagram.astro";
-import Face from "@components/icons/logo-facebook.astro";
 import Twit from "@components/icons/logo-twitter.astro";
 import Mail from "@components/icons/Mail.astro";
 import Tags from "@components/Tags";
@@ -55,17 +54,17 @@ const words = ["Innova", "Eleva", "Simplifica"];
     </div>
     <div
       class="hidden
-            lg:flex
-            items-center
-            justify-center
-            absolute
-            bottom-0
-            right-20"
+              lg:flex
+              items-center
+              justify-center
+              absolute
+              bottom-0
+              right-20"
     >
       <Image
         src={HeroImage}
         alt="Hero"
-        class="flex justify-center items-center z-10"
+        class="flex justify-center items-center z-10 image-hover"
       />
     </div>
   </div>
@@ -122,5 +121,34 @@ const words = ["Innova", "Eleva", "Simplifica"];
         transform: translateY(20px);
       }
     }
+
+    .image-hover {
+      transition: transform 0.1s ease-in-out;
+    }
   </style>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const section = document.querySelector("#home");
+    const image = document.querySelector(".image-hover");
+
+    if (section && image) {
+      section.addEventListener("mousemove", (e) => {
+        const rect = section.getBoundingClientRect();
+        const x = (e as MouseEvent).clientX - rect.left;
+        const y = (e as MouseEvent).clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 40;
+        const rotateY = (x - centerX) / 40;
+        (image as HTMLElement).style.transform =
+          `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+
+      section.addEventListener("mouseleave", () => {
+        (image as HTMLElement).style.transform = "rotateX(0) rotateY(0)";
+      });
+    }
+  });
+</script>

@@ -95,7 +95,7 @@ function Navbar() {
               href={item.href}
               aria-label={item.label}
               className={`transition-colors ${textClass} duration-300 hover:text-blue-400 font-semibold ${
-                activeLink === item.href ? "text-[#C2155C]" : ""
+                activeLink === item.href ? "text-blue-500 font-bold" : ""
               }`}
             >
               {item.label}
@@ -144,8 +144,8 @@ function Navbar() {
                   key={item.href}
                   href={item.href}
                   aria-label={item.label}
-                  className={`block px-4 py-2 text-black hover:bg-gray-200 ${
-                    activeLink === item.href ? "text-blue-500" : ""
+                  className={`block py-2 text-black hover:bg-gray-200 ${
+                    activeLink === item.href ? "text-blue-500 font-bold" : ""
                   }`}
                   onClick={() => setMenuOpen(false)}
                 >
