@@ -4,7 +4,7 @@ import LogoInstagram from "@components/icons/InstagramFooter.astro";
 import LogoTwitter from "@components/icons/TwitterFooter.astro";
 import Footer from "@public/LogoAlternative.webp";
 import { Image } from "astro:assets";
-import Whatsapp from "./whatsapp";
+import Whatsapp from "@components/whatsapp";
 ---
 
 <Layout title="Soporte | Ecommetrica">
@@ -55,7 +55,6 @@ import Whatsapp from "./whatsapp";
     </div>
   </div>
   <Whatsapp client:load />
-
   <footer class="bg-[#3C3C3C] p-12 text-white relative overflow-x-hidden">
     <div
       class="flex md:flex-row flex-col md:justify-between md:items-center mb-16"
