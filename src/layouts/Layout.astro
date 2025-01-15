@@ -34,6 +34,17 @@ const isHomePage = URL.pathname === "/";
     <link rel="canonical" href={Astro.url} />
     <meta name="publisher" content="Ecommetrica" />
     <title>{title}</title>
+    <meta property="og:url" content="https://ecommetrica.com" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Ecommetrica - Innova - Eleva - Simplifica"
+    />
+    <meta
+      property="og:description"
+      content="Ecommetrica es una consultoria que garantiza una planeacion estrategica y segura con soluciones a la medida para tu negocio y comercio en linea. Creamos tu página web confiable, segura e innovadora y ademas desarrollamos tu ecosistema de marketing digital."
+    />
+    <meta property="og:image" content="https://ecommetrica.com/ogimage.png" />
     <ViewTransitions />
   </head>
   <body class="overflow-x-hidden">
