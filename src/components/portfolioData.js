@@ -221,24 +221,24 @@ const proyectos = [
     old: false,
     oldImage: "/old-proyectotijuana-claudionaranjo.webp",
   },
-  {
-    nombre: "tallerursuablanco.com",
-    categoria: "Otros",
-    img: "/projects/tallerpage.webp",
-    url: "https://tallerursuablanco.com",
-    description: "Descripción del proyecto tallerursuablanco.com",
-    old: false,
-    oldImage: "/old-tallerursuablanco.webp",
-  },
-  {
-    nombre: "ignaciozaragoza3.com",
-    categoria: "Otros",
-    img: "/projects/zaragozapage.webp",
-    url: "https://ignaciozaragoza3.com",
-    description: "Descripción del proyecto ignaciozaragoza3.com",
-    old: false,
-    oldImage: "/old-ignaciozaragoza.webp",
-  },
+  // {
+  //   nombre: "tallerursuablanco.com",
+  //   categoria: "Otros",
+  //   img: "/projects/tallerpage.webp",
+  //   url: "https://tallerursuablanco.com",
+  //   description: "Descripción del proyecto tallerursuablanco.com",
+  //   old: false,
+  //   oldImage: "/old-tallerursuablanco.webp",
+  // },
+  // {
+  //   nombre: "ignaciozaragoza3.com",
+  //   categoria: "Otros",
+  //   img: "/projects/zaragozapage.webp",
+  //   url: "https://ignaciozaragoza3.com",
+  //   description: "Descripción del proyecto ignaciozaragoza3.com",
+  //   old: false,
+  //   oldImage: "/old-ignaciozaragoza.webp",
+  // },
 ];
 
 export default proyectos;
