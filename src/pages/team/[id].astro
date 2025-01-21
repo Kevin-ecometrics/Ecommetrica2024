@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import teamMembers from "@components/team/TeamMembers";
+import VCF from "@components/team/VCF";
 
 export function getStaticPaths() {
   return [
@@ -133,5 +134,6 @@ const member = teamMembers.find((member) => {
         </ul>
       </div>
     </div>
+    <VCF member={member} client:visible />
   </section>
 </Layout>

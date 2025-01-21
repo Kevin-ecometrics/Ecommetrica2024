@@ -8,6 +8,8 @@ const teamMembers = [
     transition: "imagen1",
     description:
       " Kevin es versátil  para facilitar y agilizar procesos de  programación para que tu sitio web sea funcional y atractivo",
+    Phone: "664-642-9633",
+    Email: "juanmanuel@ecommetrics.com",
   },
   {
     id: 2,
@@ -17,7 +19,10 @@ const teamMembers = [
     role: "Editor & Copywriter ",
     transition: "imagen2",
     description:
-      "Karen es una creativa  que elevar la voz de tu proyecto para atraer clientes y maximizar su crecimiento",
+      "Karen es una creativa que elevar la voz de tu proyecto para atraer clientes y maximizar su crecimiento",
+      Phone: "664-642-9633",
+      Email: "juanmanuel@ecommetrics.com",
+      Address: "Calle: Ignacio Zaragoza #1234, Colonia: Centro, C.P. 22000, Tijuana, B.C.",
   },
   {
     id: 3,
@@ -28,6 +33,8 @@ const teamMembers = [
     transition: "imagen3",
     description:
       "Yaz es una experta en experiencia de usuario con diseños creativos que logran atraer y cumplir las metas de tu negocio",
+      Phone: "664-642-9633",
+      Email: "juanmanuel@ecommetrics.com",
   },
   {
     id: 4,
@@ -38,6 +45,8 @@ const teamMembers = [
     transition: "imagen4",
     description:
       "Juan es experto en SEO, optimiza el posicionamiento y el cosistema digital para que tu negocio crezca ",
+      Phone: "664-642-9633",
+      Email: "juanmanuel@ecommetrics.com",
   },
 ];
 

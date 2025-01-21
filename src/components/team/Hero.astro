@@ -20,14 +20,14 @@ const { team } = Astro.props;
               class="px-4 relative h-48 transform transition-all duration-500 hover:h-64
             rounded-3xl bg-[#861453] w-64"
             >
-              {/* <a href={`/team/${member.name}`}> */}
-              <img
-                src={member.image}
-                alt={member.name}
-                transition:name={member.transition}
-                class="absolute bottom-0 left-0 right-0 w-full rounded-3xl "
-              />
-              {/* </a> */}
+              <a href={`/team/${member.name}`}>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  transition:name={member.transition}
+                  class="absolute bottom-0 left-0 right-0 w-full rounded-3xl "
+                />
+              </a>
             </div>
             <div class="py-4 text-center">
               <h2
