@@ -66,7 +66,7 @@ const member = teamMembers.find((member) => {
         <span class="text-[#861453] font-semibold">{member.role}</span>
       </div>
       <div class="text-lg">
-        <strong>Habilidades principales:</strong>
+        <strong>Habilidades:</strong>
         <span class="text-[#861453] font-semibold">{member.skills}</span>
       </div>
       <div class="text-lg">
@@ -90,49 +90,48 @@ const member = teamMembers.find((member) => {
       <div>
         <h2 class="font-bold text-lg mb-2">Proyectos Recientes</h2>
         <ul class="list-disc list-inside">
-          <li class="text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-          <li class="text-justify">
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </li>
-          <li class="text-justify">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
-          </li>
+          {member.proyecto && <li class="text-justify">{member.proyecto}</li>}
+          {member.proyecto2 && <li class="text-justify">{member.proyecto2}</li>}
+          {member.proyecto3 && <li class="text-justify">{member.proyecto3}</li>}
         </ul>
       </div>
       <div>
-        <h2 class="font-bold text-lg mb-2">Certificaciones</h2>
+        <h2 class="font-bold text-lg mb-2">Educación</h2>
         <ul class="list-disc list-inside">
-          <li class="text-justify">Certified Professional in Lorem Ipsum</li>
-          <li class="text-justify">Advanced Dolor Sit Amet Certification</li>
-          <li class="text-justify">Eiusmod Tempor Incididunt Certification</li>
+          {member.edu && <li class="text-justify">{member.edu}</li>}
+          {member.edu2 && <li class="text-justify">{member.edu2}</li>}
         </ul>
       </div>
       <div>
         <h2 class="font-bold text-lg mb-2">Testimonios</h2>
-        <blockquote
-          class="border-l-4 border-[#861453] pl-4 italic text-justify"
-        >
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          posuere erat a ante."
-        </blockquote>
-        <blockquote
-          class="border-l-4 border-[#861453] pl-4 italic text-justify mt-4"
-        >
-          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam."
-        </blockquote>
+        {
+          member.testimonio && (
+            <blockquote class="border-l-4 border-[#861453] pl-4 italic text-justify">
+              {member.testimonio}
+            </blockquote>
+          )
+        }
+        {
+          member.testimonio2 && (
+            <blockquote class="border-l-4 border-[#861453] pl-4 italic text-justify mt-4">
+              {member.testimonio2}
+            </blockquote>
+          )
+        }
       </div>
+      {
+        /*
       <div>
+
         <h2 class="font-bold text-lg mb-2">Publicaciones</h2>
         <ul class="list-disc list-inside">
-          <li class="text-justify">Lorem Ipsum: Dolor Sit Amet</li>
-          <li class="text-justify">Consectetur Adipiscing Elit</li>
-          <li class="text-justify">Eiusmod Tempor Incididunt</li>
+          <li class="text-justify">{member.publi}</li>
+          <li class="text-justify">{member.publi2}</li>
+          <li class="text-justify">{member.publi3}</li>
         </ul>
       </div>
+      */
+      }
     </div>
     <VCF member={member} client:visible />
   </section>

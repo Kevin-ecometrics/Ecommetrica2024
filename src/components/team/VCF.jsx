@@ -9,11 +9,13 @@ const VCF = ({ member }) => {
     const vcfContent = `BEGIN:VCARD
 VERSION:3.0
 FN:${member.fullName}
-IMG:${member.image}
 N:${member.name}
-TEL:${member.Phone}
-EMAIL:${member.Email}
-ADDRESS:${member.Address}
+ORG:E-commetrica
+URL:https://ecommetrica.com
+TEL;TYPE=WORK,VOICE:6646429633
+ADR;TYPE=WORK,PREF:;;8169-306 Ignacio Zaragoza, Zona Centro, Tijuana BC, 22000.
+EMAIL;INTERNET;WORK:juanmanuel@e-commetrics.com
+NOTE:Somos una consultoría que garantiza una planeación estratégica y segura con soluciones a la medida para tu negocio y comercio en línea
 END:VCARD`;
 
     const blob = new Blob([vcfContent], { type: "text/vcard" });
