@@ -93,34 +93,38 @@ const member = teamMembers.find((member) => {
           {member.proyecto && <li class="text-justify">{member.proyecto}</li>}
           {member.proyecto2 && <li class="text-justify">{member.proyecto2}</li>}
           {member.proyecto3 && <li class="text-justify">{member.proyecto3}</li>}
+          {member.proyecto4 && <li class="text-justify">{member.proyecto4}</li>}
+          {member.proyecto5 && <li class="text-justify">{member.proyecto5}</li>}
+          {member.proyecto6 && <li class="text-justify">{member.proyecto6}</li>}
+          {member.proyecto7 && <li class="text-justify">{member.proyecto7}</li>}
+          {member.proyecto8 && <li class="text-justify">{member.proyecto8}</li>}
         </ul>
-      </div>
-      <div>
-        <h2 class="font-bold text-lg mb-2">Educación</h2>
-        <ul class="list-disc list-inside">
-          {member.edu && <li class="text-justify">{member.edu}</li>}
-          {member.edu2 && <li class="text-justify">{member.edu2}</li>}
-        </ul>
-      </div>
-      <div>
-        <h2 class="font-bold text-lg mb-2">Testimonios</h2>
+        <div>
+          <h2 class="font-bold text-lg mb-2">Educación</h2>
+          <ul class="list-disc list-inside">
+            {member.edu && <li class="text-justify">{member.edu}</li>}
+            {member.edu2 && <li class="text-justify">{member.edu2}</li>}
+          </ul>
+        </div>
+        <div>
+          <h2 class="font-bold text-lg mb-2">Testimonios</h2>
+          {
+            member.testimonio && (
+              <blockquote class="border-l-4 border-[#861453] pl-4 italic text-justify">
+                {member.testimonio}
+              </blockquote>
+            )
+          }
+          {
+            member.testimonio2 && (
+              <blockquote class="border-l-4 border-[#861453] pl-4 italic text-justify mt-4">
+                {member.testimonio2}
+              </blockquote>
+            )
+          }
+        </div>
         {
-          member.testimonio && (
-            <blockquote class="border-l-4 border-[#861453] pl-4 italic text-justify">
-              {member.testimonio}
-            </blockquote>
-          )
-        }
-        {
-          member.testimonio2 && (
-            <blockquote class="border-l-4 border-[#861453] pl-4 italic text-justify mt-4">
-              {member.testimonio2}
-            </blockquote>
-          )
-        }
-      </div>
-      {
-        /*
+          /*
       <div>
 
         <h2 class="font-bold text-lg mb-2">Publicaciones</h2>
@@ -131,7 +135,8 @@ const member = teamMembers.find((member) => {
         </ul>
       </div>
       */
-      }
+        }
+      </div>
     </div>
     <VCF member={member} client:visible />
   </section>
