@@ -3,7 +3,7 @@ import Navbar from "@components/Navbar";
 import Footer from "@public/LogoAlternative.webp";
 import LogoInstagram from "@components/icons/InstagramFooter.astro";
 import LogoTwitter from "@components/icons/TwitterFooter.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import "@fontsource-variable/montserrat";
 import { Image } from "astro:assets";
 
@@ -45,7 +45,7 @@ const isHomePage = URL.pathname === "/";
       content="Ecommetrica es una consultoria que garantiza una planeacion estrategica y segura con soluciones a la medida para tu negocio y comercio en linea. Creamos tu página web confiable, segura e innovadora y ademas desarrollamos tu ecosistema de marketing digital."
     />
     <meta property="og:image" content="https://ecommetrica.com/ogimage.png" />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="overflow-x-hidden">
     {isHomePage && <Navbar client:load />}
