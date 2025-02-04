@@ -100,31 +100,33 @@ const PricingWizard = () => {
               </p>
               {/* <p className="text-gray-500 text-xs">Facturación anual</p> */}
             </div>
-
-            <div
-              className={`w-full bg-gradient-to-r text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 ${
-                selectedItems[Phases[currentPhase].type]?.id === item.id
-                  ? "from-purple-600 to-[#861453] scale-100 shadow-xl"
-                  : "from-[#861453] to-purple-600"
-              }`}
-            >
-              <svg
-                className="w-5 h-5 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            <a href="/api/calendar">
+              <div
+                className={`w-full bg-gradient-to-r text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 ${
+                  selectedItems[Phases[currentPhase].type]?.id === item.id
+                    ? "from-purple-600 to-[#861453] scale-100 shadow-xl"
+                    : "from-[#861453] to-purple-600"
+                }`}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-              {selectedItems[Phases[currentPhase].type]?.id === item.id
-                ? "Seleccionado"
-                : "Seleccionar"}
-            </div>
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+
+                {selectedItems[Phases[currentPhase].type]?.id === item.id
+                  ? "Seleccionado"
+                  : "Seleccionar"}
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -134,7 +136,7 @@ const PricingWizard = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       {/* Barra de progreso */}
-      <div className="max-w-6xl mx-auto mb-8">
+      {/* <div className="max-w-6xl mx-auto mb-8">
         <div className="flex justify-between">
           {Phases.map((phase, index) => (
             <div key={phase.id} className="w-1/4 text-center">
@@ -155,7 +157,7 @@ const PricingWizard = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Contenido de la fase actual */}
       <div className="max-w-7xl mx-auto">
@@ -175,7 +177,7 @@ const PricingWizard = () => {
         </div>
 
         {/* Navegación */}
-        <div className="flex justify-between mt-12">
+        {/* <div className="flex justify-between mt-12">
           <button
             onClick={handleBack}
             disabled={currentPhase === 0}
@@ -217,11 +219,11 @@ const PricingWizard = () => {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Modal de resumen */}
-      {showSummary && (
+      {/* {showSummary && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4">
           <div className="bg-white rounded-xl max-w-2xl w-full  p-8">
             <h2 className="text-3xl font-bold text-[#861453] mb-6">
@@ -277,7 +279,7 @@ const PricingWizard = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

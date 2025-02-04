@@ -6,7 +6,7 @@ import Skills from "@components/Skills.astro";
 import Portfolio from "@components/Portfolio";
 import Service from "@components/Service.astro";
 import Certification from "@components/Certification.astro";
-import Package from "@components/Package.astro";
+import Package from "@components/package/Hero";
 import Testimonial from "@components/Testimonial";
 import Blog from "@components/Blog.astro";
 import Consulting from "@components/Consulting.astro";
@@ -23,7 +23,7 @@ import teamMembers from "@components/team/TeamMembers";
   <Service />
   <!-- <Certification /> -->
   <Team team={teamMembers} />
-  <Package />
+  <Package client:visible />
   <!-- <Testimonial client:visible /> -->
   <!-- <Blog /> -->
   <Consulting />
