@@ -136,7 +136,7 @@ const PricingWizard = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       {/* Barra de progreso */}
-      {/* <div className="max-w-6xl mx-auto mb-8">
+      <div className="max-w-6xl mx-auto mb-8">
         <div className="flex justify-between">
           {Phases.map((phase, index) => (
             <div key={phase.id} className="w-1/4 text-center">
@@ -157,7 +157,7 @@ const PricingWizard = () => {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
 
       {/* Contenido de la fase actual */}
       <div className="max-w-7xl mx-auto">
@@ -177,7 +177,7 @@ const PricingWizard = () => {
         </div>
 
         {/* Navegación */}
-        {/* <div className="flex justify-between mt-12">
+        <div className="flex justify-between mt-12">
           <button
             onClick={handleBack}
             disabled={currentPhase === 0}
@@ -219,11 +219,11 @@ const PricingWizard = () => {
               />
             </svg>
           </button>
-        </div> */}
+        </div>
       </div>
 
       {/* Modal de resumen */}
-      {/* {showSummary && (
+      {showSummary && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4">
           <div className="bg-white rounded-xl max-w-2xl w-full  p-8">
             <h2 className="text-3xl font-bold text-[#861453] mb-6">
@@ -279,7 +279,7 @@ const PricingWizard = () => {
             </div>
           </div>
         </div>
-      )} */}
+      )}
     </div>
   );
 };
