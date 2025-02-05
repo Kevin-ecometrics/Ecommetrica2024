@@ -15,13 +15,13 @@ function Navbar({ URL }) {
   const year = new Date().getFullYear();
   const navItems = [
     { href: "#home", label: t("nav.home") },
-    { href: "#about", label: "Acerca de" },
-    { href: "#skills", label: "Habilidades" },
-    { href: "#service", label: "Servicio" },
-    { href: "#team", label: "Equipo" },
+    { href: "#about", label: t("nav.about") },
+    { href: "#skills", label: t("nav.skills") },
+    { href: "#service", label: t("nav.service") },
+    { href: "#team", label: t("nav.team") },
     // { href: "#testimonial", label: "Testimonio" },
     // { href: "#blog", label: "Blog" },
-    { href: "#contact", label: "Contacto" },
+    { href: "#contact", label: t("nav.contact") },
   ];
 
   useEffect(() => {

@@ -9,6 +9,8 @@ export function getStaticPaths() {
     { params: { id: "Karen" } },
     { params: { id: "Yaz" } },
     { params: { id: "Kevin" } },
+    { params: { id: "Jesus" } },
+    { params: { id: "Carlos" } },
   ];
 }
 
@@ -20,6 +22,8 @@ const member = teamMembers.find((member) => {
     Karen: 2,
     Yaz: 3,
     Juan: 4,
+    Jesus: 5,
+    Carlos: 6,
   };
   return member.id === memberMap[id];
 });

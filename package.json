@@ -10,21 +10,24 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/preact": "^4.0.4",
     "@astrojs/react": "^4.2.0",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^6.0.0",
     "@fontsource-variable/montserrat": "^5.0.20",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
-    "astro": "^5.2.1",
+    "astro": "^5.2.5",
     "astro-robots-txt": "^1.0.0",
     "axios": "^1.7.7",
     "framer-motion": "^11.3.30",
+    "preact": "^10.25.4",
     "react": "^18.3.1",
     "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.3.1",
     "react-floating-whatsapp": "^5.0.8",
     "react-hot-toast": "^2.4.1",
-    "react-icons": "^5.4.0"
+    "react-icons": "^5.4.0",
+    "swiper": "^11.2.2"
   }
 }

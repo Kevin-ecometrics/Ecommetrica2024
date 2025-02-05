@@ -13,6 +13,8 @@ import Consulting from "@components/Consulting.astro";
 import Contact from "@components/Contact";
 import Team from "@components/team/Hero.astro";
 import teamMembers from "@components/team/TeamMembers";
+
+const URL = Astro.url;
 ---
 
 <Layout title="Ecommetrica - Innova - Eleva - Simplifica">
@@ -24,7 +26,7 @@ import teamMembers from "@components/team/TeamMembers";
   <!-- <Certification /> -->
   <Team team={teamMembers} />
   <Package client:visible />
-  <!-- <Testimonial client:visible /> -->
+  <Testimonial client:visible />
   <!-- <Blog /> -->
   <Consulting />
   <Contact client:visible />
