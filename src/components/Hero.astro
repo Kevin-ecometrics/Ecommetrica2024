@@ -5,14 +5,17 @@ import Twit from "@components/icons/logo-twitter.astro";
 import Mail from "@components/icons/Mail.astro";
 import Tags from "@components/Tags";
 import HeroImage from "@public/JuanHero2.webp";
-
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 const words = ["Innova", "Eleva", "Simplifica"];
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="home" class="relative bg-cover bg-center bg-[#33244C]">
   <div class="flex justify-between items-center px-16 h-screen">
     <div class="flex flex-col text-white">
-      <h1 class="font-bold text-2xl mb-8">Hola, somos</h1>
+      <h1 class="font-bold text-2xl mb-8">{t("hero.title")}</h1>
       <img src="/logocompleto.webp" alt="logo" title="logo" class="mb-4" />
       <span class="text-5xl font-bold mb-8">
         <Tags client:visible tags={words} />

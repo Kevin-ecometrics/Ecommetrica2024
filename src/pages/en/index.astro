@@ -1,0 +1,31 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+import About from "@components/About.astro";
+import Skills from "@components/Skills.astro";
+import Portfolio from "@components/Portfolio";
+import Service from "@components/Service.astro";
+import Certification from "@components/Certification.astro";
+import Package from "@components/Packages";
+import Testimonial from "@components/Testimonial";
+import Blog from "@components/Blog.astro";
+import Consulting from "@components/Consulting.astro";
+import Contact from "@components/Contact";
+import Team from "@components/team/Hero.astro";
+import teamMembers from "@components/team/TeamMembers";
+---
+
+<Layout title="Ecommetrica - Innova - Eleva - Simplifica">
+  <Hero />
+  <About />
+  <Skills />
+  <Portfolio client:visible />
+  <Service />
+  <!-- <Certification /> -->
+  <Team team={teamMembers} />
+  <Package client:visible />
+  <!-- <Testimonial client:visible /> -->
+  <!-- <Blog /> -->
+  <Consulting />
+  <Contact client:visible />
+</Layout>

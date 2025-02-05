@@ -8,4 +8,11 @@ import robotsTxt from "astro-robots-txt";
 export default defineConfig({
   site: "https://ecometrica.com",
   integrations: [tailwind(), react(), sitemap(), robotsTxt()],
+  i18n: {
+    locales: ["es", "en"],
+    defaultLocale: "es",
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });

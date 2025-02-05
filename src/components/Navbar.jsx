@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-function Navbar() {
+function Navbar({ URL }) {
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
+
   const [activeLink, setActiveLink] = useState("");
   const [textClass, setTextClass] = useState("text-white");
   const [bgClass, setBgClass] = useState("bg-transparent");
@@ -10,7 +14,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const year = new Date().getFullYear();
   const navItems = [
-    { href: "#home", label: "Inicio" },
+    { href: "#home", label: t("nav.home") },
     { href: "#about", label: "Acerca de" },
     { href: "#skills", label: "Habilidades" },
     { href: "#service", label: "Servicio" },
@@ -101,6 +105,26 @@ function Navbar() {
               {item.label}
             </a>
           ))}
+          <a
+            onClick={() => (window.location.pathname = "/")}
+            className={`px-4 py-0 rounded-lg transition-colors duration-300 cursor-pointer ${
+              URL.pathname === "/"
+                ? "bg-blue-600 text-white"
+                : "bg-gray-200 text-black"
+            }`}
+          >
+            Español
+          </a>
+          <a
+            onClick={() => (window.location.pathname = "/en")}
+            className={`px-4 py-0 rounded-lg transition-colors duration-300 cursor-pointer ${
+              URL.pathname === "/en"
+                ? "bg-blue-600 text-white"
+                : "bg-gray-200 text-black"
+            }`}
+          >
+            English
+          </a>
         </div>
       </div>
       <AnimatePresence mode="popLayout">

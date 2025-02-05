@@ -6,6 +6,7 @@ import LogoTwitter from "@components/icons/TwitterFooter.astro";
 import { ClientRouter } from "astro:transitions";
 import "@fontsource-variable/montserrat";
 import { Image } from "astro:assets";
+import { getLangFromUrl } from "src/i18n/utils";
 
 interface Props {
   title: string;
@@ -14,11 +15,12 @@ interface Props {
 const { title } = Astro.props;
 
 const URL = Astro.url;
-const isHomePage = URL.pathname === "/";
+const isHomePage = URL.pathname === "/" || URL.pathname === "/en";
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -48,7 +50,7 @@ const isHomePage = URL.pathname === "/";
     <ClientRouter />
   </head>
   <body class="overflow-x-hidden">
-    {isHomePage && <Navbar client:load />}
+    {isHomePage && <Navbar client:load URL={URL} />}
     <slot />
     {
       isHomePage && (
