@@ -13,6 +13,7 @@ export function getStaticPaths() {
   ];
 }
 const { id } = Astro.params;
+const URL = Astro.url;
 const teamMembers = [
   {
     id: 1,
@@ -290,6 +291,6 @@ const member = teamMembers.find((member) => {
         }
       </div>
     </div>
-    <VCF member={member} client:visible />
+    <VCF member={member} client:visible URL={URL} />
   </section>
 </Layout>

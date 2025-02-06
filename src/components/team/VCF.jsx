@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-const VCF = ({ member }) => {
+const VCF = ({ member, URL }) => {
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
   const [isDownloading, setIsDownloading] = useState(false);
 
   const downloadVCF = () => {
@@ -38,7 +41,7 @@ END:VCARD`;
         className="bg-transparent border border-[#861453] font-semibold px-4 py-2 rounded-lg"
         disabled={isDownloading} // Deshabilitar el botón mientras se descarga
       >
-        {isDownloading ? "Descargando..." : "Descargar Contacto"}
+        {isDownloading ? t("VCF.title") : t("VCF.subtitle")}
       </button>
     </div>
   );
