@@ -6,16 +6,16 @@ import Footer from "@public/LogoAlternative.webp";
 import { Image } from "astro:assets";
 ---
 
-<Layout title="Términos y Condiciones | Ecommetrica">
+<Layout title="Terms and Conditions | Ecommetrica">
   <div
     class="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg mt-12 md:h-screen"
   >
     <div class="mb-6">
       <a
-        href="/"
+        href="/en"
         class="text-blue-600 hover:text-blue-800 font-semibold flex items-center"
       >
-        &larr; Volver a la página principal
+        &larr; Back to the main page
       </a>
     </div>
     <div class="text-center mb-8">
@@ -24,27 +24,26 @@ import { Image } from "astro:assets";
         alt="Ecommetrica Logo"
         class="mx-auto mb-4 w-32"
       />
-      <h1 class="text-3xl font-bold text-gray-900">Términos y Condiciones</h1>
+      <h1 class="text-3xl font-bold text-gray-900">Terms and Conditions</h1>
     </div>
     <div class="text-lg text-gray-700 space-y-6">
       <p>
-        La página de <a
+        The <a
           href="https://ecommetrica.com/"
           target="_blank"
           class="text-blue-600 hover:underline">ecommetrica.com</a
-        > contiene el contacto directo con nuestro personal de atención al cliente.
-        Todas las consultas realizadas en la página son directas a nuestro equipo
-        de soporte. Las consultas son respondidas por correo electrónico y deberán
-        ser atendidas por el cliente en el periodo de 48hrs a 24hrs después de la
-        consulta. Consultas no respondidas podrán ser consideradas como resueltas
-        por el cliente.
+        > page provides direct contact with our customer service team. All inquiries
+        made on the page are sent directly to our support team. Inquiries are responded
+        to via email and must be addressed by the customer within 48 to 24 hours
+        after the inquiry. Unanswered inquiries may be considered resolved by the
+        customer.
       </p>
       <p>
-        Toda situación que se presente por cambio o devolución deberán ser
-        notificado por correo electrónico a <a
+        Any situation involving changes or returns must be notified via email to
+        <a
           href="mailto:juanmanuel@ecommetrica.com"
           class="text-blue-600 hover:underline">juanmanuel@ecommetrica.com</a
-        > enviando descripción del problema o razón de la devolución.
+        >, including a description of the issue or reason for the return.
       </p>
     </div>
   </div>
@@ -53,12 +52,12 @@ import { Image } from "astro:assets";
       class="flex md:flex-row flex-col md:justify-between md:items-center mb-16"
     >
       <div class="mb-8 md:mb-24">
-        <a href="/">
+        <a href="/en">
           <Image src={Footer} alt="Logo" class="w-64" />
         </a>
       </div>
       <div class="flex space-x-4 items-center">
-        <h1 class="font-bold">Siguenos</h1>
+        <h1 class="font-bold">Follow Us</h1>
         <a
           href="https://twitter.com/SrGenial"
           class="text-[#861453] bg-[#D9D9D9] rounded-full px-4 py-4"
@@ -78,7 +77,7 @@ import { Image } from "astro:assets";
     <div class="flex flex-col md:flex-row md:justify-between">
       <div class="mb-8 md:mb-0">
         <h1 class="text-[#D9D9D9]">
-          Esta página web fue simplificada, innovada y elevada por{" "}
+          This website was simplified, innovated, and elevated by{" "}
           <a
             href="https://ecommetrica.com/"
             target="_blank"
@@ -91,16 +90,16 @@ import { Image } from "astro:assets";
       </div>
       <div class="md:space-x-2 flex flex-col md:flex-row gap-4">
         <a
-          href="/politicas"
+          href="/en/politicas"
           class="relative font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-[#D9D9D9]"
         >
-          Política de privacidad
+          Privacy Policy
         </a>
         <a
-          href="/soporte"
+          href="/en/soporte"
           class="relative font-bold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-current after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 text-[#D9D9D9]"
         >
-          Soporte
+          Support
         </a>
       </div>
     </div>
