@@ -186,7 +186,7 @@ export default function PackagesPage({ URL }) {
                 </span>
               </p>
             </div>
-            <a href="/api/calendar">
+            <a href={t("calendar.api")}>
               <div
                 className={`w-full bg-gradient-to-r text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 ${
                   selectedItems[item.id]

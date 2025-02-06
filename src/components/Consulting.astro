@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+const URL = Astro.url;
+const lang = getLangFromUrl(URL);
+const t = useTranslations(lang);
+
 let consultings = [
   {
     src: "/programacion.webp",
@@ -25,11 +30,6 @@ let consultings = [
     background: "bg-gradient-to-t from-[#9747FF] to-[#9747FF]",
   },
 ];
-
-import { getLangFromUrl, useTranslations } from "src/i18n/utils";
-const URL = Astro.url;
-const lang = getLangFromUrl(URL);
-const t = useTranslations(lang);
 ---
 
 <section

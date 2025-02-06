@@ -1,19 +1,18 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Hero from "@components/Hero.astro";
-import About from "@components/About.astro";
-import Skills from "@components/Skills.astro";
-import Portfolio from "@components/Portfolio";
-import Service from "@components/Service.astro";
-import Certification from "@components/Certification.astro";
-import Package from "@components/Packages";
-import Testimonial from "@components/Testimonial";
-import Blog from "@components/Blog.astro";
-import Consulting from "@components/Consulting.astro";
-import Contact from "@components/Contact";
-import Team from "@components/team/Hero.astro";
-const URL = Astro.url;
+import VCF from "@components/team/VCF";
 
+export function getStaticPaths() {
+  return [
+    { params: { id: "Juan" } },
+    { params: { id: "Karen" } },
+    { params: { id: "Yaz" } },
+    { params: { id: "Kevin" } },
+    { params: { id: "Jesus" } },
+    { params: { id: "Carlos" } },
+  ];
+}
+const { id } = Astro.params;
 const teamMembers = [
   {
     id: 1,
@@ -164,19 +163,133 @@ const teamMembers = [
       "Juan is an expert in SEO, optimizing positioning and the digital ecosystem to grow your business.",
   },
 ];
+const member = teamMembers.find((member) => {
+  const memberMap = {
+    Kevin: 1,
+    Karen: 2,
+    Yaz: 3,
+    Juan: 4,
+    Jesus: 5,
+    Carlos: 6,
+  };
+  return member.id === memberMap[id];
+});
 ---
 
-<Layout title="Ecommetrica - Innova - Eleva - Simplifica">
-  <Hero />
-  <About />
-  <Skills />
-  <Portfolio client:visible URL={URL} />
-  <Service />
-  <!-- <Certification /> -->
-  <Team team={teamMembers} />
-  <Package client:visible URL={URL} />
-  <!-- <Testimonial client:visible /> -->
-  <!-- <Blog /> -->
-  <Consulting />
-  <Contact URL={URL} client:visible />
+<Layout title={`Team - ${id}`}>
+  <section
+    class="container mx-auto p-4 grid grid-cols-1 md:grid-cols-3 px-8 gap-8"
+  >
+    <div class="md:col-span-3 mb-4 hidden md:block">
+      <a
+        href="javascript:history.back()"
+        class="flex items-center text-[#861453] hover:text-[#861453]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Volver
+      </a>
+    </div>
+    <div
+      class="col-span-1 flex flex-col items-center space-y-4 border-2 border-[#861453] p-4 rounded-lg shadow-md"
+    >
+      <img
+        src={member.image}
+        transition:name={member.transition}
+        class="h-80 w-80 object-cover rounded-full shadow-lg border-2 border-[#861453]"
+      />
+      <h1 class="text-3xl font-bold text-center text-[#861453]">
+        {member.fullName}
+      </h1>
+      <div class="text-lg">
+        <strong>Work Station:</strong>
+        <span class="text-[#861453] font-semibold">{member.role}</span>
+      </div>
+      <div class="text-lg">
+        <strong>Skills:</strong>
+        <span class="text-[#861453] font-semibold">{member.skills}</span>
+      </div>
+      <div class="text-lg">
+        <strong>Experience:</strong>
+        <span class="text-[#861453] font-semibold">{member.experience}</span>
+      </div>
+      <div class="text-lg">
+        <strong>Education:</strong>
+        <span class="text-[#861453] font-semibold">{member.education}</span>
+      </div>
+      <div class="text-lg">
+        <strong>Contact:</strong>
+        <span class="text-[#861453] font-semibold">{member.contact}</span>
+      </div>
+    </div>
+    <div class="col-span-2 space-y-8">
+      {
+        member.bio && (
+          <div>
+            <h2 class="font-bold text-lg mb-2">About {member.fullName}</h2>
+            <p class="text-justify">{member.bio}</p>
+          </div>
+        )
+      }
+      <div>
+        <h2 class="font-bold text-lg mb-2">Recent Projects</h2>
+        <ul class="list-disc list-inside">
+          {member.proyecto && <li class="text-justify">{member.proyecto}</li>}
+          {member.proyecto2 && <li class="text-justify">{member.proyecto2}</li>}
+          {member.proyecto3 && <li class="text-justify">{member.proyecto3}</li>}
+          {member.proyecto4 && <li class="text-justify">{member.proyecto4}</li>}
+          {member.proyecto5 && <li class="text-justify">{member.proyecto5}</li>}
+        </ul>
+        <div>
+          <h2 class="font-bold text-lg mb-2">Education</h2>
+          <ul class="list-disc list-inside">
+            {member.edu && <li class="text-justify">{member.edu}</li>}
+            {member.edu2 && <li class="text-justify">{member.edu2}</li>}
+          </ul>
+        </div>
+        <daiv>
+          <h2 class="font-bold text-lg mb-2">Testimonies</h2>
+          {
+            member.testimonio && (
+              <blockquote class="border-l-4 border-[#861453] pl-4 italic text-justify">
+                {member.testimonio}
+              </blockquote>
+            )
+          }
+          {
+            member.testimonio2 && (
+              <blockquote class="border-l-4 border-[#861453] pl-4 italic text-justify mt-4">
+                {member.testimonio2}
+              </blockquote>
+            )
+          }
+        </daiv>
+        {
+          /*
+      <div>
+
+        <h2 class="font-bold text-lg mb-2">Publicaciones</h2>
+        <ul class="list-disc list-inside">
+          <li class="text-justify">{member.publi}</li>
+          <li class="text-justify">{member.publi2}</li>
+          <li class="text-justify">{member.publi3}</li>
+        </ul>
+      </div>
+      */
+        }
+      </div>
+    </div>
+    <VCF member={member} client:visible />
+  </section>
 </Layout>

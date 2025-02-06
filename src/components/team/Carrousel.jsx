@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
 // Carrusel para escritorio
-export function DesktopCarousel({ team }) {
+export function DesktopCarousel({ team, URL }) {
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
+  const teamMember = t("team");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState("right");
 
@@ -104,7 +108,8 @@ export function DesktopCarousel({ team }) {
                     className="px-4 relative h-48 transform transition-all duration-500 hover:h-64 rounded-3xl bg-[#861453] w-64"
                     whileHover={{ scale: 1.05 }}
                   >
-                    <a href={`/team/${member.name}`}>
+                    <a href={`${teamMember}${team[currentIndex].name}`}>
+                      {" "}
                       <img
                         src={member.image}
                         alt={member.name}
@@ -163,10 +168,12 @@ export function DesktopCarousel({ team }) {
 }
 
 // Carrusel para móvil
-export function MobileCarousel({ team }) {
+export function MobileCarousel({ team, URL }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState("right");
-
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
+  const teamMember = t("team");
   const nextSlide = () => {
     setDirection("right");
     setCurrentIndex((prev) => (prev + 1 >= team.length ? 0 : prev + 1));
@@ -250,7 +257,7 @@ export function MobileCarousel({ team }) {
                   className="px-4 relative h-48 transform transition-all duration-500 hover:h-64 rounded-3xl bg-[#861453] w-64"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <a href={`/team/${team[currentIndex].name}`}>
+                  <a href={`${teamMember}${team[currentIndex].name}`}>
                     <img
                       src={team[currentIndex].image}
                       alt={team[currentIndex].name}
@@ -306,11 +313,11 @@ export function MobileCarousel({ team }) {
 }
 
 // Componente principal
-export default function Carrousel({ team }) {
+export default function Carrousel({ team, URL }) {
   return (
     <>
-      <DesktopCarousel team={team} />
-      <MobileCarousel team={team} />
+      <DesktopCarousel team={team} URL={URL} />
+      <MobileCarousel team={team} URL={URL} />
     </>
   );
 }

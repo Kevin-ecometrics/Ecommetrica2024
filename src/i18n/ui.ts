@@ -277,6 +277,11 @@ export const ui = {
 "projectmodal.currentwebpage": "Ver Sitio Web",
 "projectmodal.close": "Cerrar",
 "projectmodal.image": "Ver imagen",
+"calendar.api" : "/api/calendar",
+"team" : "/team/",
+"hero.hello" : "¡Hola!",
+"hero.team" : "Conoce al Equipo"
+
 
 
 
@@ -555,7 +560,14 @@ export const ui = {
 "projectmodal.oldwebpage": "Previous Website",
 "projectmodal.currentwebpage": "View Website",
 "projectmodal.close": "Close",
-"projectmodal.image": "View Image"
+"projectmodal.image": "View Image",
+"calendar.api" : "/en/api/calendar",
+"team" : "/en/team/",
+"hero.hello" : "Hello!",
+"hero.team" : "Meet the team",
+
+
+
 
 
 
