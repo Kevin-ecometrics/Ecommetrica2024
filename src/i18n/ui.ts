@@ -94,7 +94,10 @@ export const ui = {
 "skills.service3.description": "Mejora la adquisición de leads y conversiones con técnicas de growth hacking de primer nivel.",
 
 "skills.service4": "Análisis Corporativo",
-"skills.service4.description": "Obtén conocimiento preciso y tiempo para captar leads entrantes y vender sin parar."
+"skills.service4.description": "Obtén conocimiento preciso y tiempo para captar leads entrantes y vender sin parar.",
+"portfolio.title": "Portafolio",
+"portfolio.subtitle": "Dale un Vistazo a Nuestro Trabajo",
+"portfolio.button": "Ver Proyecto",
   },
 
   en: {
@@ -182,5 +185,8 @@ export const ui = {
 
 "skills.service4": "Corporate Analysis",
 "skills.service4.description": "Gain precise insights and time to capture inbound leads and sell nonstop.",
+"portfolio.title": "Portfolio",
+"portfolio.subtitle": "Take a Look at Our Work",
+"portfolio.button": "View Project"
   },
 } as const;
