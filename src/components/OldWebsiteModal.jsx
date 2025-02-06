@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-const OldWebsiteModal = ({ isOpen, onClose, oldImage }) => {
+const OldWebsiteModal = ({ isOpen, onClose, oldImage, URL }) => {
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -48,7 +51,7 @@ const OldWebsiteModal = ({ isOpen, onClose, oldImage }) => {
             onClick={onClose}
             className="bg-red-500 text-white px-4 py-2 rounded-lg"
           >
-            Cerrar
+            {t("projectmodal.close")}
           </button>
           <a
             href={oldImage}

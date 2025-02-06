@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-const ProjectModal = ({ isOpen, onClose, project, onOpenOldWebsite }) => {
+const ProjectModal = ({ isOpen, onClose, project, onOpenOldWebsite, URL }) => {
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
   if (!isOpen) return null;
 
   const handleClickOutside = (e) => {
@@ -50,7 +53,7 @@ const ProjectModal = ({ isOpen, onClose, project, onOpenOldWebsite }) => {
               onClick={onOpenOldWebsite}
               className="bg-gray-500 text-white px-4 py-2 rounded-lg"
             >
-              Anterior Sitio Web
+              {t("projectmodal.oldwebpage")}
             </button>
           )}
           <a
@@ -59,7 +62,7 @@ const ProjectModal = ({ isOpen, onClose, project, onOpenOldWebsite }) => {
             rel="noopener noreferrer"
             className="bg-blue-500 text-white px-4 py-2 rounded-lg"
           >
-            Ver Sitio Web
+            {t("projectmodal.currentwebpage")}
           </a>
         </div>
         <p className="text-black">{project.description}</p>
@@ -67,7 +70,7 @@ const ProjectModal = ({ isOpen, onClose, project, onOpenOldWebsite }) => {
           onClick={onClose}
           className="bg-red-500 text-white px-4 py-2 rounded-lg mt-4"
         >
-          Cerrar
+          {t("projectmodal.close")}
         </button>
       </motion.div>
     </div>

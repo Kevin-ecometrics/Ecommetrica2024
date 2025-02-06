@@ -176,6 +176,26 @@ function Navbar({ URL }) {
                   {item.label}
                 </a>
               ))}
+              <a
+                onClick={() => (window.location.pathname = "/")}
+                className={`px-0 py-0 rounded-lg transition-colors duration-300 cursor-pointer ${
+                  URL.pathname === "/"
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-200 text-black"
+                }`}
+              >
+                Español
+              </a>
+              <a
+                onClick={() => (window.location.pathname = "/en")}
+                className={`px-0 py-0 rounded-lg transition-colors duration-300 cursor-pointer ${
+                  URL.pathname === "/en"
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-200 text-black"
+                }`}
+              >
+                English
+              </a>
               {/* <button className="block w-full py-2 text-white bg-black">
                 
               </button> */}

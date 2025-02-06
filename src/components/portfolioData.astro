@@ -1,11 +1,17 @@
+---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const URL = Astro.url;
+const lang = getLangFromUrl(URL);
+const t = useTranslations(lang);
+
 const proyectos = [
   {
     nombre: "Bitescreadoresdesonrisas.com",
     categoria: "Dentistas",
     img: "/projects/bitespage.webp",
     url: "https://bitescreadoresdesonrisas.com",
-    description:
-      "Es un centro de alta estética dental, que requería renovar su página web y optimizar su UX UI con una imagen que refleje el estilo distintivo de Bites. Incorporamos el calendario que genera citas y pagos directamente desde la página brindando una experiencia fluida y eficiente en la que pueden tener el control mediante una web App.",
+    description: t("portfolio.description.bites"),
     old: true,
     oldImage: "/projects/bites.webp",
     prioridad: true,
@@ -221,24 +227,7 @@ const proyectos = [
     old: false,
     oldImage: "/old-proyectotijuana-claudionaranjo.webp",
   },
-  // {
-  //   nombre: "tallerursuablanco.com",
-  //   categoria: "Otros",
-  //   img: "/projects/tallerpage.webp",
-  //   url: "https://tallerursuablanco.com",
-  //   description: "Descripción del proyecto tallerursuablanco.com",
-  //   old: false,
-  //   oldImage: "/old-tallerursuablanco.webp",
-  // },
-  // {
-  //   nombre: "ignaciozaragoza3.com",
-  //   categoria: "Otros",
-  //   img: "/projects/zaragozapage.webp",
-  //   url: "https://ignaciozaragoza3.com",
-  //   description: "Descripción del proyecto ignaciozaragoza3.com",
-  //   old: false,
-  //   oldImage: "/old-ignaciozaragoza.webp",
-  // },
 ];
 
-export default proyectos;
+export { proyectos };
+---
