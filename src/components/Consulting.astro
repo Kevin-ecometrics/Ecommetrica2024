@@ -25,42 +25,49 @@ let consultings = [
     background: "bg-gradient-to-t from-[#9747FF] to-[#9747FF]",
   },
 ];
+
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+const URL = Astro.url;
+const lang = getLangFromUrl(URL);
+const t = useTranslations(lang);
 ---
 
 <section
   class="md:h-screen py-8 flex justify-center flex-col items-center md:px-8 bg-gradient-to-l from-[#BD155C] to-[#1E171E]"
 >
   <h1 class="text-4xl text-white font-bold mb-4 text-center">
-    ¿Qué hay Dentro de la Consultoría de Ecommetrica?
+    {t("consulting.title")}
   </h1>
   <h2 class="text-white text-3xl font-medium mb-12 text-center">
-    En cualquier paquete tienes:
+    {t("consulting.subtitle")}
   </h2>
   <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
     {
-      consultings.map((item) => (
-        <div class="relative flex flex-col md:items-center group">
-          <div class="relative group">
-            <img
-              src={item.src}
-              alt="consultoria"
-              class="object-cover transition-transform duration-500 group-hover:scale-110"
-              loading="lazy"
-            />
-            <div
-              class={`absolute inset-0 opacity-0 group-hover:opacity-80 group-hover:scale-110 rounded-2xl transition-opacity duration-500 ${item.background}`}
-            />
+      consultings.map((item, index) => {
+        return (
+          <div class="relative flex flex-col md:items-center group">
+            <div class="relative group">
+              <img
+                src={item.src}
+                alt="consultoria"
+                class="object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div
+                class={`absolute inset-0 opacity-0 group-hover:opacity-80 group-hover:scale-110 rounded-2xl transition-opacity duration-500 ${item.background}`}
+              />
+            </div>
+            <div class="absolute inset-0 w-full flex-col flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <span class="text-white text-3xl font-bold md:px-4 py-2 w-full text-center">
+                {t(`consulting.title`)}
+              </span>
+              <span class="text-white text-xl font-bold md:px-4 py-2 w-full text-center">
+                {t(`consulting.subtitle`)}
+              </span>
+            </div>
           </div>
-          <div class="absolute inset-0 w-full flex-col flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <span class="text-white text-3xl font-bold md:px-4 py-2 w-full text-center">
-              {item.text}
-            </span>
-            <span class="text-white text-xl font-bold md:px-4 py-2 w-full text-center">
-              {item.description}
-            </span>
-          </div>
-        </div>
-      ))
+        );
+      })
     }
   </div>
 </section>

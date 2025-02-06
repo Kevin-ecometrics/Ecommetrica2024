@@ -6,10 +6,10 @@ import Mail from "@components/icons/Mail.astro";
 import Tags from "@components/Tags";
 import HeroImage from "@public/JuanHero2.webp";
 import { getLangFromUrl, useTranslations } from "src/i18n/utils";
-const words = ["Innova", "Eleva", "Simplifica"];
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const words = t("hero.words");
 ---
 
 <section id="home" class="relative bg-cover bg-center bg-[#33244C]">
@@ -25,13 +25,13 @@ const t = useTranslations(lang);
           href="#package"
           class="px-8 py-2 hover:bg-white hover:text-black bg-[#861453] text-white
             transition rounded-lg duration-300 ease-in-out"
-          >Comienza</a
+          >{t("hero.button1")}</a
         >
         <a
           href="#skills"
           class="px-8 py-2 text-white hover:bg-white hover:text-black
         transition rounded-lg duration-300 ease-in-out"
-          >Nosotros</a
+          >{t("hero.button2")}</a
         >
       </div>
       <div class="flex md:flex-col gap-4 mb-8">
@@ -42,7 +42,6 @@ const t = useTranslations(lang);
         >
           <Insta class="w-8 h-8" />
         </a>
-        <!-- <Face class="w-8 h-8" /> -->
         <a
           href="https://twitter.com/SrGenial"
           target="_blank"

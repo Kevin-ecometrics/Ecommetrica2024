@@ -3,6 +3,11 @@ import { Image } from "astro:assets";
 import HeroImage from "@public/1. Foto Team 1.webp";
 import HeroImage2 from "@public/2. Foto Team 2.webp";
 import Guia from "@components/Guia";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const URL = Astro.url;
+const lang = getLangFromUrl(URL);
+const t = useTranslations(lang);
 ---
 
 <section
@@ -26,23 +31,22 @@ import Guia from "@components/Guia";
     </div>
     <div class="text-white col-span-2">
       <h1 class="text-xl md:text-2xl font-bold mb-4">
-        Consultoría en E-commerce
+        {t("about.title1")}
       </h1>
-      <h2 class="font-bold text-3xl md:text-6xl">Bienvenidos</h2>
+      <h2 class="font-bold text-3xl md:text-6xl">
+        {t("about.title2")}
+      </h2>
       <h3 class="font-bold text-3xl md:text-6xl text-[#c2155C] mb-8">
-        a Ecommetrica
+        {t("about.title3")}
       </h3>
       <p class="text-3xl text-[#c2155C] font-bold mb-8">
-        Visítanos, Tijuana y San Diego
+        {t("about.subtitle")}
       </p>
-      <p class="md:w-[60%] text-xl font-light mb-12">
-        Somos una consultoría que garantiza una planeación estratégica y segura
-        con soluciones a la medida para tu negocio y comercio en línea <br />
-        <br /> Creamos tu página web confiable, segura e innovadora y además desarrollamos
-        tu ecosistema de marketing digital. <br />
-        <br /> No te pierdas de nada del INTERNET y descarga nuestra guía básica.
-      </p>
-      <Guia client:visible />
+      <p
+        class="md:w-[60%] text-xl font-light mb-12"
+        set:html={t("about.description")}
+      />
+      <Guia URL={URL} client:visible />
     </div>
   </div>
   <div class="absolute bottom-[-20px] right-20 z-10 hidden xl:block">

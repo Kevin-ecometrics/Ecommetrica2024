@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Modal from "@components/Modal";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-function Guia() {
+function Guia({ URL }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [pdfUrl, setPdfUrl] = useState("");
+
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
 
   const handleOpenModal = (e) => {
     e.preventDefault();
@@ -38,11 +42,10 @@ function Guia() {
     <div>
       <a
         onClick={handleOpenModal}
-        className="bg-white hover:bg-transparent w-64 hover:border-white hover:border hover:text-white text-black px-6 rounded-lg py-2 font-bold flex gap-2 items-center
-       transition duration-300 ease-in-out mb-16 hover:cursor-pointer"
+        className="bg-white hover:bg-transparent w-64 hover:border-white hover:border hover:text-white text-black px-6 rounded-lg py-2 font-bold flex gap-2 items-center transition duration-300 ease-in-out mb-16 hover:cursor-pointer"
         id="test"
       >
-        Guia de e-commerce
+        {t("guia.buttonText")} {/* Texto del botón traducido */}
         <svg
           width="19"
           height="25"
@@ -57,6 +60,7 @@ function Guia() {
         </svg>
       </a>
       <Modal
+        URL={URL}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         onSubmit={handleSubmit}

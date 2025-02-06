@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-function Modal({ isOpen, onClose, onSubmit }) {
+function Modal({ isOpen, onClose, onSubmit, URL }) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [businessType, setBusinessType] = useState("");
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
 
   if (!isOpen) return null;
 
@@ -29,15 +33,15 @@ function Modal({ isOpen, onClose, onSubmit }) {
     const newErrors = {};
 
     if (!validateEmail(email)) {
-      newErrors.email = "Correo electrónico no válido";
+      newErrors.email = t("modal.emailError");
     }
 
     if (!validatePhone(phone)) {
-      newErrors.phone = "Teléfono no válido. Debe tener 10 dígitos.";
+      newErrors.phone = t("modal.phoneError");
     }
 
     if (!validateBusinessType(businessType)) {
-      newErrors.businessType = "Tipo de negocio no puede estar vacío";
+      newErrors.businessType = t("modal.businessTypeError");
     }
 
     if (Object.keys(newErrors).length > 0) {
@@ -64,10 +68,14 @@ function Modal({ isOpen, onClose, onSubmit }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white p-8 rounded-lg w-96">
-        <h2 className="text-2xl font-bold mb-4 text-black">Formulario</h2>
+        <h2 className="text-2xl font-bold mb-4 text-black">
+          {t("modal.title")}
+        </h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700">Correo Electrónico</label>
+            <label className="block text-gray-700">
+              {t("modal.emailLabel")}
+            </label>
             <input
               type="email"
               name="email"
@@ -79,7 +87,9 @@ function Modal({ isOpen, onClose, onSubmit }) {
             {errors.email && <p className="text-red-500">{errors.email}</p>}
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700">Teléfono</label>
+            <label className="block text-gray-700">
+              {t("modal.phoneLabel")}
+            </label>
             <input
               type="tel"
               name="phone"
@@ -94,7 +104,9 @@ function Modal({ isOpen, onClose, onSubmit }) {
             {errors.phone && <p className="text-red-500">{errors.phone}</p>}
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700">Tipo de Negocio</label>
+            <label className="block text-gray-700">
+              {t("modal.businessTypeLabel")}
+            </label>
             <input
               type="text"
               name="businessType"
@@ -114,14 +126,16 @@ function Modal({ isOpen, onClose, onSubmit }) {
               className="bg-gray-500 text-white px-4 py-2 rounded-lg mr-2"
               disabled={isSubmitting}
             >
-              Cancelar
+              {t("modal.cancelButton")}
             </button>
             <button
               type="submit"
               className="bg-blue-500 text-white px-4 py-2 rounded-lg"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Enviando..." : "Enviar"}
+              {isSubmitting
+                ? t("modal.submittingButton")
+                : t("modal.submitButton")}
             </button>
           </div>
         </form>

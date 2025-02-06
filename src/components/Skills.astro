@@ -1,5 +1,10 @@
 ---
 import Percentage from "@components/Percentage.jsx";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const URL = Astro.url;
+const lang = getLangFromUrl(URL);
+const t = useTranslations(lang);
 ---
 
 <section
@@ -9,22 +14,18 @@ import Percentage from "@components/Percentage.jsx";
   <div class="grid grid-cols-1 md:grid-cols-2 px-8 gap-8">
     <div>
       <h1 class="text-[#3C3C3C] text-4xl md:text-2xl font-bold mb-8">
-        ¿Cómo hacerlo bien en línea?
+        {t("skills.title1")}
       </h1>
       <h2
         class="md:w-[80%] text-2xl md:text-6xl text-[#515151] mb-16 font-bold"
       >
-        ¡Una receta para todo lo que has imaginado!
+        {t("skills.title2")}
       </h2>
       <p class="md:w-[70%] mb-16">
-        En más de 10 años de experiencia en eCommerce hemos acompañado a marcas
-        y empresas a lo largo de su transformación digital creando sitios web y
-        aplicaciones web visualmente sofisticados, tecnológicamente innovadores
-        y multifuncionales.
+        {t("skills.description1")}
       </p>
       <p class="md:w-[70%]">
-        Caminarás en tu propio ecosistema digital poniendo tu negocio al lado de
-        las Visas y Mastercards de tus Clientes y Consumidores.
+        {t("skills.description2")}
       </p>
     </div>
     <Percentage client:load />

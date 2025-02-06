@@ -2,12 +2,16 @@ import { useState } from "react";
 import axios from "axios";
 import "@components/KeyFrames.css";
 import toast, { Toaster } from "react-hot-toast";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-function Contact() {
+function Contact({ URL }) {
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -17,12 +21,12 @@ function Contact() {
         email,
         message,
       });
-      toast.success("Mensaje enviado correctamente");
+      toast.success(t("contact.successMessage"));
       setName("");
       setEmail("");
       setMessage("");
     } catch (error) {
-      toast.error("Error al enviar el mensaje");
+      toast.error(t("contact.errorMessage"));
     } finally {
       setLoading(false);
     }
@@ -30,22 +34,20 @@ function Contact() {
 
   return (
     <section
-      className=" flex justify-center items-center flex-col px-8 py-16 mb-16 relative"
+      className="flex justify-center items-center flex-col px-8 py-16 mb-16 relative"
       id="contact"
     >
       <div className="h-24 w-24 bg-[#861453] animate-div-2 absolute top-0 left-64 hidden xl:block"></div>
       <h1 className="text-2xl text-[#861453] font-bold text-center md:w-[30%] mb-4">
-        Nos encantaría trabajar en tu proyecto
+        {t("contact.title1")}
       </h1>
       <h2 className="text-3xl md:text-5xl font-bold mb-12">
-        Ponte en Contacto con Nosotros
+        {t("contact.title2")}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 md:px-8 gap-4">
         <div>
           <h1 className="md:w-[70%] font-light mb-4">
-            Llena la forma para ponernos en contacto o llamar de: 9:00 a.m. a
-            6:00 p.m de Lunes a Viernes. para comenzar a darle vida a tus
-            proyectos.
+            {t("contact.description")}
           </h1>
           <div className="flex gap-4 items-start">
             <svg
@@ -64,9 +66,8 @@ function Contact() {
               <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
             </svg>
             <div className="flex flex-col">
-              {" "}
               <h2 className="text-[#861453] text-xl font-bold">
-                Llama o agenda
+                {t("contact.phone")}
               </h2>
               <p className="text-[#861453] text-2xl font-bold mb-8">
                 <a className="hover:underline" href="tel:+526646429633">
@@ -94,13 +95,15 @@ function Contact() {
               <path d="M3 7l9 6l9 -6" />
             </svg>
             <div className="flex flex-col">
-              <h2 className="text-[#861453] text-xl font-bold">Correo</h2>
+              <h2 className="text-[#861453] text-xl font-bold">
+                {t("contact.email")}
+              </h2>
               <p className="text-[#861453] text-2xl font-bold">
                 <a
                   className="hover:underline"
                   href="mailto:juanmanuel@ecommetrica.com"
                 >
-                  juanmanuel@ecommetrica.com{" "}
+                  juanmanuel@ecommetrica.com
                 </a>
               </p>
             </div>
@@ -110,21 +113,21 @@ function Contact() {
           <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Nombre"
+              placeholder={t("contact.namePlaceholder")}
               onChange={(e) => setName(e.target.value)}
               value={name}
-              className="w-full focus:outline-none  p-2 border shadow-xl rounded-lg mb-6"
+              className="w-full focus:outline-none p-2 border shadow-xl rounded-lg mb-6"
             />
             <input
               type="email"
-              placeholder="Correo"
+              placeholder={t("contact.emailPlaceholder")}
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               className="w-full focus:outline-none stroke-none p-2 border shadow-xl rounded-lg mb-6"
             />
             <textarea
               type="text"
-              placeholder="Mensaje"
+              placeholder={t("contact.messagePlaceholder")}
               onChange={(e) => setMessage(e.target.value)}
               value={message}
               className="w-full focus:outline-none stroke-none p-2 border shadow-xl rounded-lg mb-6"
@@ -134,7 +137,11 @@ function Contact() {
               disabled={loading}
             >
               <div className="flex gap-4 items-center font-bold px-6 py-2">
-                <h1>{loading ? "Enviando..." : "Enviar"} </h1>
+                <h1>
+                  {loading
+                    ? t("contact.sendingButton")
+                    : t("contact.sendButton")}
+                </h1>
                 {loading ? (
                   <svg
                     className="animate-spin h-5 w-5 text-white"

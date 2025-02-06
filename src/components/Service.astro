@@ -49,6 +49,13 @@ let services = [
       "Nos enfocamos en el crecimiento de tu negocio, te ayudamos a identificar oportunidades de mejora y a implementar estrategias que te permitan alcanzar tus objetivos. ",
   },
 ];
+
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const URL = Astro.url;
+const lang = getLangFromUrl(URL);
+const t = useTranslations(lang);
+const consultingItems = t("services"); // Asegúrate de que esto devuelva la lista de servicios
 ---
 
 <section class="md:p-16 px-8 md:mb-32 bg-custom-bg relative" id="service">
@@ -56,23 +63,23 @@ let services = [
     <!-- Encabezado y Descripción -->
     <div class="col-span-1 p-4">
       <h1 class="text-[#861453] text-2xl font-bold mb-4">
-        Listos para dar vida a tus proyectos
+        {t("service.readyTitle")}
       </h1>
-      <h2 class="text-5xl text-[#515151] font-bold mb-8">Nuestros Servicios</h2>
+      <h2 class="text-5xl text-[#515151] font-bold mb-8">
+        {t("service.ourServices")}
+      </h2>
       <p class="mb-8">
-        Adicionalmente a nuestro servicio de asesoramiento, nos interesamos por
-        crear estrategias y tecnología para diferentes comercios con un equipo
-        multidisciplinario en mercadotenica digital y producción.
+        {t("service.description")}
       </p>
     </div>
 
     <!-- Servicios -->
     {
-      services.map((service) => {
+      consultingItems.map((service) => {
         // Seleccionamos el icono correspondiente a cada servicio
         const getIcon = () => {
           switch (service.name.trim()) {
-            case "Video producción":
+            case "Video Production":
               return (
                 <svg
                   class="w-7 h-7 text-[#861453]"
@@ -221,7 +228,6 @@ let services = [
 
         return (
           <div class="group mb-8 p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden transform hover:-translate-y-1.5 border-2 border-transparent ">
-            {/* Contenedor del icono */}
             <section class="flex items-center justify-start">
               <div class="w-14 h-14 items-center bg-[#861453]/10 rounded-xl">
                 {getIcon()}
@@ -243,15 +249,14 @@ let services = [
       })
     }
 
-    <!-- Preguntas -->
     <div class="col-span-1 p-4 text-center font-bold">
-      <h1 class="text-2xl font-bold mb-4">¿Alguna pregunta?</h1>
-      <h2 class="text-2xl mb-4">Nos encanta responder</h2>
+      <h1 class="text-2xl font-bold mb-4">{t("service.anyQuestions")}</h1>
+      <h2 class="text-2xl mb-4">{t("service.loveToAnswer")}</h2>
       <button
         class="px-4 py-2 text-black border border-[#861453] rounded hover:bg-[#861453] hover:text-white"
       >
         <a class="flex items-center gap-4" href="#contact">
-          <h1>preguntar</h1>
+          <h1>{t("service.ask")}</h1>
           <svg
             width="18"
             height="13"

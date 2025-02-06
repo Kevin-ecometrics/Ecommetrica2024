@@ -13,7 +13,6 @@ import Consulting from "@components/Consulting.astro";
 import Contact from "@components/Contact";
 import Team from "@components/team/Hero.astro";
 import teamMembers from "@components/team/TeamMembers";
-
 const URL = Astro.url;
 ---
 
@@ -29,5 +28,5 @@ const URL = Astro.url;
   <Testimonial client:visible />
   <!-- <Blog /> -->
   <Consulting />
-  <Contact client:visible />
+  <Contact URL={URL} client:visible />
 </Layout>
