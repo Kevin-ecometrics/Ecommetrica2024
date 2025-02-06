@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
 const Percentage = ({ URL }) => {
-  const [skills, setSkills] = useState(skillsData);
   const [intervals, setIntervals] = useState([]);
   const lang = getLangFromUrl(URL);
   const t = useTranslations(lang);
@@ -91,6 +90,8 @@ const Percentage = ({ URL }) => {
       ),
     },
   ];
+
+  const [skills, setSkills] = useState(skillsData);
 
   const handleMouseEnter = (index) => {
     clearInterval(intervals[index]);
