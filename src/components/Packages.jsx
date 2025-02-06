@@ -1,7 +1,117 @@
 import { useState } from "react";
-import { packages } from "./package/Packages";
+// import { packages } from "./package/Packages.astro";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-export default function PackagesPage() {
+export default function PackagesPage({ URL }) {
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
+  const packages = [
+    {
+      id: 1,
+      name: t("packages.inicial"),
+      description: t("packages.inicialdesc"),
+      price: 675,
+      month: t("packages.inicialmonths"),
+      popular: false,
+      services: [
+        {
+          title: t("packages.inicial.service1"),
+          description: t("packages.inicial.service1desc"),
+        },
+        {
+          title: t("packages.inicial.service2"),
+          description: t("packages.inicial.service2desc"),
+        },
+        {
+          title: t("packages.inicial.service3"),
+          description: t("packages.inicial.service3desc"),
+        },
+        {
+          title: t("packages.inicial.service4"),
+          description: t("packages.inicial.service4desc"),
+        },
+      ],
+    },
+    {
+      id: 2,
+      name: t("packages.pro"),
+      description: t("packages.prodesc"),
+      price: 995,
+      month: t("packages.promonths"),
+      popular: true,
+      services: [
+        {
+          title: t("packages.pro.service1"),
+          description: t("packages.pro.service1desc"),
+        },
+        {
+          title: t("packages.pro.service2"),
+          description: t("packages.pro.service2desc"),
+        },
+        {
+          title: t("packages.pro.service3"),
+          description: t("packages.pro.service3desc"),
+        },
+        {
+          title: t("packages.pro.service4"),
+          description: t("packages.pro.service4desc"),
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: t("packages.empresa"),
+      description: t("packages.empresadesc"),
+      price: 1185,
+      month: t("packages.empresamonths"),
+      popular: false,
+      services: [
+        {
+          title: t("packages.empresa.service1"),
+          description: t("packages.empresa.service1desc"),
+        },
+        {
+          title: t("packages.empresa.service2"),
+          description: t("packages.empresa.service2desc"),
+        },
+        {
+          title: t("packages.empresa.service3"),
+          description: t("packages.empresa.service3desc"),
+        },
+        {
+          title: t("packages.empresa.service4"),
+          description: t("packages.empresa.service4desc"),
+        },
+      ],
+    },
+    {
+      id: 4,
+      name: t("packages.personalizado"),
+      description: t("packages.personalizadodesc"),
+      price: 1555,
+      month: t("packages.personalizadomonths"),
+      popular: false,
+      services: [
+        {
+          title: t("packages.personalizado.service1"),
+          description: t("packages.personalizado.service1desc"),
+        },
+        {
+          title: t("packages.personalizado.service2"),
+          description: t("packages.personalizado.service2desc"),
+        },
+        {
+          title: t("packages.personalizado.service3"),
+          description: t("packages.personalizado.service3desc"),
+        },
+        {
+          title: t("packages.personalizado.service4"),
+          description: t("packages.personalizado.service4desc"),
+        },
+      ],
+    },
+  ];
+
   const [selectedItems, setSelectedItems] = useState({});
 
   const handleSelect = (item) => {
@@ -25,7 +135,7 @@ export default function PackagesPage() {
         <div className="bg-white/90 backdrop-blur-lg rounded-xl p-8 h-full flex flex-col">
           {item.popular && (
             <div className="absolute top-0 right-4 -translate-y-1/2 bg-gradient-to-r from-[#861453] to-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
-              Más popular
+              {t("packages.popular")}
             </div>
           )}
 
@@ -39,7 +149,7 @@ export default function PackagesPage() {
           {item.services && (
             <div className="mb-8 flex-1">
               <h3 className="text-sm font-semibold text-[#861453] mb-4 uppercase tracking-wide">
-                Servicios Incluidos:
+                {t("packages.servincl")}
               </h3>
               <ul className="space-y-3">
                 {item.services.map((service, index) => (
@@ -98,7 +208,9 @@ export default function PackagesPage() {
                   />
                 </svg>
 
-                {selectedItems[item.id] ? "Seleccionado" : "Seleccionar"}
+                {selectedItems[item.id]
+                  ? t("packages.selected")
+                  : t("packages.select")}
               </div>
             </a>
           </div>
@@ -110,10 +222,10 @@ export default function PackagesPage() {
   return (
     <section class="bg-[#F4F4FF] flex p-16 flex-col scroll-mt-20" id="package">
       <h1 class="text-[#861453] text-2xl font-normal mb-4 text-center">
-        Conoce nuestros paquetes
+        {t("packages.paquetes")}
       </h1>
       <h2 class="text-[#861453] font-bold text-3xl md:text-4xl mb-16 text-center">
-        E-commerce Meticulosamente Valorado
+        {t("packages.ecommerce")}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {renderCards()}

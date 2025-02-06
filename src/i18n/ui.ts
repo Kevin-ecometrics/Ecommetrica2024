@@ -166,17 +166,112 @@ export const ui = {
 
 "portfolio.categories.all": "Todos",
 "portfolio.categories.dentists": "Dentistas",
-"portfolio.categories.doctors": "Médicos",
+"portfolio.categories.doctors": "Doctores",
 "portfolio.categories.industry": "Industria",
-"portfolio.categories.consulting": "Consultorías",
-"portfolio.categories.trading": "Comercializadoras",
+"portfolio.categories.consulting": "Consultoría",
+"portfolio.categories.trading": "Comercio",
 "portfolio.categories.others": "Otros",
 
-"packages.inicial" : "Plan Inicial",
-"packages.inicialdesc" : "Para los recién llegados",
-"packages.inicialmonths" : ""
+"packages.inicial": "Plan Inicial",
+"packages.inicialdesc": "Para los recién llegados",
+"packages.inicialmonths": "/por 3 meses",
+"packages.inicial.service1": "Sitio Web Básico",
+"packages.inicial.service1desc":
+  "Desarrollo de una landing page en React o Astro según necesidad",
+"packages.inicial.service2": "SEO Inicial",
+"packages.inicial.service2desc":
+  "Optimización básica en motores de búsqueda para mejorar visibilidad",
+"packages.inicial.service3": "Configuración de Redes Sociales",
+"packages.inicial.service3desc":
+  "Creación y optimización de perfiles en redes sociales principales",
+"packages.inicial.service4": "Google Analytics & Facebook Pixel",
+"packages.inicial.service4desc":
+  "Configuración de herramientas de seguimiento para análisis de tráfico",
 
+"packages.pro": "Plan Pro",
+"packages.prodesc": "Para pequeñas empresas y emprendedores",
+"packages.promonths": "/por 4 meses",
+"packages.pro.service1": "Ecommerce con Shopify",
+"packages.pro.service1desc":
+  "Configuración y personalización de tienda en Shopify con diseño profesional",
+"packages.pro.service2": "SEO Avanzado",
+"packages.pro.service2desc":
+  "Optimización técnica y estrategia de contenido para posicionamiento orgánico",
+"packages.pro.service3": "Google Tag Manager & GA4",
+"packages.pro.service3desc":
+  "Implementación avanzada de Google Analytics 4 y Tag Manager",
+"packages.pro.service4": "Diseño de Posts & Reels",
+"packages.pro.service4desc":
+  "Creación de contenido visual optimizado para redes sociales",
 
+"packages.empresa": "Empresa",
+"packages.empresadesc": "Para empresas pequeñas con ambiciones",
+"packages.empresamonths": "/por 6 meses",
+"packages.empresa.service1": "Desarrollo Web Personalizado",
+"packages.empresa.service1desc":
+  "Creación de un sitio web en React o Astro con diseño a medida",
+"packages.empresa.service2": "Estrategia en Redes Sociales",
+"packages.empresa.service2desc":
+  "Gestión de contenido con planificación mensual y analítica avanzada",
+"packages.empresa.service3": "Publicidad Digital",
+"packages.empresa.service3desc":
+  "Campañas en Google Ads, Facebook Ads e Instagram con segmentación avanzada",
+"packages.empresa.service4": "Branding & Diseño Gráfico",
+"packages.empresa.service4desc":
+  "Diseño de identidad visual en Figma, Photoshop e Illustrator",
+
+"packages.personalizado": "Personalizado",
+"packages.personalizadodesc": "Para empresas grandes y corporativos",
+"packages.personalizadomonths": "/por 8 meses",
+"packages.personalizado.service1": "Consultoría Estratégica",
+"packages.personalizado.service1desc":
+  "Asesoramiento personalizado para expansión digital y crecimiento",
+"packages.personalizado.service2": "Automatización de Marketing",
+"packages.personalizado.service2desc":
+  "Flujos automatizados con IA y remarketing avanzado en múltiples plataformas",
+"packages.personalizado.service3": "Producción Audiovisual",
+"packages.personalizado.service3desc":
+  "Videograbación y edición profesional para campañas publicitarias",
+"packages.personalizado.service4": "Rebranding & Posicionamiento de Marca",
+"packages.personalizado.service4desc":
+  "Estrategias omnicanal para posicionamiento premium en el mercado",
+"packages.popular" : "Más popular",
+"packages.servincl" : "Servicios Incluidos:",
+"packages.paquetes" : "Conoce nuestros paquetes",
+"packeages.ecommerce": "E-commerce Meticulosamente Valorado",
+"packages.select": "Seleccionar",
+"packages.selected": "Seleccionado",
+"calendar.previous": "Anterior",
+"calendar.next": "Siguiente",
+"calendar.scheduleConsultation": "Agendar asesoría para el día",
+"calendar.selectTime": "Selecciona una hora",
+"calendar.consultationType": "Tipo de asesoría",
+"calendar.selectOption": "Selecciona una opción",
+"calendar.packageInterest": "Me interesa un paquete",
+"calendar.marketingConsulting": "Consultoría de Marketing",
+"calendar.socialMediaStrategy": "Estrategia de Redes Sociales",
+"calendar.seoOptimization": "Optimización SEO",
+"calendar.digitalAdvertising": "Publicidad Digital",
+"calendar.other": "Otro",
+"calendar.promoCode": "Código (opcional)",
+"calendar.enterPromoCode": "Ingresa un código promocional",
+"calendar.email": "Correo electrónico",
+"calendar.enterEmail": "Ingresa tu correo electrónico",
+"calendar.schedule": "Agendar",
+"calendar.consultationConfirmation": "Confirmación de asesoría",
+"calendar.selectedDay": "Día seleccionado",
+"calendar.time": "Hora",
+"calendar.promoCodePlaceholder": "Código de promoción",
+"calendar.consultationTypePlaceholder": "Tipo de asesoría",
+"calendar.emailPlaceholder": "Correo electrónico",
+"calendar.location": "Ubicación",
+"calendar.cancel": "Cancelar",
+"calendar.confirm": "Confirmar",
+"calendar.consultationConfirmed": "Asesoría confirmada",
+"calendar.consultationSuccess": "Tu asesoría ha sido confirmada exitosamente.",
+"calendar.close": "Cerrar",
+"calendar.error": "Error",
+"calendar.consultationError": "Hubo un error al confirmar tu asesoría. Por favor, intenta de nuevo."
 
 
 
@@ -352,5 +447,76 @@ export const ui = {
 "portfolio.categories.consulting": "Consulting",
 "portfolio.categories.trading": "Trading",
 "portfolio.categories.others": "Others",
+
+
+"packages.inicial": "Initial Plan",
+"packages.inicialdesc": "For newcomers",
+"packages.inicialmonths": "/for 3 months",
+"packages.inicial.service1": "Basic Website",
+"packages.inicial.service1desc":
+  "Development of a landing page in React or Astro as needed",
+"packages.inicial.service2": "Initial SEO",
+"packages.inicial.service2desc":
+  "Basic search engine optimization to improve visibility",
+"packages.inicial.service3": "Social Media Setup",
+"packages.inicial.service3desc":
+  "Creation and optimization of profiles on major social networks",
+"packages.inicial.service4": "Google Analytics & Facebook Pixel",
+"packages.inicial.service4desc":
+  "Configuration of tracking tools for traffic analysis",
+
+"packages.pro": "Pro Plan",
+"packages.prodesc": "For small businesses and entrepreneurs",
+"packages.promonths": "/for 4 months",
+"packages.pro.service1": "Ecommerce with Shopify",
+"packages.pro.service1desc":
+  "Shopify store setup and customization with professional design",
+"packages.pro.service2": "Advanced SEO",
+"packages.pro.service2desc":
+  "Technical optimization and content strategy for organic positioning",
+"packages.pro.service3": "Google Tag Manager & GA4",
+"packages.pro.service3desc":
+  "Advanced implementation of Google Analytics 4 and Tag Manager",
+"packages.pro.service4": "Post & Reel Design",
+"packages.pro.service4desc":
+  "Creation of optimized visual content for social media",
+
+"packages.empresa": "Business",
+"packages.empresadesc": "For small businesses with ambitions",
+"packages.empresamonths": "/for 6 months",
+"packages.empresa.service1": "Custom Web Development",
+"packages.empresa.service1desc":
+  "Creation of a website in React or Astro with custom design",
+"packages.empresa.service2": "Social Media Strategy",
+"packages.empresa.service2desc":
+  "Content management with monthly planning and advanced analytics",
+"packages.empresa.service3": "Digital Advertising",
+"packages.empresa.service3desc":
+  "Campaigns on Google Ads, Facebook Ads, and Instagram with advanced targeting",
+"packages.empresa.service4": "Branding & Graphic Design",
+"packages.empresa.service4desc":
+  "Visual identity design in Figma, Photoshop, and Illustrator",
+
+"packages.personalizado": "Custom",
+"packages.personalizadodesc": "For large businesses and corporations",
+"packages.personalizadomonths": "/for 8 months",
+"packages.personalizado.service1": "Strategic Consulting",
+"packages.personalizado.service1desc":
+  "Personalized advice for digital expansion and growth",
+"packages.personalizado.service2": "Marketing Automation",
+"packages.personalizado.service2desc":
+  "Automated workflows with AI and advanced remarketing on multiple platforms",
+"packages.personalizado.service3": "Audiovisual Production",
+"packages.personalizado.service3desc":
+  "Professional video recording and editing for advertising campaigns",
+"packages.personalizado.service4": "Rebranding & Brand Positioning",
+"packages.personalizado.service4desc":
+  "Omnichannel strategies for premium market positioning",
+"packages.popular": "Most popular",
+"packages.servincl": "Included Services:",
+"packages.paquetes": "Discover our packages",
+"packages.ecommerce": "Meticulously Valued E-commerce",
+"packages.select": "Select",
+"packages.selected": "Selected",
   },
 } as const;
