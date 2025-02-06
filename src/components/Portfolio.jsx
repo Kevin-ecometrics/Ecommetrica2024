@@ -3,7 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import ProjectModal from "./ProjectModal";
 import OldWebsiteModal from "./OldWebsiteModal";
 import proyectos from "@components/portfolioData";
-const Portfolio = () => {
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const Portfolio = ({ URL }) => {
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
   const lista = [
     "Todos",
     "Dentistas",
@@ -78,10 +82,10 @@ const Portfolio = () => {
   return (
     <section className="portfolio-section bg-gradient-to-l from-[#BD155C] to-[#1E171E] py-16 text-white md:px-0 px-8">
       <h1 className="text-center font-normal text-xl md:text-2xl">
-        Portafolio
+        {t("portfolio.title")}
       </h1>
       <p className="text-3xl md:text-5xl font-bold text-center mb-16">
-        Dale un Vistazo a Nuestro Trabajo
+        {t("portfolio.subtitle")}
       </p>
       <div className="md:flex justify-center mb-8 hidden">
         <div className="flex space-x-4">
@@ -134,7 +138,7 @@ const Portfolio = () => {
                   onClick={() => handleOpenProjectModal(proyecto)}
                   className="bg-[#861453] text-white px-4 py-2 rounded-lg font-bold"
                 >
-                  Ver Proyecto
+                  {t("portfolio.button")}
                 </button>
               </div>
             </motion.div>

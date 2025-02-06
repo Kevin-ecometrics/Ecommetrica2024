@@ -20,7 +20,7 @@ const URL = Astro.url;
   <Hero />
   <About />
   <Skills />
-  <Portfolio client:visible />
+  <Portfolio client:visible URL={URL} />
   <Service />
   <!-- <Certification /> -->
   <Team team={teamMembers} />
