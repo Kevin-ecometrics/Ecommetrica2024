@@ -55,7 +55,6 @@ import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 const URL = Astro.url;
 const lang = getLangFromUrl(URL);
 const t = useTranslations(lang);
-const consultingItems = t("services"); // Asegúrate de que esto devuelva la lista de servicios
 ---
 
 <section class="md:p-16 px-8 md:mb-32 bg-custom-bg relative" id="service">
@@ -75,7 +74,7 @@ const consultingItems = t("services"); // Asegúrate de que esto devuelva la lis
 
     <!-- Servicios -->
     {
-      consultingItems.map((service) => {
+      services.map((service) => {
         // Seleccionamos el icono correspondiente a cada servicio
         const getIcon = () => {
           switch (service.name.trim()) {
