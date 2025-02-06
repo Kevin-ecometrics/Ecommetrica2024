@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-function Calendar() {
+function Calendar({ URL }) {
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
+
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [showForm, setShowForm] = useState(false);
@@ -22,7 +26,7 @@ function Calendar() {
       const response = await axios.get("https://ecommetrica.com/asesorias");
       setReservations(response.data);
     } catch (error) {
-      console.error("Error al obtener las asesorías:", error);
+      console.error(t("calendar.fetchError"), error);
     }
   };
 
@@ -94,7 +98,7 @@ function Calendar() {
     setFormData({ ...formData, [name]: value });
 
     if (name === "code" && value === "ecommetrica-2025") {
-      setPromoMessage("¡Código válido! Tienes 30 minutos gratis.");
+      setPromoMessage(t("calendar.validCode"));
     } else {
       setPromoMessage("");
     }
@@ -127,7 +131,7 @@ function Calendar() {
 
       await fetchReservations();
     } catch (error) {
-      console.error("Error al confirmar la asesoría:", error);
+      console.error(t("calendar.confirmationError"), error);
       setError(true);
     } finally {
       setShowModal(false);
@@ -146,7 +150,7 @@ function Calendar() {
       );
       times.push(
         <option key={time} value={time} disabled={isReserved}>
-          {time} {isReserved ? "(Reservado)" : ""}
+          {time} {isReserved ? `(${t("calendar.reserved")})` : ""}
         </option>
       );
     }
@@ -154,7 +158,7 @@ function Calendar() {
   };
 
   const formatDate = (date) => {
-    return date.toLocaleDateString("es-ES", {
+    return date.toLocaleDateString(lang, {
       day: "numeric",
       month: "long",
       year: "numeric",
@@ -168,17 +172,17 @@ function Calendar() {
           onClick={handlePrevMonth}
           className="bg-blue-500 text-white px-4 py-2 rounded-md"
         >
-          Anterior
+          {t("calendar.previous")}
         </button>
         <h2 className="text-xl font-bold">
-          {currentDate.toLocaleString("default", { month: "long" })}{" "}
+          {currentDate.toLocaleString(lang, { month: "long" })}{" "}
           {currentDate.getFullYear()}
         </h2>
         <button
           onClick={handleNextMonth}
           className="bg-blue-500 text-white px-4 py-2 rounded-md"
         >
-          Siguiente
+          {t("calendar.next")}
         </button>
       </div>
       <div className="days-of-week grid grid-cols-7 text-center font-bold mb-2">
@@ -192,11 +196,11 @@ function Calendar() {
       {showForm && (
         <div className="mt-4">
           <h3 className="text-lg font-bold mb-2">
-            Agendar asesoría para el día {formatDate(selectedDate)}
+            {t("calendar.scheduleConsultation")} {formatDate(selectedDate)}
           </h3>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block mb-1">Hora:</label>
+              <label className="block mb-1">{t("calendar.time")}:</label>
               <select
                 name="time"
                 value={formData.time}
@@ -205,14 +209,16 @@ function Calendar() {
                 required
               >
                 <option value="" disabled>
-                  Selecciona una hora
+                  {t("calendar.selectTime")}
                 </option>
                 {renderTimeOptions()}
               </select>
             </div>
 
             <div>
-              <label className="block mb-1">Tipo de asesoría:</label>
+              <label className="block mb-1">
+                {t("calendar.consultationType")}:
+              </label>
               <select
                 name="type"
                 value={formData.type}
@@ -221,30 +227,34 @@ function Calendar() {
                 required
               >
                 <option value="" disabled>
-                  Selecciona una opción
+                  {t("calendar.selectOption")}
                 </option>
                 <option value="Me interesa un paquete">
-                  Me interesa un paquete
+                  {t("calendar.packageInterest")}
                 </option>
                 <option value="Consultoría de Marketing">
-                  Consultoría de Marketing
+                  {t("calendar.marketingConsulting")}
                 </option>
                 <option value="Estrategia de Redes Sociales">
-                  Estrategia de Redes Sociales
+                  {t("calendar.socialMediaStrategy")}
                 </option>
-                <option value="Optimización SEO">Optimización SEO</option>
-                <option value="Publicidad Digital">Publicidad Digital</option>
-                <option value="Otro">Otro</option>
+                <option value="Optimización SEO">
+                  {t("calendar.seoOptimization")}
+                </option>
+                <option value="Publicidad Digital">
+                  {t("calendar.digitalAdvertising")}
+                </option>
+                <option value="Otro">{t("calendar.other")}</option>
               </select>
             </div>
             <div>
-              <label className="block mb-1">Código (opcional):</label>
+              <label className="block mb-1">{t("calendar.promoCode")}:</label>
               <input
                 type="text"
                 name="code"
                 value={formData.code}
                 onChange={handleInputChange}
-                placeholder="Ingresa un código promocional"
+                placeholder={t("calendar.enterPromoCode")}
                 className="w-full p-2 border border-gray-300 rounded-md"
               />
               {promoMessage && (
@@ -252,13 +262,13 @@ function Calendar() {
               )}
             </div>
             <div>
-              <label className="block mb-1">Correo electrónico:</label>
+              <label className="block mb-1">{t("calendar.email")}:</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="Ingresa tu correo electrónico"
+                placeholder={t("calendar.enterEmail")}
                 className="w-full p-2 border border-gray-300 rounded-md"
                 required
               />
@@ -267,7 +277,7 @@ function Calendar() {
               type="submit"
               className="bg-blue-500 text-white px-4 py-2 rounded-md"
             >
-              Agendar
+              {t("calendar.schedule")}
             </button>
           </form>
         </div>
@@ -276,28 +286,32 @@ function Calendar() {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
             <h3 className="text-2xl font-bold mb-4">
-              Confirmación de asesoría
+              {t("calendar.consultationConfirmation")}
             </h3>
             <p className="mb-2">
-              <strong>Día seleccionado:</strong> {formatDate(selectedDate)}
+              <strong>{t("calendar.selectedDay")}:</strong>{" "}
+              {formatDate(selectedDate)}
             </p>
             <p className="mb-2">
-              <strong>Hora:</strong> {formData.time}
+              <strong>{t("calendar.time")}:</strong> {formData.time}
             </p>
             <p className="mb-2">
-              <strong>Código de promoción:</strong> {formData.code || "N/A"}
+              <strong>{t("calendar.promoCodePlaceholder")}:</strong>{" "}
+              {formData.code || "N/A"}
             </p>
             <p className="mb-2">
-              <strong>Tipo de asesoría:</strong> {formData.type}
+              <strong>{t("calendar.consultationTypePlaceholder")}:</strong>{" "}
+              {formData.type}
             </p>
             <p className="mb-2">
-              <strong>Correo electrónico:</strong> {formData.email}
+              <strong>{t("calendar.emailPlaceholder")}:</strong>{" "}
+              {formData.email}
             </p>
             {promoMessage && (
               <p className="text-green-500 mt-2">{promoMessage}</p>
             )}
             <p className="mb-4">
-              <strong>Ubicación:</strong>
+              <strong>{t("calendar.location")}:</strong>
               <a
                 href="https://maps.app.goo.gl/MQFyMxdECgqJJ65p7"
                 target="_blank"
@@ -314,13 +328,13 @@ function Calendar() {
                 onClick={() => setShowModal(false)}
                 className="bg-gray-500 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition"
               >
-                Cancelar
+                {t("calendar.cancel")}
               </button>
               <button
                 onClick={handleConfirm}
                 className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
               >
-                Confirmar
+                {t("calendar.confirm")}
               </button>
             </div>
           </div>
@@ -329,8 +343,10 @@ function Calendar() {
       {confirmed && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-            <h3 className="text-2xl font-bold mb-4">Asesoría confirmada</h3>
-            <p>Tu asesoría ha sido confirmada exitosamente.</p>
+            <h3 className="text-2xl font-bold mb-4">
+              {t("calendar.consultationConfirmed")}
+            </h3>
+            <p>{t("calendar.consultationSuccess")}</p>
             {promoMessage && (
               <p className="text-green-500 mt-2">{promoMessage}</p>
             )}
@@ -338,7 +354,7 @@ function Calendar() {
               onClick={() => setConfirmed(false)}
               className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
             >
-              Cerrar
+              {t("calendar.close")}
             </button>
           </div>
         </div>
@@ -346,16 +362,13 @@ function Calendar() {
       {error && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-            <h3 className="text-2xl font-bold mb-4">Error</h3>
-            <p>
-              Hubo un error al confirmar tu asesoría. Por favor, intenta de
-              nuevo.
-            </p>
+            <h3 className="text-2xl font-bold mb-4">{t("calendar.error")}</h3>
+            <p>{t("calendar.consultationError")}</p>
             <button
               onClick={() => setError(false)}
               className="mt-4 bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition"
             >
-              Cerrar
+              {t("calendar.close")}
             </button>
           </div>
         </div>

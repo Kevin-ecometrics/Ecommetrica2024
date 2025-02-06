@@ -271,9 +271,12 @@ export const ui = {
 "calendar.consultationSuccess": "Tu asesoría ha sido confirmada exitosamente.",
 "calendar.close": "Cerrar",
 "calendar.error": "Error",
-"calendar.consultationError": "Hubo un error al confirmar tu asesoría. Por favor, intenta de nuevo."
+"calendar.consultationError": "Hubo un error al confirmar tu asesoría. Por favor, intenta de nuevo.",
 
-
+"projectmodal.oldwebpage": "Anterior Sitio Web",
+"projectmodal.currentwebpage": "Ver Sitio Web",
+"projectmodal.close": "Cerrar",
+"projectmodal.image": "Ver imagen",
 
 
 
@@ -517,6 +520,44 @@ export const ui = {
 "packages.paquetes": "Discover our packages",
 "packages.ecommerce": "Meticulously Valued E-commerce",
 "packages.select": "Select",
-"packages.selected": "Selected",
+"packages.selected": "Selected",  
+"calendar.previous": "Previous",
+"calendar.next": "Next",
+"calendar.scheduleConsultation": "Schedule consultation for the day",
+"calendar.selectTime": "Select a time",
+"calendar.consultationType": "Consultation type",
+"calendar.selectOption": "Select an option",
+"calendar.packageInterest": "I'm interested in a package",
+"calendar.marketingConsulting": "Marketing Consulting",
+"calendar.socialMediaStrategy": "Social Media Strategy",
+"calendar.seoOptimization": "SEO Optimization",
+"calendar.digitalAdvertising": "Digital Advertising",
+"calendar.other": "Other",
+"calendar.promoCode": "Code (optional)",
+"calendar.enterPromoCode": "Enter a promotional code",
+"calendar.email": "Email",
+"calendar.enterEmail": "Enter your email",
+"calendar.schedule": "Schedule",
+"calendar.consultationConfirmation": "Consultation Confirmation",
+"calendar.selectedDay": "Selected day",
+"calendar.time": "Time",
+"calendar.promoCodePlaceholder": "Promo code",
+"calendar.consultationTypePlaceholder": "Consultation type",
+"calendar.emailPlaceholder": "Email",
+"calendar.location": "Location",
+"calendar.cancel": "Cancel",
+"calendar.confirm": "Confirm",
+"calendar.consultationConfirmed": "Consultation confirmed",
+"calendar.consultationSuccess": "Your consultation has been successfully confirmed.",
+"calendar.close": "Close",
+"calendar.error": "Error",
+"calendar.consultationError": "There was an error confirming your consultation. Please try again.",
+"projectmodal.oldwebpage": "Previous Website",
+"projectmodal.currentwebpage": "View Website",
+"projectmodal.close": "Close",
+"projectmodal.image": "View Image"
+
+
+
   },
 } as const;
