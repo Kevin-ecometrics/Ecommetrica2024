@@ -108,7 +108,7 @@ export function DesktopCarousel({ team, URL }) {
                     className="px-4 relative h-48 transform transition-all duration-500 hover:h-64 rounded-3xl bg-[#861453] w-64"
                     whileHover={{ scale: 1.05 }}
                   >
-                    <a href={`${teamMember}${team[currentIndex].name}`}>
+                    <a href={`${teamMember}${member.name}`}>
                       {" "}
                       <img
                         src={member.image}
