@@ -1,95 +1,96 @@
 import React, { useState } from "react";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-const skillsData = [
-  {
-    name: "Consultoría Estratégica",
-    description:
-      "Nuestra receta para el éxito garantiza una planificación segura sobre proyecciones y resultados.",
-    percentage: 0,
-    icon: (
-      <svg
-        className="w-6 h-6 text-white"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "Optimización de Google y Meta",
-    description:
-      "GOOGLE posee más del 93% de la intención de búsqueda y Instagram es donde todos están.",
-    percentage: 0,
-    icon: (
-      <svg
-        className="w-6 h-6 text-white"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "Automatización de Marketing y Ventas",
-    description:
-      "Mejora la adquisición de leads y conversiones con técnicas de growth hacking de primer nivel.",
-    percentage: 0,
-    icon: (
-      <svg
-        className="w-6 h-6 text-white"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "Análisis Corporativo",
-    description:
-      "Obtén conocimiento preciso y tiempo para captar leads entrantes y vender sin parar.",
-    percentage: 0,
-    icon: (
-      <svg
-        className="w-6 h-6 text-white"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-        />
-      </svg>
-    ),
-  },
-];
-
-const Percentage = () => {
+const Percentage = ({ URL }) => {
   const [skills, setSkills] = useState(skillsData);
   const [intervals, setIntervals] = useState([]);
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
+
+  const skillsData = [
+    {
+      name: t("skills.service1"),
+      description: t("skills.service1.description"),
+      percentage: 0,
+      icon: (
+        <svg
+          className="w-6 h-6 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+          />
+        </svg>
+      ),
+    },
+    {
+      name: t("skills.service2"),
+      description: t("skills.service2.description"),
+
+      percentage: 0,
+      icon: (
+        <svg
+          className="w-6 h-6 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"
+          />
+        </svg>
+      ),
+    },
+    {
+      name: t("skills.service3"),
+      description: t("skills.service3.description"),
+
+      percentage: 0,
+      icon: (
+        <svg
+          className="w-6 h-6 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+          />
+        </svg>
+      ),
+    },
+    {
+      name: t("skills.service4"),
+      description: t("skills.service4.description"),
+      percentage: 0,
+      icon: (
+        <svg
+          className="w-6 h-6 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+          />
+        </svg>
+      ),
+    },
+  ];
 
   const handleMouseEnter = (index) => {
     clearInterval(intervals[index]);
