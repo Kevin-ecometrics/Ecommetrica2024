@@ -98,6 +98,93 @@ export const ui = {
 "portfolio.title": "Portafolio",
 "portfolio.subtitle": "Dale un Vistazo a Nuestro Trabajo",
 "portfolio.button": "Ver Proyecto",
+"portfolio.description.bites": "Es un centro de alta estética dental que necesitaba renovar su página web y optimizar su UX/UI con una imagen que reflejara el estilo distintivo de Bites. Incorporamos un calendario que permite agendar citas y realizar pagos directamente desde la página, brindando una experiencia fluida y eficiente en la que los usuarios pueden tener el control mediante una web app.",
+"portfolio.category.bites": "Dentistas",
+
+"portfolio.description.reformadental": "Un consultorio dental familiar que buscaba posicionarse como una alternativa con servicios completos a precios competitivos en la zona céntrica. Diseñamos y desarrollamos un sitio web funcional para facilitar la programación de citas, con un diseño moderno que resalta su competitividad y variedad de servicios.",
+"portfolio.category.reformadental": "Dentistas",
+
+"portfolio.description.dentalreforma": "Un consultorio dental familiar con más de 35 años en Tijuana que busca seguir siendo relevante y tener presencia en los motores de búsqueda. Diseñamos un sitio web para destacar sus valores, experiencia y servicios.",
+"portfolio.category.dentalreforma": "Dentistas",
+
+"portfolio.description.mongeortopedia": "Un traumatólogo ortopedista que buscaba un sitio web moderno y minimalista para diferenciarse de los sitios convencionales en el ámbito de la traumatología. Logramos un diseño profesional y sencillo.",
+"portfolio.category.mongeortopedia": "Doctores",
+
+"portfolio.description.cesiaborjon": "Una ginecóloga-obstetra feminista con más de 15 años de experiencia que quería crear un sitio web inclusivo y dinámico. Diseñamos una experiencia atractiva y reactiva que refleja su esencia y valores, permitiendo a sus pacientes una navegación agradable.",
+"portfolio.category.cesiaborjon": "Doctores",
+
+"portfolio.description.doctorarturlopez": "Un cirujano plástico que requería una landing page efectiva para destacar sus servicios de rejuvenecimiento facial, como rellenos y otros tratamientos antienvejecimiento. El diseño se enfocó en ser breve pero impactante, equilibrando simplicidad y elegancia con un video y un mensaje conciso con sus datos de contacto.",
+"portfolio.category.doctorarturlopez": "Doctores",
+
+"portfolio.description.doctorapamelaperez": "Una otorrinolaringóloga especializada en cirugía plástica nasal que buscaba un sitio web enfocado en destacar los resultados de sus pacientes y explicar cada procedimiento mediante video blogs. Desarrollamos una página de inicio reactiva y una sección de procedimientos con videos, priorizando formatos breves y fotos de su trabajo.",
+"portfolio.category.doctorapamelaperez": "Doctores",
+
+"portfolio.description.carboneticsinc": "Una tienda de accesorios y partes de fibra de carbono para autos de carrera que necesitaba optimizar su sistema de compras, disposición de productos e interfaz general. Implementamos un nuevo sistema de inventario y logística para mejorar el flujo de productos, selección y compra, además de optimizar la apariencia UI/UX de la tienda.",
+"portfolio.category.carboneticsinc": "Industria",
+
+"portfolio.description.lacocina": "Una marca de caldos y condimentos que quería establecer presencia en línea y lanzar sus productos al mercado internacional. Desarrollamos una tienda en Shopify con un diseño que resalta cada producto y elaboramos un discurso persuasivo y cálido alineado con el mensaje de la marca, creando una tienda sencilla pero con un mensaje potente.",
+"portfolio.category.lacocina": "Industria",
+
+"portfolio.description.wislinfarm": "Un negocio familiar que comercializa y distribuye productos lácteos y embutidos a nivel local, con la meta de llegar a diversos mercados. Desarrollamos una página de inicio que refleja la esencia y el producto de la marca, combinando imágenes de productos con una narrativa atractiva.",
+"portfolio.category.wislinfarm": "Industria",
+
+"portfolio.description.sylindustrial": "Un distribuidor de productos para la industria maquiladora que necesitaba una landing page para mostrar sus servicios y datos de contacto. Nos enfocamos en diseñar una página sencilla pero efectiva que presentara claramente sus servicios e información clave, integrando múltiples métodos de contacto accesibles.",
+"portfolio.category.sylindustrial": "Industria",
+
+"portfolio.description.kamili": "Un salón de uñas y spa que buscaba un sitio web donde los clientes pudieran agendar citas en cualquiera de sus dos sucursales y elegir servicios. Implementamos una interfaz intuitiva que permite explorar el catálogo de servicios, seleccionar tratamientos, reservar y pagar, asegurando una experiencia eficiente y fluida.",
+"portfolio.category.kamili": "Industria",
+
+"portfolio.description.thecondorvision": "Una agencia de viajes inmersivos en drones que buscaba un sitio web que resaltara la experiencia de vuelo. Diseñamos una página en la que la landing page está dominada por un video inmersivo en alta calidad, transportando al usuario. Además, integramos secciones con más videos y fotos inmersivas que refuerzan la narrativa visual de la marca.",
+"portfolio.category.thecondorvision": "Industria",
+
+"portfolio.description.gpeconsultores": "Una firma de consultoría legal y contable que buscaba posicionarse y diferenciarse del sector con un sitio web moderno, además de mejorar la gestión de correos corporativos. Desarrollamos un sitio innovador y funcional optimizado para el posicionamiento, además de una web app que centraliza la gestión y cantidad de correos e información, mejorando la eficiencia general.",
+"portfolio.category.gpeconsultores": "Consultoría",
+
+"portfolio.description.syltalento": "Una agencia de reclutamiento que necesitaba un sitio web para informar sobre sus servicios, contar con su propia bolsa de trabajo y una web app para empleados. Creamos un sitio optimizado para una experiencia de navegación intuitiva, permitiendo explorar valores, servicios y blogs de la agencia. Además, implementamos una bolsa de trabajo funcional donde los candidatos pueden aplicar directamente a vacantes y desarrollamos una web app para la gestión interna de correos y administración de datos relacionados con vacantes.",
+"portfolio.category.syltalento": "Consultoría",
+
+"portfolio.description.ecommetrics": "Plataforma de análisis y métricas para e-commerce que buscaba un sitio web optimizado y profesional para destacar sus servicios y capacidades.",
+"portfolio.category.ecommetrics": "Consultoría",
+
+"portfolio.description.bordergrower": "Un distribuidor comercial en el sector agrícola que necesitaba un sitio web optimizado para ampliar su alcance y mejorar la oferta de servicios.",
+"portfolio.category.bordergrower": "Comercio",
+
+"portfolio.description.chik": "Un distribuidor de productos de belleza que quería modernizar y fortalecer su tienda en Shopify. Realizamos un rebranding, reestructuramos la tienda, optimizamos la distribución y presentación de productos, asegurando una navegación intuitiva y coherente. Enfocarnos en la cohesión del mensaje visual y verbal nos permitió crear una tienda atractiva.",
+"portfolio.category.chik": "Comercio",
+
+"portfolio.description.labodegasolar": "Un distribuidor de productos solares que necesitaba un sitio web para mejorar su alcance en el mercado y la relación con los clientes.",
+"portfolio.category.labodegasolar": "Comercio",
+
+"portfolio.description.ziggiz": "Una marca de papel para fumar que buscaba una tienda en línea simple y directa para los compradores. Desarrollamos una tienda en Shopify con un diseño limpio y navegación intuitiva, permitiendo que los clientes comprendan el mensaje y asegurando una experiencia de compra rápida y eficiente.",
+"portfolio.category.ziggiz": "Comercio",
+
+"portfolio.description.centraltoreo": "Oficinas del sector administrativo y médico que querían mejorar su landing page con un diseño más moderno y navegación fluida. La nueva página se enfocó en mejorar la experiencia del usuario con una navegación más fluida, un diseño más atractivo y una estructura optimizada para resaltar la oferta y mensaje. Además, integramos herramientas para facilitar el contacto y centralizar la gestión de correos.",
+"portfolio.category.centraltoreo": "Otros",
+
+"portfolio.description.proyectotijuana": "Un proyecto comunitario que busca promover iniciativas sociales y el desarrollo cultural en Tijuana, requiriendo una presencia en línea funcional y atractiva.",
+"portfolio.category.proyectotijuana": "Otros",
+
+"portfolio.categories.all": "Todos",
+"portfolio.categories.dentists": "Dentistas",
+"portfolio.categories.doctors": "Médicos",
+"portfolio.categories.industry": "Industria",
+"portfolio.categories.consulting": "Consultorías",
+"portfolio.categories.trading": "Comercializadoras",
+"portfolio.categories.others": "Otros",
+
+"packages.inicial" : "Plan Inicial",
+"packages.inicialdesc" : "Para los recién llegados",
+"packages.inicialmonths" : ""
+
+
+
+
+
+
+
+
+
+
   },
 
   en: {
@@ -159,8 +246,7 @@ export const ui = {
     "team.title2": "Meet the Team",
     "service.readyTitle": "Ready to bring your projects to life",
     "service.ourServices": "Our Services",
-    "service.description":
-      "In addition to our consulting service, we are passionate about creating strategies and technology for different businesses with a multidisciplinary team in digital marketing and production.",
+    "service.description": "In addition to our consulting service, we are passionate about creating strategies and technology for different businesses with a multidisciplinary team in digital marketing and production.",
     "service.anyQuestions": "Any questions?",
     "service.loveToAnswer": "We love to answer",
     "service.ask": "Ask",
@@ -193,6 +279,78 @@ export const ui = {
 "skills.service4.description": "Gain precise insights and time to capture inbound leads and sell nonstop.",
 "portfolio.title": "Portfolio",
 "portfolio.subtitle": "Take a Look at Our Work",
-"portfolio.button": "View Project"
+"portfolio.button": "View Project",
+"portfolio.description.bites": "It is a high-aesthetic dental center that needed to renew its website and optimize its UX/UI with an image that reflects Bites' distinctive style. We incorporated a calendar that allows scheduling appointments and payments directly from the website, providing a smooth and efficient experience where users can have control through a web app.",
+"portfolio.category.bites": "Dentists",
+
+"portfolio.description.reformadental": "A family dental office that wanted to position itself as an alternative with complete services at competitive prices in the central area. We designed and developed a functional website for easy appointment scheduling, with a modern design that highlights its competitiveness and variety of services.",
+"portfolio.category.reformadental": "Dentists",
+
+"portfolio.description.dentalreforma": "A family dental office with over 35 years in Tijuana seeks to remain relevant and have a presence in search engines. We designed a website to highlight its values, experience, and services.",
+"portfolio.category.dentalreforma": "Dentists",
+
+"portfolio.description.mongeortopedia": "An orthopedic traumatologist who sought a modern and minimalist website to stand out from conventional sites in the field of traumatology. We achieved a professional and simple design.",
+"portfolio.category.mongeortopedia": "Doctors",
+
+"portfolio.description.cesiaborjon": "A feminist gynecologist-obstetrician with over 15 years of experience who wanted to create an inclusive and dynamic website. We created an attractive and reactive experience that reflects her essence and values while allowing patients to have a pleasant navigation experience.",
+"portfolio.category.cesiaborjon": "Doctors",
+
+"portfolio.description.doctorarturlopez": "A plastic surgeon required an effective landing page that highlighted his facial rejuvenation services, such as fillers and other anti-aging treatments. The design was intended to be brief yet striking, balancing simplicity and elegance with a video and a brief message with his contact details.",
+"portfolio.category.doctorarturlopez": "Doctors",
+
+"portfolio.description.doctorapamelaperez": "An otolaryngologist specializing in nasal plastic surgery aimed to have a website focused on highlighting her patients' results and explaining each procedure through video blogs. Therefore, we developed a reactive homepage and a procedures section with videos, emphasizing brief formats and photos of her work.",
+"portfolio.category.doctorapamelaperez": "Doctors",
+
+"portfolio.description.carboneticsinc": "A store selling carbon fiber accessories and parts for race cars that needed to optimize its purchasing system, product arrangement, and overall interface. We implemented a new inventory and logistics system to enable optimal product flow, selection, and purchase while improving the store's overall UI/UX appearance.",
+"portfolio.category.carboneticsinc": "Industry",
+
+"portfolio.description.lacocina": "A brand of broths and seasonings that wanted to establish an online presence and launch its products for international sales. We developed a Shopify store with a design that highlights each product and crafted a persuasive and warm discourse aligned with the brand's message, creating a simple store with a strong message.",
+"portfolio.category.lacocina": "Industry",
+
+"portfolio.description.wislinfarm": "A family business that markets and distributes dairy products and cold cuts on a local scale, aiming to reach various markets. We developed a homepage reflecting the brand's essence and product, blending product images with an engaging narrative.",
+"portfolio.category.wislinfarm": "Industry",
+
+"portfolio.description.sylindustrial": "A distributor of products for maquiladora industries that wanted a landing page to showcase its services and contact details. We focused on designing a simple yet effective page that clearly presents its services and key information. We integrated multiple accessible contact methods.",
+"portfolio.category.sylindustrial": "Industry",
+
+"portfolio.description.kamili": "A nail salon and spa that wanted a website allowing customers to book appointments at either of its two locations and choose services. We implemented an intuitive interface that enables clients to explore the service catalog, select treatments, book, and pay, ensuring an efficient and smooth experience.",
+"portfolio.category.kamili": "Industry",
+
+"portfolio.description.thecondorvision": "An immersive drone travel agency sought a website that highlighted the flight experience. We designed a page where the landing page is dominated by a high-quality immersive video, transporting the user. Additionally, we integrated sections with more immersive videos and photos reinforcing the brand's visual narrative.",
+"portfolio.category.thecondorvision": "Industry",
+
+"portfolio.description.gpeconsultores": "A legal and accounting consulting firm seeking to position itself and distinguish itself from the sector with a modern website, as well as better management of corporate emails. We developed an innovative and functional website optimized for positioning, and we also provided a web app that centralizes the management and number of emails and information, improving overall efficiency.",
+"portfolio.category.gpeconsultores": "Consulting",
+
+"portfolio.description.syltalento": "A recruitment agency that wanted a website to provide information about its services, have its own job board, and a web app for employees. We created an optimized website for an intuitive browsing experience, allowing users to explore the agency’s values, services, and blogs. Additionally, we implemented a functional job board where candidates can apply directly to vacancies and developed a web app for internal email management and vacancy-related data administration.",
+"portfolio.category.syltalento": "Consulting",
+
+"portfolio.description.ecommetrics": "E-commerce metrics and analysis platform seeking an optimized and professional website to highlight its services and capabilities.",
+"portfolio.category.ecommetrics": "Consulting",
+
+"portfolio.description.bordergrower": "A commercial distributor in the agricultural sector that wanted an optimized website to expand its reach and enhance its service offerings.",
+"portfolio.category.bordergrower": "Trading",
+
+"portfolio.description.chik": "A beauty product distributor that wanted to modernize and strengthen its Shopify store. We carried out a rebranding, restructured the store, optimized product distribution and presentation, ensuring intuitive and coherent navigation. Focusing on the cohesion of the visual and verbal message allowed us to create an attractive store.",
+"portfolio.category.chik": "Trading",
+
+"portfolio.description.labodegasolar": "A solar product distributor that needed a website for improved market reach and customer engagement.",
+"portfolio.category.labodegasolar": "Trading",
+
+"portfolio.description.ziggiz": "A rolling paper brand that wanted a simple and direct online store for buyers. We developed a Shopify store with a clean design and intuitive navigation, allowing customers to understand the message and ensuring a quick and efficient shopping experience.",
+"portfolio.category.ziggiz": "Trading",
+
+"portfolio.description.centraltoreo": "Administrative and medical sector offices that wanted to improve their landing page with a more modern design and smoother navigation. The new page focused on enhancing the user experience with smoother navigation, a more attractive design, and an optimized structure to highlight the offer and message. Additionally, we integrated tools to facilitate contact and centralize email management.",
+"portfolio.category.centraltoreo": "Others",
+
+"portfolio.description.proyectotijuana": "A community project aimed at promoting social initiatives and cultural development in Tijuana, seeking a functional and attractive online presence.",
+"portfolio.category.proyectotijuana": "Others",
+"portfolio.categories.all": "All",
+"portfolio.categories.dentists": "Dentists",
+"portfolio.categories.doctors": "Doctors",
+"portfolio.categories.industry": "Industry",
+"portfolio.categories.consulting": "Consulting",
+"portfolio.categories.trading": "Trading",
+"portfolio.categories.others": "Others",
   },
 } as const;
