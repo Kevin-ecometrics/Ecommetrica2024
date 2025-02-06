@@ -1,60 +1,52 @@
 ---
-let services = [
-  {
-    id: 0,
-    name: "Video producción ",
-    description:
-      "  Diseñamos y ejecutamos todos los procesos clave de preproducción, producción y post producción para trasformar la visión de nuestros clientes en realidad, adaptándonos al formato que se requiera.",
-  },
-  {
-    id: 1,
-    name: "Identidad de marca ",
-    description:
-      "Mas allá de un logo unificamos nombre, colores y estrategia de marketing para lograr una coherencia visual poderosa que tenga presencia para los consumidores.  ",
-  },
-  {
-    id: 2,
-    name: "Escritura creativa ",
-    description:
-      "Le damos alma y personalidad a tu marca o negocio mientras jugamos con la imaginación y creatividad para crear narrativas e historias que conecten con la gente. ",
-  },
-  {
-    id: 3,
-    name: "Posicionamiento Web  ",
-    description:
-      "Impulsamos tu negocio en motores de búsqueda. Diseñamos estrategias integrales que maximizan la retención de leads y la conversión. Creamos ecosistemas digitales conectando tu página web con redes sociales, producimos y distribuimos contenido de alto valor, y ejecutamos campañas de email marketing altamente efectivas.   ",
-  },
-  {
-    id: 4,
-    name: "Programación y  webApps ",
-    description:
-      "Desarrollamos páginas y tiendas en línea impactantes y adaptables que crecen contigo. Hechas a tu gusto, necesidad y flujo que requieras. Así mismo cada cliente obtiene una aplicación web personalizada que simplifica la gestión de su negocio, en la que podrá acceder a toda su información, calendarios de citas, reseñas, envíos de correos masivos y mucho más en un clic. ",
-  },
-  {
-    id: 5,
-    name: "Diseño web ",
-    description:
-      "Nos enfocamos en Brindar una experiencia de usuario UX y diseño interfaz que se diferencie del resto, con un alto rendimiento y funcionalidad superior para que tus potenciales clientes o pacientes disfruten una experiencia cómoda y única.  ",
-  },
-  {
-    id: 6,
-    name: "E-commerce ",
-    description:
-      "Nos especializamos en B2C, B2B, te guiamos paso a paso para diseñar un plan estratégico que impulse tu crecimiento, te guiamos a comprender a fondo el mercado y a definir con claridad tus productos y servicios. Fusionamos nuestra tecnología para seleccionar la plataforma más apropiada que te brinde autonomía, apertura a nivel regional e internacional y automatice tus procesos para maximizar eficiencia y resultados. ",
-  },
-  {
-    id: 7,
-    name: "Planeación estratégica ",
-    description:
-      "Nos enfocamos en el crecimiento de tu negocio, te ayudamos a identificar oportunidades de mejora y a implementar estrategias que te permitan alcanzar tus objetivos. ",
-  },
-];
-
 import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
 const URL = Astro.url;
 const lang = getLangFromUrl(URL);
 const t = useTranslations(lang);
+
+let services = [
+  {
+    id: 0,
+    name: t("service.video"),
+    description: t("service.videodesc"),
+  },
+  {
+    id: 1,
+    name: t("service.brand"),
+    description: t("service.branddesc"),
+  },
+  {
+    id: 2,
+    name: t("service.writing"),
+    description: t("service.writingdesc"),
+  },
+  {
+    id: 3,
+    name: t("service.web"),
+    description: t("service.webdesc"),
+  },
+  {
+    id: 4,
+    name: t("service.webapp"),
+    description: t("service.webappdesc"),
+  },
+  {
+    id: 5,
+    name: t("service.desing"),
+    description: t("service.desingdesc"),
+  },
+  {
+    id: 6,
+    name: t("service.ecommerce"),
+    description: t("service.ecommercedesc"),
+  },
+  {
+    id: 7,
+    name: t("service.planning"),
+    description: t("service.planningdesc"),
+  },
+];
 ---
 
 <section class="md:p-16 px-8 md:mb-32 bg-custom-bg relative" id="service">
@@ -75,7 +67,6 @@ const t = useTranslations(lang);
     <!-- Servicios -->
     {
       services.map((service) => {
-        // Seleccionamos el icono correspondiente a cada servicio
         const getIcon = () => {
           switch (service.name.trim()) {
             case "Video Production":

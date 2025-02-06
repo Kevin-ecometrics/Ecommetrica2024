@@ -41,15 +41,12 @@ export const ui = {
     "about.title2": "Bienvenidos",
     "about.title3": "a Ecommetrica",
     "about.subtitle": "Visítanos, Tijuana y San Diego",
-    "about.description":
-      "Somos una consultoría que garantiza una planeación estratégica y segura con soluciones a la medida para tu negocio y comercio en línea. <br /> <br /> Creamos tu página web confiable, segura e innovadora y además desarrollamos tu ecosistema de marketing digital. <br /> <br /> No te pierdas de nada del INTERNET y descarga nuestra guía básica.",
+    "about.description": "Somos una consultoría que garantiza una planeación estratégica y segura con soluciones a la medida para tu negocio y comercio en línea. <br /> <br /> Creamos tu página web confiable, segura e innovadora y además desarrollamos tu ecosistema de marketing digital. <br /> <br /> No te pierdas de nada del INTERNET y descarga nuestra guía básica.",
     "guia.buttonText": "Guía de e-commerce",
     "skills.title1": "¿Cómo hacerlo bien en línea?",
     "skills.title2": "¡Una receta para todo lo que has imaginado!",
-    "skills.description1":
-      "En más de 10 años de experiencia en e-Commerce hemos acompañado a marcas y empresas a lo largo de su transformación digital creando sitios web y aplicaciones web visualmente sofisticados, tecnológicamente innovadores y multifuncionales.",
-    "skills.description2":
-      "Caminarás en tu propio ecosistema digital poniendo tu negocio al lado de las Visas y Mastercards de tus Clientes y Consumidores.",
+    "skills.description1": "En más de 10 años de experiencia en e-Commerce hemos acompañado a marcas y empresas a lo largo de su transformación digital creando sitios web y aplicaciones web visualmente sofisticados, tecnológicamente innovadores y multifuncionales.",
+    "skills.description2": "Caminarás en tu propio ecosistema digital poniendo tu negocio al lado de las Visas y Mastercards de tus Clientes y Consumidores.",
     "consulting.title": "¿Qué hay Dentro de la Consultoría de Ecommetrica?",
     "consulting.subtitle": "En cualquier paquete tienes:",
     "consulting.programation": "Programación",
@@ -67,11 +64,37 @@ export const ui = {
     "team.title2": "Conoce al Equipo",
     "service.readyTitle": "Ready to bring your projects to life",
     "service.ourServices": "Our Services",
-    "service.description":
-      "In addition to our consulting service, we are passionate about creating strategies and technology for different businesses with a multidisciplinary team in digital marketing and production.",
+    "service.description": "In addition to our consulting service, we are passionate about creating strategies and technology for different businesses with a multidisciplinary team in digital marketing and production.",
     "service.anyQuestions": "¿Alguna pregunta?",
     "service.loveToAnswer": "Nos encanta responder",
     "service.ask": "Preguntar",
+    "service.video": "Video producción",
+    "service.videodesc": "Diseñamos y ejecutamos todos los procesos clave de preproducción, producción y post producción para trasformar la visión de nuestros clientes en realidad, adaptándonos al formato que se requiera.",
+    "service.brand": "Identidad de marca",
+    "service.branddesc": "Mas allá de un logo unificamos nombre, colores y estrategia de marketing para lograr una coherencia visual poderosa que tenga presencia para los consumidores.",
+    "service.writing": "Escritura creativa ",
+    "service.writingdesc": "Le damos alma y personalidad a tu marca o negocio mientras jugamos con la imaginación y creatividad para crear narrativas e historias que conecten con la gente.",
+    "service.web": "Posicionamiento Web",
+    "service.webdesc": "Impulsamos tu negocio en motores de búsqueda. Diseñamos estrategias integrales que maximizan la retención de leads y la conversión. Creamos ecosistemas digitales conectando tu página web con redes sociales, producimos y distribuimos contenido de alto valor, y ejecutamos campañas de email marketing altamente efectivas.",
+    "service.webapp":"Programación y  webApps",
+    "service.webappdesc":"Desarrollamos páginas y tiendas en línea impactantes y adaptables que crecen contigo. Hechas a tu gusto, necesidad y flujo que requieras. Así mismo cada cliente obtiene una aplicación web personalizada que simplifica la gestión de su negocio, en la que podrá acceder a toda su información, calendarios de citas, reseñas, envíos de correos masivos y mucho más en un clic.",
+    "service.desing":"Diseño web.",
+    "service.desingdesc":"Nos enfocamos en Brindar una experiencia de usuario UX y diseño interfaz que se diferencie del resto, con un alto rendimiento y funcionalidad superior para que tus potenciales clientes o pacientes disfruten una experiencia cómoda y única.",
+    "service.ecommerce": "E-commerce",
+    "service.ecommercedesc": "Nos especializamos en B2C, B2B, te guiamos paso a paso para diseñar un plan estratégico que impulse tu crecimiento, te guiamos a comprender a fondo el mercado y a definir con claridad tus productos y servicios. Fusionamos nuestra tecnología para seleccionar la plataforma más apropiada que te brinde autonomía, apertura a nivel regional e internacional y automatice tus procesos para maximizar eficiencia y resultados.",
+    "service.planning": "Planeación estratégica",
+    "service.planningdesc": "Nos enfocamos en el crecimiento de tu negocio, te ayudamos a identificar oportunidades de mejora y a implementar estrategias que te permitan alcanzar tus objetivos.",
+    "skills.service1": "Consultoría Estratégica",
+"skills.service1.description": "Nuestra receta para el éxito garantiza una planificación segura sobre proyecciones y resultados.",
+
+"skills.service2": "Optimización de Google y Meta",
+"skills.service2.description": "GOOGLE posee más del 93% de la intención de búsqueda e Instagram es donde todos están.",
+
+"skills.service3": "Automatización de Marketing y Ventas",
+"skills.service3.description": "Mejora la adquisición de leads y conversiones con técnicas de growth hacking de primer nivel.",
+
+"skills.service4": "Análisis Corporativo",
+"skills.service4.description": "Obtén conocimiento preciso y tiempo para captar leads entrantes y vender sin parar."
   },
 
   en: {
@@ -84,8 +107,7 @@ export const ui = {
     "hero.title": "Hello, we are",
     "contact.title1": "We would love to work on your project",
     "contact.title2": "Contact us now",
-    "contact.description":
-      "Fill out the form to contact us or call from 9:00 a.m. to 6:00 p.m. Monday to Friday to start bringing your projects to life.",
+    "contact.description": "Fill out the form to contact us or call from 9:00 a.m. to 6:00 p.m. Monday to Friday to start bringing your projects to life.",
     "contact.phone": "Call or schedule",
     "contact.email": "Email",
     "contact.namePlaceholder": "Name",
@@ -109,8 +131,7 @@ export const ui = {
     "about.title2": "Welcome",
     "about.title3": "to Ecommetrica",
     "about.subtitle": "Visit us, Tijuana and San Diego",
-    "about.description":
-      "We are a consulting firm that guarantees strategic and secure planning with tailored solutions for your business and online commerce. <br /> <br /> We create reliable, secure, and innovative websites and develop your digital marketing ecosystem. <br /> <br /> Don't miss out on anything on the INTERNET and download our basic guide.",
+    "about.description": "We are a consulting firm that guarantees strategic and secure planning with tailored solutions for your business and online commerce. <br /> <br /> We create reliable, secure, and innovative websites and develop your digital marketing ecosystem. <br /> <br /> Don't miss out on anything on the INTERNET and download our basic guide.",
     "guia.buttonText": "E-commerce Guide",
     "skills.title1": "How to do it right online?",
     "skills.title2": "A recipe for everything you've imagined!",
@@ -133,7 +154,6 @@ export const ui = {
     "hero.words": ["Innovate", "Elevate", "Simplify"],
     "team.title1": "Hello!",
     "team.title2": "Meet the Team",
-
     "service.readyTitle": "Ready to bring your projects to life",
     "service.ourServices": "Our Services",
     "service.description":
@@ -141,5 +161,26 @@ export const ui = {
     "service.anyQuestions": "Any questions?",
     "service.loveToAnswer": "We love to answer",
     "service.ask": "Ask",
+    "service.video": "Production Video.",
+    "service.videodesc": "We design and execute all key processes of pre-production, production, and post-production to transform our clients' vision into reality, adapting to the required format.",
+    "service.brand": "Beyond a logo, we unify name, colors, and marketing strategy to achieve a powerful visual coherence that resonates with consumers.",
+    "service.branddesc": "Beyond a logo, we unify name, colors, and marketing strategy to achieve a powerful visual coherence that resonates with consumers.",
+    "service.writing": "We give soul and personality to your brand or business while playing with imagination and creativity to create narratives and stories that connect with people.",
+    "service.web":"We boost your business on search engines. We design comprehensive strategies that maximize lead retention and conversion. We create digital ecosystems by connecting your website with social networks, produce and distribute high-value content, and execute highly effective email marketing campaigns.",
+    "serice.webapp":"We develop impactful and adaptable online pages and stores that grow with you. Made to your taste, needs, and required workflow. Each client also gets a customized web application that simplifies business management, allowing access to all their information, appointment calendars, reviews, mass emailing, and much more in one click.",
+    "service.desing":"We focus on providing a user experience (UX) and interface design that stands out from the rest, with high performance and superior functionality so your potential clients or patients enjoy a comfortable and unique experience.",
+    "service.ecommerce": "We specialize in B2C, B2B. We guide you step by step to design a strategic plan that drives your growth, helps you deeply understand the market, and clearly define your products and services. We combine our technology to select the most appropriate platform that gives you autonomy, regional and international reach, and automates your processes to maximize efficiency and results.",
+    "service.planning": "We focus on the growth of your business, helping you identify improvement opportunities and implement strategies that allow you to achieve your goals.",
+  "skills.service1": "Strategic Consulting",
+"skills.service1.description": "Our recipe for success guarantees reliable planning on projections and results.",
+
+"skills.service2": "Google and Meta Optimization",
+"skills.service2.description": "GOOGLE holds over 93% of search intent, and Instagram is where everyone is.",
+
+"skills.service3": "Marketing and Sales Automation",
+"skills.service3.description": "Improve lead acquisition and conversions with top-tier growth hacking techniques.",
+
+"skills.service4": "Corporate Analysis",
+"skills.service4.description": "Gain precise insights and time to capture inbound leads and sell nonstop.",
   },
 } as const;
