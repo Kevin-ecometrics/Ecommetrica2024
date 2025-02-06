@@ -118,7 +118,7 @@ function Navbar({ URL }) {
           <a
             onClick={() => (window.location.pathname = "/en")}
             className={`px-4 py-0 rounded-lg transition-colors duration-300 cursor-pointer ${
-              URL.pathname === "/en"
+              URL.pathname === "/en/"
                 ? "bg-blue-600 text-white"
                 : "bg-gray-200 text-black"
             }`}
@@ -189,7 +189,7 @@ function Navbar({ URL }) {
               <a
                 onClick={() => (window.location.pathname = "/en")}
                 className={`px-0 py-0 rounded-lg transition-colors duration-300 cursor-pointer ${
-                  URL.pathname === "/en"
+                  URL.pathname === "/en/"
                     ? "bg-blue-600 text-white"
                     : "bg-gray-200 text-black"
                 }`}

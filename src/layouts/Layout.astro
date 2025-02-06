@@ -15,7 +15,7 @@ interface Props {
 const { title } = Astro.props;
 
 const URL = Astro.url;
-const isHomePage = URL.pathname === "/" || URL.pathname === "/en";
+const isHomePage = URL.pathname === "/" || URL.pathname === "/en/";
 
 const lang = getLangFromUrl(Astro.url);
 
@@ -38,7 +38,7 @@ const texts = {
 };
 
 // Determina el idioma basado en la ruta
-const isEnglish = URL.pathname.startsWith("/en");
+const isEnglish = URL.pathname.startsWith("/en/");
 const t = isEnglish ? texts.en : texts.es;
 
 // Define las rutas dinámicas basadas en la ruta
