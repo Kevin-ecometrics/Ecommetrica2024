@@ -20,6 +20,7 @@ export const ui = {
     "hero.button1": "Comienza",
     "hero.button2": "Nosotros",
     "hero.words": ["Insnova", "Eleva", "Simplifica"],
+    "calendar.days":["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
     "hero.hello": "¡Hola!",
     "hero.team": "Conoce al Equipo",
 
@@ -322,6 +323,9 @@ export const ui = {
     "consulting.seodesc": "Tu sitio estará mejor estructurado para Google©",
     "consulting.webmaster": "Web Master",
     "consulting.webmasterdesc": "Hospedaje rápido, seguro y confiable.",
+
+    
+
   },
 
   en: {
@@ -338,6 +342,7 @@ export const ui = {
     "hero.button1": "Get Started",
     "hero.button2": "About Us",
     "hero.words": ["Innovate", "Elevate", "Simplify"],
+    "calendar.days":["Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"],
     "hero.hello": "Hello!",
     "hero.team": "Meet the team",
 

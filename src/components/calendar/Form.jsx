@@ -13,7 +13,7 @@ function Calendar({ URL }) {
     time: "",
     code: "",
     type: "",
-    email: "", // Nuevo campo de correo electrónico
+    email: "",
   });
   const [showModal, setShowModal] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
@@ -34,7 +34,9 @@ function Calendar({ URL }) {
     fetchReservations();
   }, []);
 
-  const daysOfWeek = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+  const daysOfWeek = t("calendar.days");
+
+  const words = t("hero.words");
 
   const getDaysInMonth = (year, month) =>
     new Date(year, month + 1, 0).getDate();
