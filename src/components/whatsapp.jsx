@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-function CustomFloatingWhatsApp() {
+function CustomFloatingWhatsApp({ URL }) {
+  const lang = getLangFromUrl(URL);
+  const t = useTranslations(lang);
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([
-    { type: "received", text: "Hola, ¿En qué podemos ayudarte?" },
+    { type: "received", text: t("whatsapp.message") },
   ]);
 
   const toggleChat = () => setIsOpen(!isOpen);
@@ -46,7 +49,7 @@ function CustomFloatingWhatsApp() {
               />
               <div>
                 <p className="font-semibold">Ecommetrica</p>
-                <p className="text-sm">En línea</p>
+                <p className="text-sm">{t("whatsapp.online")}</p>
               </div>
             </div>
             <button

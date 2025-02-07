@@ -58,10 +58,10 @@ const Portfolio = ({ URL }) => {
       prioridad: true,
     },
     {
-      nombre: "Doctorarturlopez.com",
+      nombre: "Doctorarturolopez.com",
       categoria: t("portfolio.category.doctorarturlopez"),
       img: "/projects/arturopage.webp",
-      url: "https://doctorarturlopez.com",
+      url: "https://doctorarturolopez.com",
       description: t("portfolio.description.doctorarturlopez"),
       old: false,
       oldImage: "/old-doctorarturlopez.webp",
