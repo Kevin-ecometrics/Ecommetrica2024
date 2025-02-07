@@ -5,6 +5,7 @@ import LogoTwitter from "@components/icons/TwitterFooter.astro";
 import Footer from "@public/LogoAlternative.webp";
 import { Image } from "astro:assets";
 import Whatsapp from "@components/whatsapp";
+const URL = Astro.url;
 ---
 
 <Layout title="Support | Ecommetrica">
@@ -50,7 +51,7 @@ import Whatsapp from "@components/whatsapp";
       </p>
     </div>
   </div>
-  <Whatsapp client:load />
+  <Whatsapp client:load URL={URL} />
   <footer class="bg-[#3C3C3C] p-12 text-white relative overflow-x-hidden">
     <div
       class="flex md:flex-row flex-col md:justify-between md:items-center mb-16"
