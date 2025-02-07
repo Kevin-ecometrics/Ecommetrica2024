@@ -7,26 +7,26 @@ const t = useTranslations(lang);
 let consultings = [
   {
     src: "/programacion.webp",
-    text: "Programación",
-    description: "Páginas Web, rápida y segura.",
+    text: t("consulting.programation"),
+    description: t("consulting.programationdesc"),
     background: "bg-gradient-to-t from-[#1FBCFF] to-[#1FBCFF]",
   },
   {
     src: "/marketing.webp",
-    text: "Marketing",
-    description: "Tenemos el mejor S.S.L. con NameCheap",
+    text: t("consulting.marketing"),
+    description: t("consulting.marketingdesc"),
     background: "bg-gradient-to-t from-[#861453] to-[#861453]",
   },
   {
     src: "/SEO.webp",
-    text: "SEO",
-    description: "Tu sitio estará mejor estructurado para Google©",
+    text: t("consulting.seo"),
+    description: t("consulting.seodesc"),
     background: "bg-gradient-to-t from-[#59A29E] to-[#5DA9A6]",
   },
   {
     src: "/webMaster.webp",
-    text: "Web Master",
-    description: "Hospedaje rápido, seguro y confiable.",
+    text: t("consulting.webmaster"),
+    description: t("consulting.webmasterdesc"),
     background: "bg-gradient-to-t from-[#9747FF] to-[#9747FF]",
   },
 ];
@@ -43,7 +43,7 @@ let consultings = [
   </h2>
   <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
     {
-      consultings.map((item, index) => {
+      consultings.map((item) => {
         return (
           <div class="relative flex flex-col md:items-center group">
             <div class="relative group">
@@ -59,10 +59,10 @@ let consultings = [
             </div>
             <div class="absolute inset-0 w-full flex-col flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <span class="text-white text-3xl font-bold md:px-4 py-2 w-full text-center">
-                {t(`consulting.title`)}
+                {item.text}
               </span>
               <span class="text-white text-xl font-bold md:px-4 py-2 w-full text-center">
-                {t(`consulting.subtitle`)}
+                {item.description}
               </span>
             </div>
           </div>

@@ -306,8 +306,22 @@ export const ui = {
 
     // Rutas
     team: "/team/",
+
+    // VCF
     "VCF.title": "Descargando...",
     "VCF.subtitle": "Descargar contacto",
+
+    //Consulting
+    "consulting.title": "¿Qué hay Dentro de la Consultoría de Ecommetrica?",
+    "consulting.subtitle": "En cualquier paquete tienes:",
+    "consulting.programation": "Programación",
+    "consulting.programationdesc": "Páginas Web, rápida y segura.",
+    "consulting.marketing": "Marketing",
+    "consulting.marketingdesc": "Tenemos el mejor S.S.L. con NameCheap",
+    "consulting.seo": "SEO",
+    "consulting.seodesc": "Tu sitio estará mejor estructurado para Google©",
+    "consulting.webmaster": "Web Master",
+    "consulting.webmasterdesc": "Hospedaje rápido, seguro y confiable.",
   },
 
   en: {
@@ -612,5 +626,16 @@ export const ui = {
     team: "/en/team/",
     "VCF.title": "Downloading...",
     "VCF.subtitle": "Downloading contact",
+
+    "consulting.title": "What's Inside Ecommetrica's Consulting?",
+    "consulting.subtitle": "In any package, you get:",
+    "consulting.programation": "Programming",
+    "consulting.programationdesc": "Fast and secure web pages.",
+    "consulting.marketing": "Marketing",
+    "consulting.marketingdesc": "We have the best S.S.L. with NameCheap",
+    "consulting.seo": "SEO",
+    "consulting.seodesc": "Your site will be better structured for Google©",
+    "consulting.webmaster": "Web Master",
+    "consulting.webmasterdesc": "Fast, secure, and reliable hosting.",
   },
 } as const;
