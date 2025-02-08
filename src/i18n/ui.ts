@@ -7,6 +7,14 @@ export const defaultLang = "es";
 
 export const ui = {
   es: {
+    // Banner
+    "banner.title1": "Tu dashboard",
+    "banner.title2":
+      "Trabaja, consulta, organiza y controla tus recursos, enlaces y documentos en un solo lugar",
+    "banner.title3": "📈 Gestiona toda tu información",
+    "banner.title4": "🔐 Seguridad Nivel Empresa",
+    "banner.title5": "Explorar Plataforma",
+
     // Whatsapp
     "whatsapp.message": "Hola, ¿En qué podemos ayudarte?",
     "whatsapp.online": "En línea",
@@ -23,7 +31,7 @@ export const ui = {
     "hero.title": "Hola, somos",
     "hero.button1": "Comienza",
     "hero.button2": "Nosotros",
-    "hero.words": ["Insnova", "Eleva", "Simplifica"],
+    "hero.words": ["Innova", "Eleva", "Simplifica"],
     "calendar.days": ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"],
     "hero.hello": "¡Hola!",
     "hero.team": "Conoce al Equipo",
@@ -330,6 +338,14 @@ export const ui = {
   },
 
   en: {
+    // Banner
+    "banner.title1": "Your dashboard",
+    "banner.title2":
+      "Work, consult, organize and control your resources, links and documents in one place",
+    "banner.title3": "📈 Manage all your information",
+    "banner.title4": "🔐 Enterprise Level Security",
+    "banner.title5": "Explore Platform",
+    //Whatsapp
     "whatsapp.message": "Hello, how can we help you?",
     "whatsapp.online": "Online",
     "whatsapp.send": "Send",

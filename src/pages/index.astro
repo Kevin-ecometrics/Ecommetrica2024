@@ -12,6 +12,7 @@ import Blog from "@components/Blog.astro";
 import Consulting from "@components/Consulting.astro";
 import Contact from "@components/Contact";
 import Team from "@components/team/Hero.astro";
+import Banner from "@components/Banner.astro";
 const URL = Astro.url;
 const teamMembers = [
   {
@@ -177,4 +178,5 @@ const teamMembers = [
   <!-- <Blog /> -->
   <Consulting />
   <Contact URL={URL} client:visible />
+  <Banner />
 </Layout>

@@ -12,6 +12,7 @@ import Blog from "@components/Blog.astro";
 import Consulting from "@components/Consulting.astro";
 import Contact from "@components/Contact";
 import Team from "@components/team/Hero.astro";
+import Banner from "@components/Banner.astro";
 const URL = Astro.url;
 
 const teamMembers = [
@@ -111,7 +112,7 @@ const teamMembers = [
     testimonio2:
       "His experience in ecommerce development and his ability to position brands in the digital market make him an expert in the field.",
     description:
-      "Juan is an expert in SEO, optimizing positioning and the digital ecosystem to grow your business.",
+      "Juan is an expert in optimizing SEO, positioning and the digital ecosystem to grow your business.",
   },
   // {
   //   id: 5,
@@ -179,4 +180,5 @@ const teamMembers = [
   <!-- <Blog /> -->
   <Consulting />
   <Contact URL={URL} client:visible />
+  <Banner />
 </Layout>

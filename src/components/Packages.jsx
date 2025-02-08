@@ -221,7 +221,7 @@ export default function PackagesPage({ URL }) {
 
   return (
     <section class="bg-[#F4F4FF] flex p-16 flex-col scroll-mt-20" id="package">
-      <h1 class="text-[#861453] text-2xl font-normal mb-4 text-center">
+      <h1 class="text-[#861453] text-3xl font-bold  mb-4 text-center">
         {t("packages.paquetes")}
       </h1>
       <h2 class="text-[#861453] font-bold text-3xl md:text-4xl mb-16 text-center">
