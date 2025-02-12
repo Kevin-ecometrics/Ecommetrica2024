@@ -23,6 +23,7 @@ export const ui = {
     "nav.home": "Inicio",
     "nav.about": "Nosotros",
     "nav.skills": "Habilidades",
+    "nav.portfolio": "Portafolio",
     "nav.service": "Servicios",
     "nav.team": "Equipo",
     "nav.contact": "Contacto",
@@ -144,43 +145,43 @@ export const ui = {
     "portfolio.category.dentalreforma": "Dentistas",
     "portfolio.description.mongeortopedia":
       "Un traumatólogo ortopedista que buscaba un sitio web moderno y minimalista para diferenciarse de los sitios convencionales en el ámbito de la traumatología. Logramos un diseño profesional y sencillo.",
-    "portfolio.category.mongeortopedia": "Doctores",
+    "portfolio.category.mongeortopedia": "Medicos",
     "portfolio.description.cesiaborjon":
       "Una ginecóloga-obstetra feminista con más de 15 años de experiencia que quería crear un sitio web inclusivo y dinámico. Diseñamos una experiencia atractiva y reactiva que refleja su esencia y valores, permitiendo a sus pacientes una navegación agradable.",
-    "portfolio.category.cesiaborjon": "Doctores",
+    "portfolio.category.cesiaborjon": "Medicos",
     "portfolio.description.doctorarturlopez":
       "Un cirujano plástico que requería una landing page efectiva para destacar sus servicios de rejuvenecimiento facial, como rellenos y otros tratamientos antienvejecimiento. El diseño se enfocó en ser breve pero impactante, equilibrando simplicidad y elegancia con un video y un mensaje conciso con sus datos de contacto.",
-    "portfolio.category.doctorarturlopez": "Doctores",
+    "portfolio.category.doctorarturlopez": "Medicos",
     "portfolio.description.doctorapamelaperez":
       "Una otorrinolaringóloga especializada en cirugía plástica nasal que buscaba un sitio web enfocado en destacar los resultados de sus pacientes y explicar cada procedimiento mediante video blogs. Desarrollamos una página de inicio reactiva y una sección de procedimientos con videos, priorizando formatos breves y fotos de su trabajo.",
-    "portfolio.category.doctorapamelaperez": "Doctores",
+    "portfolio.category.doctorapamelaperez": "Medicos",
     "portfolio.description.carboneticsinc":
       "Una tienda de accesorios y partes de fibra de carbono para autos de carrera que necesitaba optimizar su sistema de compras, disposición de productos e interfaz general. Implementamos un nuevo sistema de inventario y logística para mejorar el flujo de productos, selección y compra, además de optimizar la apariencia UI/UX de la tienda.",
-    "portfolio.category.carboneticsinc": "Industria",
+    "portfolio.category.carboneticsinc": "Industrias",
     "portfolio.description.lacocina":
       "Una marca de caldos y condimentos que quería establecer presencia en línea y lanzar sus productos al mercado internacional. Desarrollamos una tienda en Shopify con un diseño que resalta cada producto y elaboramos un discurso persuasivo y cálido alineado con el mensaje de la marca, creando una tienda sencilla pero con un mensaje potente.",
-    "portfolio.category.lacocina": "Industria",
+    "portfolio.category.lacocina": "Industrias",
     "portfolio.description.wislinfarm":
       "Un negocio familiar que comercializa y distribuye productos lácteos y embutidos a nivel local, con la meta de llegar a diversos mercados. Desarrollamos una página de inicio que refleja la esencia y el producto de la marca, combinando imágenes de productos con una narrativa atractiva.",
-    "portfolio.category.wislinfarm": "Industria",
+    "portfolio.category.wislinfarm": "Industrias",
     "portfolio.description.sylindustrial":
       "Un distribuidor de productos para la industria maquiladora que necesitaba una landing page para mostrar sus servicios y datos de contacto. Nos enfocamos en diseñar una página sencilla pero efectiva que presentara claramente sus servicios e información clave, integrando múltiples métodos de contacto accesibles.",
-    "portfolio.category.sylindustrial": "Industria",
+    "portfolio.category.sylindustrial": "Industrias",
     "portfolio.description.kamili":
       "Un salón de uñas y spa que buscaba un sitio web donde los clientes pudieran agendar citas en cualquiera de sus dos sucursales y elegir servicios. Implementamos una interfaz intuitiva que permite explorar el catálogo de servicios, seleccionar tratamientos, reservar y pagar, asegurando una experiencia eficiente y fluida.",
-    "portfolio.category.kamili": "Industria",
+    "portfolio.category.kamili": "Industrias",
     "portfolio.description.thecondorvision":
       "Una agencia de viajes inmersivos en drones que buscaba un sitio web que resaltara la experiencia de vuelo. Diseñamos una página en la que la landing page está dominada por un video inmersivo en alta calidad, transportando al usuario. Además, integramos secciones con más videos y fotos inmersivas que refuerzan la narrativa visual de la marca.",
-    "portfolio.category.thecondorvision": "Industria",
+    "portfolio.category.thecondorvision": "Industrias",
     "portfolio.description.gpeconsultores":
       "Una firma de consultoría legal y contable que buscaba posicionarse y diferenciarse del sector con un sitio web moderno, además de mejorar la gestión de correos corporativos. Desarrollamos un sitio innovador y funcional optimizado para el posicionamiento, además de una web app que centraliza la gestión y cantidad de correos e información, mejorando la eficiencia general.",
-    "portfolio.category.gpeconsultores": "Consultoría",
+    "portfolio.category.gpeconsultores": "Consultorías",
     "portfolio.description.syltalento":
       "Una agencia de reclutamiento que necesitaba un sitio web para informar sobre sus servicios, contar con su propia bolsa de trabajo y una web app para empleados. Creamos un sitio optimizado para una experiencia de navegación intuitiva, permitiendo explorar valores, servicios y blogs de la agencia. Además, implementamos una bolsa de trabajo funcional donde los candidatos pueden aplicar directamente a vacantes y desarrollamos una web app para la gestión interna de correos y administración de datos relacionados con vacantes.",
-    "portfolio.category.syltalento": "Consultoría",
+    "portfolio.category.syltalento": "Consultorías",
     "portfolio.description.ecommetrics":
       "Plataforma de análisis y métricas para e-commerce que buscaba un sitio web optimizado y profesional para destacar sus servicios y capacidades.",
-    "portfolio.category.ecommetrics": "Consultoría",
+    "portfolio.category.ecommetrics": "Consultorías",
     "portfolio.description.bordergrower":
       "Un distribuidor comercial en el sector agrícola que necesitaba un sitio web optimizado para ampliar su alcance y mejorar la oferta de servicios.",
     "portfolio.category.bordergrower": "Comercio",
@@ -201,9 +202,9 @@ export const ui = {
     "portfolio.category.proyectotijuana": "Otros",
     "portfolio.categories.all": "Todos",
     "portfolio.categories.dentists": "Dentistas",
-    "portfolio.categories.doctors": "Doctores",
-    "portfolio.categories.industry": "Industria",
-    "portfolio.categories.consulting": "Consultoría",
+    "portfolio.categories.doctors": "Medicos",
+    "portfolio.categories.industry": "Industrias",
+    "portfolio.categories.consulting": "Consultorías",
     "portfolio.categories.trading": "Comercio",
     "portfolio.categories.others": "Otros",
 
@@ -353,6 +354,7 @@ export const ui = {
     "nav.home": "Home",
     "nav.about": "About",
     "nav.skills": "Skills",
+    "nav.portfolio": "Portfolio",
     "nav.service": "Services",
     "nav.team": "Team",
     "nav.contact": "Contact",

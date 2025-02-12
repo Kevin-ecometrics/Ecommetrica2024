@@ -17,12 +17,28 @@ function Navbar({ URL }) {
     { href: "#home", label: t("nav.home") },
     { href: "#about", label: t("nav.about") },
     { href: "#skills", label: t("nav.skills") },
+    { href: "#portfolio", label: t("nav.portfolio") },
     { href: "#service", label: t("nav.service") },
     { href: "#team", label: t("nav.team") },
     // { href: "#testimonial", label: "Testimonio" },
     // { href: "#blog", label: "Blog" },
     { href: "#contact", label: t("nav.contact") },
   ];
+
+  const [language, setLanguage] = useState("es");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setLanguage(window.location.pathname.startsWith("/en") ? "en" : "es");
+    }
+  }, []);
+
+  const toggleLanguage = () => {
+    if (typeof window !== "undefined") {
+      const newPath = language === "en" ? "/" : "/en";
+      window.location.pathname = newPath;
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,26 +121,16 @@ function Navbar({ URL }) {
               {item.label}
             </a>
           ))}
-          <a
-            onClick={() => (window.location.pathname = "/")}
-            className={`px-4 py-0 rounded-lg transition-colors duration-300 cursor-pointer ${
-              URL.pathname === "/"
+          <button
+            onClick={toggleLanguage}
+            className={`px-4 py-1 rounded-lg transition-colors duration-300 font-semibold ${
+              language === "en"
                 ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-black"
+                : "bg-blue-600 text-white"
             }`}
           >
-            Español
-          </a>
-          <a
-            onClick={() => (window.location.pathname = "/en")}
-            className={`px-4 py-0 rounded-lg transition-colors duration-300 cursor-pointer ${
-              URL.pathname === "/en/"
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-black"
-            }`}
-          >
-            English
-          </a>
+            {language === "en" ? "Español" : "English"}
+          </button>
         </div>
       </div>
       <AnimatePresence mode="popLayout">

@@ -11,10 +11,10 @@ const t = useTranslations(lang);
 ---
 
 <section
-  class="flex md:justify-center md:h-screen md:items-start bg-gradient-to-l from-[#BD155C] to-[#1E171E] px-8 relative"
+  class="flex md:justify-center md:items-start bg-gradient-to-l from-[#BD155C] to-[#1E171E] px-8 relative"
   id="about"
 >
-  <div class="grid grid-cols-1 md:grid-cols-3 px-8 gap-16 md:mt-24">
+  <div class="grid grid-cols-1 md:grid-cols-3 px-8 gap-16 md:mt-24 md:mb-24">
     <div class="flex justify-center items-start">
       <Image
         src={HeroImage}
@@ -49,7 +49,7 @@ const t = useTranslations(lang);
       <Guia URL={URL} client:visible />
     </div>
   </div>
-  <div class="absolute bottom-[-20px] right-20 z-10 hidden xl:block">
+  <div class="absolute bottom-[-60px] right-20 z-10 hidden xl:block">
     <Image
       src={HeroImage2}
       alt="About Image"

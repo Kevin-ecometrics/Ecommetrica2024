@@ -299,7 +299,10 @@ const Portfolio = ({ URL }) => {
   };
 
   return (
-    <section className="portfolio-section bg-gradient-to-l from-[#BD155C] to-[#1E171E] py-16 text-white md:px-0 px-8">
+    <section
+      className="portfolio-section bg-gradient-to-l from-[#BD155C] to-[#1E171E] py-16 text-white md:px-0 px-8"
+      id="portfolio"
+    >
       <h1 className="text-center font-normal text-xl md:text-2xl">
         {t("portfolio.title")}
       </h1>
