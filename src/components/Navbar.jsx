@@ -35,7 +35,7 @@ function Navbar({ URL }) {
 
   const toggleLanguage = () => {
     if (typeof window !== "undefined") {
-      const newPath = language === "en" ? "/" : "/en";
+      const newPath = language === "en" ? "/" : "/en/";
       window.location.pathname = newPath;
     }
   };
@@ -81,7 +81,7 @@ function Navbar({ URL }) {
 
   return (
     <nav
-      className={`fixed flex h-20 md:h-16 w-full items-center justify-between border ${border} z-50 ${bgClass}`}
+      className={`fixed flex h-20 md:h-16 w-full items-center justify-between border ${border} z-40 ${bgClass}`}
     >
       <div className="md:pl-14 pl-4">
         {logoSrc && <img src={logoSrc} alt="logo" title="logo" />}{" "}

@@ -7,7 +7,7 @@ import { ClientRouter } from "astro:transitions";
 import "@fontsource-variable/montserrat";
 import { Image } from "astro:assets";
 import { getLangFromUrl } from "src/i18n/utils";
-
+import LanguageModal from "@components/LanguageModal";
 interface Props {
   title: string;
 }
@@ -78,6 +78,8 @@ const supportRoute = isEnglish ? "/en/soporte/" : "/soporte/";
     <ClientRouter />
   </head>
   <body class="overflow-x-hidden">
+    <LanguageModal client:load />
+
     {isHomePage && <Navbar client:load URL={URL} />}
     <slot />
     {
