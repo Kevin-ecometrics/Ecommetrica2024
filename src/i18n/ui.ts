@@ -103,27 +103,50 @@ export const ui = {
     "service.ask": "Preguntar",
     "service.video": "Video producción",
     "service.videodesc":
-      "Diseñamos y ejecutamos todos los procesos clave de preproducción, producción y post producción para trasformar la visión de nuestros clientes en realidad, adaptándonos al formato que se requiera.",
+      "Diseñamos y ejecutamos todos los procesos clave de preproducción, producción y post producción...",
+    "service.videodesc2":
+      "Diseñamos y ejecutamos todos los procesos clave de preproducción, producción y post producción para transformar la visión de nuestros clientes en realidad, adaptándonos al formato que se requiera.",
+
     "service.brand": "Identidad de marca",
     "service.branddesc":
+      "Mas allá de un logo unificamos nombre, colores y estrategia de marketing...",
+    "service.branddesc2":
       "Mas allá de un logo unificamos nombre, colores y estrategia de marketing para lograr una coherencia visual poderosa que tenga presencia para los consumidores.",
-    "service.writing": "Escritura creativa ",
+
+    "service.writing": "Escritura creativa",
     "service.writingdesc":
+      "Le damos alma y personalidad a tu marca o negocio...",
+    "service.writingdesc2":
       "Le damos alma y personalidad a tu marca o negocio mientras jugamos con la imaginación y creatividad para crear narrativas e historias que conecten con la gente.",
+
     "service.web": "Posicionamiento Web",
     "service.webdesc":
+      "Impulsamos tu negocio en motores de búsqueda. Diseñamos estrategias integrales...",
+    "service.webdesc2":
       "Impulsamos tu negocio en motores de búsqueda. Diseñamos estrategias integrales que maximizan la retención de leads y la conversión. Creamos ecosistemas digitales conectando tu página web con redes sociales, producimos y distribuimos contenido de alto valor, y ejecutamos campañas de email marketing altamente efectivas.",
+
     "service.webapp": "Programación y webApps",
     "service.webappdesc":
+      "Desarrollamos páginas y tiendas en línea impactantes y adaptables...",
+    "service.webappdesc2":
       "Desarrollamos páginas y tiendas en línea impactantes y adaptables que crecen contigo. Hechas a tu gusto, necesidad y flujo que requieras. Así mismo cada cliente obtiene una aplicación web personalizada que simplifica la gestión de su negocio, en la que podrá acceder a toda su información, calendarios de citas, reseñas, envíos de correos masivos y mucho más en un clic.",
-    "service.desing": "Diseño web.",
+
+    "service.desing": "Diseño web",
     "service.desingdesc":
-      "Nos enfocamos en Brindar una experiencia de usuario UX y diseño interfaz que se diferencie del resto, con un alto rendimiento y funcionalidad superior para que tus potenciales clientes o pacientes disfruten una experiencia cómoda y única.",
+      "Nos enfocamos en brindar una experiencia de usuario UX y diseño interfaz...",
+    "service.desingdesc2":
+      "Nos enfocamos en brindar una experiencia de usuario UX y diseño interfaz que se diferencie del resto, con un alto rendimiento y funcionalidad superior para que tus potenciales clientes o pacientes disfruten una experiencia cómoda y única.",
+
     "service.ecommerce": "E-commerce",
     "service.ecommercedesc":
+      "Nos especializamos en B2C, B2B, te guiamos paso a paso...",
+    "service.ecommercedesc2":
       "Nos especializamos en B2C, B2B, te guiamos paso a paso para diseñar un plan estratégico que impulse tu crecimiento, te guiamos a comprender a fondo el mercado y a definir con claridad tus productos y servicios. Fusionamos nuestra tecnología para seleccionar la plataforma más apropiada que te brinde autonomía, apertura a nivel regional e internacional y automatice tus procesos para maximizar eficiencia y resultados.",
+
     "service.planning": "Planeación estratégica",
     "service.planningdesc":
+      "Nos enfocamos en el crecimiento de tu negocio, te ayudamos a identificar oportunidades...",
+    "service.planningdesc2":
       "Nos enfocamos en el crecimiento de tu negocio, te ayudamos a identificar oportunidades de mejora y a implementar estrategias que te permitan alcanzar tus objetivos.",
 
     // Equipo
@@ -434,27 +457,50 @@ export const ui = {
     "service.ask": "Ask",
     "service.video": "Production Video",
     "service.videodesc":
+      "We design and execute all key processes of pre-production, production, and post-production...",
+    "service.videodesc2":
       "We design and execute all key processes of pre-production, production, and post-production to transform our clients' vision into reality, adapting to the required format.",
+
     "service.brand": "Brand Identity",
     "service.branddesc":
+      "Beyond a logo, we unify name, colors, and marketing strategy...",
+    "service.branddesc2":
       "Beyond a logo, we unify name, colors, and marketing strategy to achieve a powerful visual coherence that resonates with consumers.",
+
     "service.writing": "Creative Writing",
     "service.writingdesc":
+      "We give soul and personality to your brand or business...",
+    "service.writingdesc2":
       "We give soul and personality to your brand or business while playing with imagination and creativity to create narratives and stories that connect with people.",
+
     "service.web": "Web Positioning",
     "service.webdesc":
+      "We boost your business on search engines. We design comprehensive strategies...",
+    "service.webdesc2":
       "We boost your business on search engines. We design comprehensive strategies that maximize lead retention and conversion. We create digital ecosystems by connecting your website with social networks, produce and distribute high-value content, and execute highly effective email marketing campaigns.",
+
     "service.webapp": "Programming and Web Apps",
     "service.webappdesc":
+      "We develop impactful and adaptable online pages and stores...",
+    "service.webappdesc2":
       "We develop impactful and adaptable online pages and stores that grow with you. Made to your taste, needs, and required workflow. Each client also gets a customized web application that simplifies business management, allowing access to all their information, appointment calendars, reviews, mass emailing, and much more in one click.",
+
     "service.desing": "Web Design",
     "service.desingdesc":
+      "We focus on providing a user experience (UX) and interface design...",
+    "service.desingdesc2":
       "We focus on providing a user experience (UX) and interface design that stands out from the rest, with high performance and superior functionality so your potential clients or patients enjoy a comfortable and unique experience.",
+
     "service.ecommerce": "E-commerce",
     "service.ecommercedesc":
+      "We specialize in B2C, B2B. We guide you step by step...",
+    "service.ecommercedesc2":
       "We specialize in B2C, B2B. We guide you step by step to design a strategic plan that drives your growth, helps you deeply understand the market, and clearly define your products and services. We combine our technology to select the most appropriate platform that gives you autonomy, regional and international reach, and automates your processes to maximize efficiency and results.",
+
     "service.planning": "Strategic Planning",
     "service.planningdesc":
+      "We focus on the growth of your business, helping you identify improvement opportunities...",
+    "service.planningdesc2":
       "We focus on the growth of your business, helping you identify improvement opportunities and implement strategies that allow you to achieve your goals.",
 
     // Team Section

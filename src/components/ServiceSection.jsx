@@ -191,12 +191,12 @@ function ServiceSection({ services, URL }) {
                   </h2>
                 </section>
 
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                <p className="text-gray-600 text-lg leading-relaxed mb-6 px-14">
                   {service.description}
                 </p>
 
                 {/* Separador con gradiente personalizado */}
-                <div className="w-16 h-1 bg-gradient-to-r from-[#861453] via-purple-900 to-[#1a0933] mb-6 rounded-full" />
+                <div className="w-16 h-1 bg-gradient-to-r from-[#861453] via-purple-900 to-[#1a0933] mb-6 rounded-full ml-14" />
               </div>
             ))}
 
@@ -246,12 +246,15 @@ function ServiceSection({ services, URL }) {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full"
+                className="bg-white p-6 rounded-lg shadow-lg max-w-5xl w-full"
               >
-                <h2 className="text-2xl font-bold">{selectedService.name}</h2>
-                <p className="mt-4">{selectedService.description}</p>
+                <img src="/bannerService.png" alt="test" />
+                <h2 className="text-3xl font-bold mt-4">
+                  {selectedService.name}
+                </h2>
+                <p className="mt-4">{selectedService.descriptionModal}</p>
                 <button
-                  className="mt-6 px-4 py-2 bg-[#861453] text-white rounded"
+                  className="mt-6 px-4 py-2 bg-[#861453] hover:bg-opacity-80 text-white rounded"
                   onClick={() => setSelectedService(null)}
                 >
                   Cerrar
