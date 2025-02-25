@@ -47,7 +47,7 @@ function Navbar({ URL }) {
         setTextClass("text-black");
         setBgClass("bg-white");
         setBorder("border-gray-300");
-        setLogoSrc("/LogoNav.webp");
+        setLogoSrc("/LogoNav.png");
       } else {
         setTextClass("text-white");
         setBgClass("bg-transparent");

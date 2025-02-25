@@ -53,7 +53,9 @@ export const ui = {
     "contact.errorMessage": "Error al enviar el mensaje",
 
     // Modal de Contacto
-    "modal.title": "Formulario",
+    "modal.title": "Formulario para descarga",
+    "modal.subtitle":
+      "Mantengamos el contacto, conoce todo lo que podemos ofrecerte y recibe nuestra guia de e-commerce.",
     "modal.emailLabel": "Correo Electrónico",
     "modal.emailError": "Correo electrónico no válido",
     "modal.phoneLabel": "Teléfono",
@@ -61,7 +63,7 @@ export const ui = {
     "modal.businessTypeLabel": "Tipo de Negocio",
     "modal.businessTypeError": "Tipo de negocio no puede estar vacío",
     "modal.cancelButton": "Cancelar",
-    "modal.submitButton": "Enviar",
+    "modal.submitButton": "Enviar y Descargar",
     "modal.submittingButton": "Enviando...",
 
     // Sobre Nosotros
@@ -407,7 +409,9 @@ export const ui = {
     "contact.errorMessage": "Error sending message",
 
     // Modal (Contact Form)
-    "modal.title": "Form",
+    "modal.title": "Form for download",
+    "modal.subtitle":
+      "Let's keep in touch, learn everything we can offer you and receive our e-commerce guide.",
     "modal.emailLabel": "Email",
     "modal.emailError": "Invalid email",
     "modal.phoneLabel": "Phone",
@@ -415,7 +419,7 @@ export const ui = {
     "modal.businessTypeLabel": "Business Type",
     "modal.businessTypeError": "Business type cannot be empty",
     "modal.cancelButton": "Cancel",
-    "modal.submitButton": "Submit",
+    "modal.submitButton": "Submit and Download",
     "modal.submittingButton": "Submitting...",
 
     // About Section

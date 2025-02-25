@@ -6,7 +6,7 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ecometrica.com",
+  site: "https://ecommetrica.com",
   integrations: [tailwind(), react(), sitemap(), robotsTxt()],
   i18n: {
     locales: ["es", "en"],

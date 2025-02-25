@@ -6,6 +6,8 @@ import Mail from "@components/icons/Mail.astro";
 import Tags from "@components/Tags";
 import HeroImage from "@public/JuanHero2.webp";
 import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { LuMouse } from "react-icons/lu";
+import { FaXTwitter } from "react-icons/fa6";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -35,122 +37,87 @@ const words = t("hero.words");
         >
       </div>
       <div class="flex md:flex-col gap-4 mb-8">
-        <a
-          href="https://www.instagram.com/ecommetrica/"
-          target="_blank"
-          class="cursor-pointer"
-        >
+        <a href="https://www.instagram.com/ecommetrica/" target="_blank">
           <Insta class="w-8 h-8" />
         </a>
-        <a
-          href="https://twitter.com/SrGenial"
-          target="_blank"
-          class="cursor-pointer"
-        >
-          <Twit class="w-8 h-8" />
+        <a href="https://twitter.com/SrGenial" target="_blank">
+          <FaXTwitter className="w-8 h-8" />
         </a>
         <a href="mailto:juanmanuel@ecommetrics.com">
           <Mail class="w-10 h-10" />
         </a>
+        <a href="#about">
+          <LuMouse className="w-8 h-8" />
+        </a>
       </div>
     </div>
+
+    <!-- Imagen Hero con efecto parallax -->
     <div
-      class="hidden
-              lg:flex
-              items-center
-              justify-center
-              absolute
-              bottom-0
-              right-20"
+      class="hidden lg:flex items-center justify-center absolute bottom-0 right-20 z-20 parallax-active"
+      data-speed="0.5"
     >
       <Image
         src={HeroImage}
         alt="Hero"
-        class="flex justify-center items-center z-10 image-hover"
+        class="flex justify-center items-center image-hover"
       />
     </div>
   </div>
+
+  <!-- Elementos flotantes con parallax -->
   <div class="hidden lg:block">
     <div
-      class="border-l-8 border-t-8 border-b-8 absolute top-[25%] border-[#D9D9D9] right-48 w-[300px] h-[500px]"
-      style="animation: moveLeftRight 3s infinite;"
+      class="border-l-8 border-t-8 border-b-8 border-r-8 absolute top-[25%] border-[#D9D9D9] z-10 right-48 w-[300px] h-[500px] parallax-active"
+      data-speed="0.2"
     >
     </div>
+
     <div
-      class="absolute bottom-[15%] right-0 h-[600px] w-96 bg-[#C2155C]"
-      style="animation: moveLeftRight 5s infinite;"
+      class="absolute bottom-[15%] right-0 h-[600px] w-96 bg-[#C2155C] z-10 parallax-active"
+      data-speed="0.2"
     >
     </div>
+
     <div
-      class="absolute bottom-[5%] right-[420px] h-40 w-40 bg-[#C2155C]"
-      style="animation: moveUpDown 3s infinite;"
+      class="absolute bottom-[5%] right-[420px] h-40 w-40 bg-[#C2155C] z-20 parallax-active"
+      data-speed="0.3"
     >
     </div>
+
     <div
-      class="absolute top-[40%] right-[30%] h-28 w-20 bg-[#C2155C]"
-      style="animation: moveDownUp 3s infinite;"
+      class="absolute top-[40%] right-[30%] h-28 w-20 bg-[#C2155C] z-20 parallax-active"
+      data-speed="0.2"
     >
+    </div>
+
+    <div
+      class="absolute top-[50%] right-[10%] z-10 parallax-active"
+      data-speed="0.2"
+    >
+      <img src="/contorno.png" alt="Contorno Logo" />
     </div>
   </div>
 
   <style>
-    @keyframes moveUpDown {
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-60px);
-      }
-    }
-
-    @keyframes moveLeftRight {
-      0%,
-      100% {
-        transform: translateX(0);
-      }
-      50% {
-        transform: translateX(20px);
-      }
-    }
-
-    @keyframes moveDownUp {
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(20px);
-      }
-    }
-
-    .image-hover {
-      transition: transform 0.1s ease-in-out;
+    .parallax-active {
+      transition: transform 0.2s ease-out;
     }
   </style>
 </section>
 
+<!-- Script de Parallax -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const section = document.querySelector("#home");
-    const image = document.querySelector(".image-hover");
+  document.addEventListener("mousemove", (e) => {
+    const elements = document.querySelectorAll(".parallax-active");
+    const { clientX: x, clientY: y } = e;
 
-    if (section && image) {
-      section.addEventListener("mousemove", (e) => {
-        const rect = section.getBoundingClientRect();
-        const x = (e as MouseEvent).clientX - rect.left;
-        const y = (e as MouseEvent).clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 40;
-        const rotateY = (x - centerX) / 40;
-        (image as HTMLElement).style.transform =
-          `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      });
+    elements.forEach((el) => {
+      const speed = parseFloat(el.getAttribute("data-speed")) / 10; // Reduce el efecto
+      const offsetX = (x - window.innerWidth / 2) * speed;
+      const offsetY = (y - window.innerHeight / 2) * speed;
 
-      section.addEventListener("mouseleave", () => {
-        (image as HTMLElement).style.transform = "rotateX(0) rotateY(0)";
-      });
-    }
+      el.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    });
   });
 </script>

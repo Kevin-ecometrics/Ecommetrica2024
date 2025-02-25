@@ -13,6 +13,8 @@ import Consulting from "@components/Consulting.astro";
 import Contact from "@components/Contact";
 import Team from "@components/team/Hero.astro";
 import Banner from "@components/Banner.astro";
+import LanguageModal from "@components/LanguageModal";
+
 const URL = Astro.url;
 const teamMembers = [
   {
@@ -166,6 +168,7 @@ const teamMembers = [
 ---
 
 <Layout title="Ecommetrica - Innova - Eleva - Simplifica">
+  <LanguageModal client:load />
   <Hero />
   <About />
   <Skills />

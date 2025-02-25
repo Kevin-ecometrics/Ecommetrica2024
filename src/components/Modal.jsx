@@ -66,36 +66,46 @@ function Modal({ isOpen, onClose, onSubmit, URL }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-8 rounded-lg w-96">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 ">
+      <div className="bg-white p-8 rounded-lg w-96 relative">
+        <div
+          className="absolute top-[-20px] right-[-20px] w-20 h-20 flex hover:bg-opacity-95 items-center justify-center cursor-pointer text-4xl bg-[#861453] text-white rounded-full"
+          onClick={onClose}
+        >
+          !
+        </div>
+
         <h2 className="text-2xl font-bold mb-4 text-black">
           {t("modal.title")}
         </h2>
+        <h4 className="text-xl mb-4 text-black">{t("modal.subtitle")} </h4>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700">
+            {/* <label className="block text-gray-700">
               {t("modal.emailLabel")}
-            </label>
+            </label> */}
             <input
               type="email"
+              placeholder={t("modal.emailLabel")}
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full text-black border-black px-4 py-2 border rounded-lg"
+              className="w-full text-black border-b-[#B8B7B7] px-4 py-2 focus:outline-none border"
               required
             />
             {errors.email && <p className="text-red-500">{errors.email}</p>}
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700">
+            {/* <label className="block text-gray-700">
               {t("modal.phoneLabel")}
-            </label>
+            </label> */}
             <input
               type="tel"
+              placeholder={t("modal.phoneLabel")}
               name="phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="w-full text-black border-black px-4 py-2 border rounded-lg"
+              className="w-full text-black border-b-[#B8B7B7] px-4 py-2 focus:outline-none border"
               pattern="\d{10}"
               maxLength="10"
               inputMode="numeric"
@@ -104,33 +114,36 @@ function Modal({ isOpen, onClose, onSubmit, URL }) {
             {errors.phone && <p className="text-red-500">{errors.phone}</p>}
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700">
+            {/* <label className="block text-gray-700">
               {t("modal.businessTypeLabel")}
-            </label>
+            </label> */}
             <input
               type="text"
+              placeholder={t("modal.businessTypeLabel")}
               name="businessType"
               value={businessType}
               onChange={(e) => setBusinessType(e.target.value)}
-              className="w-full text-black border-black px-4 py-2 border rounded-lg"
+              className="w-full text-black border-b-[#B8B7B7] px-4 py-2 focus:outline-none border"
               required
             />
             {errors.businessType && (
               <p className="text-red-500">{errors.businessType}</p>
             )}
           </div>
-          <div className="flex justify-end">
-            <button
+          <div className="flex justify-center">
+            {/* <button
               type="button"
               onClick={onClose}
               className="bg-gray-500 text-white px-4 py-2 rounded-lg mr-2"
               disabled={isSubmitting}
             >
               {t("modal.cancelButton")}
-            </button>
+            </button> */}
             <button
               type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+              className="bg-white border-2 font-bold w-full hover:bg-[#861453] hover:text-white text-black border-[#861453] py-2 rounded-lg 
+                transform transition duration-500 ease-in-out
+              "
               disabled={isSubmitting}
             >
               {isSubmitting
