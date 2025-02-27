@@ -248,7 +248,11 @@ function ServiceSection({ services, URL }) {
                 transition={{ duration: 0.3 }}
                 className="bg-white p-6 rounded-lg shadow-lg max-w-5xl w-full"
               >
-                <img src="/bannerService.png" alt="test" />
+                <img
+                  src={selectedService.image}
+                  alt={selectedService.name}
+                  className="w-full h-96 object-cover rounded-lg"
+                />
                 <h2 className="text-3xl font-bold mt-4">
                   {selectedService.name}
                 </h2>

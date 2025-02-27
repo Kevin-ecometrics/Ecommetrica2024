@@ -47,14 +47,29 @@ const words = t("hero.words");
           <Mail class="w-10 h-10" />
         </a>
         <a href="#about">
-          <LuMouse className="w-8 h-8" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-mouse"
+          >
+            <rect x="5" y="2" width="14" height="20" rx="7"></rect>
+            <path d="M12 6v4" class="stroke-[2] stroke-current animate-draw"
+            ></path>
+          </svg>
         </a>
       </div>
     </div>
 
     <!-- Imagen Hero con efecto parallax -->
     <div
-      class="hidden lg:flex items-center justify-center absolute bottom-0 right-20 z-20 parallax-active"
+      class="hidden lg:flex items-center justify-center absolute bottom-0 right-20 z-30 parallax-active"
       data-speed="0.5"
     >
       <Image
@@ -68,40 +83,58 @@ const words = t("hero.words");
   <!-- Elementos flotantes con parallax -->
   <div class="hidden lg:block">
     <div
-      class="border-l-8 border-t-8 border-b-8 border-r-8 absolute top-[25%] border-[#D9D9D9] z-10 right-48 w-[300px] h-[500px] parallax-active"
+      class="border-l-[6px] border-t-[6px] border-b-[6px] border-r-[6px] absolute top-[25%] border-[#D9D9D9] z-20 right-36 w-[25%] h-[55%] parallax-active"
       data-speed="0.2"
     >
     </div>
 
     <div
-      class="absolute bottom-[15%] right-0 h-[600px] w-96 bg-[#C2155C] z-10 parallax-active"
+      class="absolute bottom-[15%] right-24 h-[70%] w-[25%] bg-[#C2155C] z-10 parallax-active"
       data-speed="0.2"
     >
     </div>
 
     <div
-      class="absolute bottom-[5%] right-[420px] h-40 w-40 bg-[#C2155C] z-20 parallax-active"
+      class="absolute bottom-[5%] right-[27%] h-40 w-40 bg-[#C2155C] z-30 parallax-active"
       data-speed="0.3"
     >
     </div>
 
     <div
-      class="absolute top-[40%] right-[30%] h-28 w-20 bg-[#C2155C] z-20 parallax-active"
+      class="absolute top-[35%] right-[35%] h-32 w-20 bg-[#C2155C] z-20 parallax-active"
       data-speed="0.2"
     >
     </div>
 
     <div
-      class="absolute top-[50%] right-[10%] z-10 parallax-active"
+      class="absolute bottom-[5%] right-[2%] h-20 w-20 bg-[#C2155C] z-30 parallax-active"
       data-speed="0.2"
     >
-      <img src="/contorno.png" alt="Contorno Logo" />
+    </div>
+
+    <div class="absolute top-[30%] right-48 z-10">
+      <img src="/contorno.png" alt="Contorno Logo" title="Contorno Logo" />
     </div>
   </div>
 
   <style>
     .parallax-active {
       transition: transform 0.2s ease-out;
+    }
+
+    @keyframes draw {
+      from {
+        stroke-dasharray: 5;
+        stroke-dashoffset: 5;
+      }
+      to {
+        stroke-dasharray: 5;
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .animate-draw {
+      animation: draw 1s ease-in-out infinite alternate;
     }
   </style>
 </section>
@@ -112,12 +145,15 @@ const words = t("hero.words");
     const elements = document.querySelectorAll(".parallax-active");
     const { clientX: x, clientY: y } = e;
 
-    elements.forEach((el) => {
-      const speed = parseFloat(el.getAttribute("data-speed")) / 10; // Reduce el efecto
-      const offsetX = (x - window.innerWidth / 2) * speed;
-      const offsetY = (y - window.innerHeight / 2) * speed;
+    window.requestAnimationFrame(() => {
+      elements.forEach((el) => {
+        const speed = parseFloat(el.getAttribute("data-speed")) / 15;
+        const offsetX = -(x - window.innerWidth / 2) * speed * 1.5; // Inverso en X
+        const offsetY = -(y - window.innerHeight / 2) * speed * 0.6; // Inverso en Y
 
-      el.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        (el as HTMLElement).style.transform =
+          `translate(${offsetX}px, ${offsetY}px)`;
+      });
     });
   });
 </script>
