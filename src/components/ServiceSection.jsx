@@ -252,6 +252,7 @@ function ServiceSection({ services, URL }) {
                   src={selectedService.image}
                   alt={selectedService.name}
                   className="w-full h-96 object-cover rounded-lg"
+                  loading="lazy"
                 />
                 <h2 className="text-3xl font-bold mt-4">
                   {selectedService.name}

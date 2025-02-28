@@ -23,10 +23,12 @@ const t = useTranslations(lang);
         class="object-cover relative z-10 rounded-xl hidden xl:block"
       />
       <div
-        class="border-r-8 border-t-8 border-b-8 absolute left-[-100px] w-[300px] h-48 animate-slideX z-10 hidden xl:block"
+        class="border-r-8 border-t-8 border-b-8 absolute left-[-100px] w-[300px] top-16 h-48 slideX z-10 hidden xl:block"
       >
       </div>
-      <div class="bg-white h-64 w-64 absolute animate-slideY hidden xl:block">
+      <div
+        class="bg-white h-64 w-64 absolute left-32 top-[150px] slideY hidden xl:block"
+      >
       </div>
     </div>
     <div class="text-white col-span-2">
@@ -58,57 +60,41 @@ const t = useTranslations(lang);
     />
   </div>
   <div
-    class="hidden xl:block bottom-10 right-[-300px] absolute bg-white w-[604px] h-[404px] animete-slide-X"
+    class="hidden xl:block bottom-10 right-[-300px] absolute bg-white w-[604px] h-[404px] slide-X"
   >
   </div>
 </section>
 
 <style>
-  @keyframes slideX {
-    0% {
-      transform: translateX(-50%) translateY(-50px);
-    }
-    50% {
-      transform: translateX(20%) translateY(-50px);
-    }
-    100% {
-      transform: translateX(-50%) translateY(-50px);
-    }
-  }
-
-  @keyframes slideY {
-    0% {
-      transform: translateY(0) translateX(-100px);
-    }
-    50% {
-      transform: translateY(100%) translateX(-100px);
-    }
-    100% {
-      transform: translateY(0) translateX(-100px);
-    }
-  }
-
-  @keyframes slide-X {
-    0% {
-      transform: translateX(0) translateY(0);
-    }
-    50% {
-      transform: translateX(50%) translateY(0);
-    }
-    100% {
-      transform: translateX(0) translateY(0);
-    }
-  }
-
-  .animate-slideX {
-    animation: slideX 5s ease-in-out infinite;
-  }
-
-  .animate-slideY {
-    animation: slideY 5s ease-in-out infinite;
-  }
-
-  .animete-slide-X {
-    animation: slide-X 5s ease-in-out infinite;
+  .slideX,
+  .slideY,
+  .slide-X {
+    transition: transform 0.5s ease-in-out;
   }
 </style>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const scrollPercentage =
+      window.scrollY /
+      (document.documentElement.scrollHeight - window.innerHeight);
+
+    const slideXElements = document.querySelectorAll(".slideX");
+    slideXElements.forEach((el) => {
+      (el as HTMLElement).style.transform =
+        `translateX(${scrollPercentage * 150}%) translateY(0)`;
+    });
+
+    const slideYElements = document.querySelectorAll(".slideY");
+    slideYElements.forEach((el) => {
+      (el as HTMLElement).style.transform =
+        `translateY(${scrollPercentage * 150}%) translateY(0)`;
+    });
+
+    const slideXElementsAlt = document.querySelectorAll(".slide-X");
+    slideXElementsAlt.forEach((el) => {
+      (el as HTMLElement).style.transform =
+        `translateX(${scrollPercentage * 150}%) translateY(0)`;
+    });
+  });
+</script>
