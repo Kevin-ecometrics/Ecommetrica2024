@@ -4,6 +4,7 @@ import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
 // Carrusel para escritorio
 export function DesktopCarousel({ team, URL }) {
+  const [hovered, setHovered] = useState(false);
   const lang = getLangFromUrl(URL);
   const t = useTranslations(lang);
   const teamMember = t("team");
@@ -12,12 +13,12 @@ export function DesktopCarousel({ team, URL }) {
 
   const nextSlide = () => {
     setDirection("right");
-    setCurrentIndex((prev) => (prev + 3 >= team.length ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev + 3 >= team.length ? 0 : prev + 3));
   };
 
   const prevSlide = () => {
     setDirection("left");
-    setCurrentIndex((prev) => (prev === 0 ? team.length - 3 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? team.length - 3 : prev - 3));
   };
 
   const visibleTeam = team.slice(currentIndex, currentIndex + 3);
@@ -107,15 +108,16 @@ export function DesktopCarousel({ team, URL }) {
                   <motion.div
                     className="px-4 relative h-48 transform transition-all duration-500 hover:h-64 rounded-3xl bg-[#861453] w-64"
                     whileHover={{ scale: 1.05 }}
+                    onMouseEnter={() => setHovered(index)}
+                    onMouseLeave={() => setHovered(null)}
                   >
-                    <a href={`${teamMember}${member.name}`}>
-                      {" "}
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="absolute bottom-0 left-0 right-0 w-full rounded-3xl"
-                      />
-                    </a>
+                    {/* <a href={`${teamMember}${member.name}`}> */}{" "}
+                    <img
+                      src={hovered === index ? member.image2 : member.image}
+                      alt={member.name}
+                      className="absolute bottom-0 left-0 right-0 w-full rounded-3xl"
+                    />
+                    {/* </a> */}
                   </motion.div>
 
                   <div className="py-4 text-center">

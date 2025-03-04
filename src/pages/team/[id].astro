@@ -8,8 +8,8 @@ export function getStaticPaths() {
     { params: { id: "Karen" } },
     { params: { id: "Yaz" } },
     { params: { id: "Kevin" } },
-    { params: { id: "Jesus" } },
     { params: { id: "Carlos" } },
+    { params: { id: "Jesus" } },
   ];
 }
 
@@ -118,9 +118,9 @@ const teamMembers = [
   },
   {
     id: 5,
-    image: "/team4.webp",
-    name: "Jesus",
-    fullName: "Juan M. González",
+    image: "/team5.webp",
+    name: "Carlos",
+    fullName: "Juan Carlos",
     role: "CEO & Consultor",
     skills: "WebMaster, Project Manager, Ecommerce",
     transition: "imagen4",
@@ -143,9 +143,9 @@ const teamMembers = [
   },
   {
     id: 6,
-    image: "/team4.webp",
-    name: "Carlos",
-    fullName: "Juan Carlos",
+    image: "/team6.webp",
+    name: "Jesus",
+    fullName: "Jesus",
     role: "CEO & Consultor",
     skills: "WebMaster, Project Manager, Ecommerce",
     transition: "imagen4",
@@ -174,8 +174,8 @@ const member = teamMembers.find((member) => {
     Karen: 2,
     Yaz: 3,
     Juan: 4,
-    Jesus: 5,
-    Carlos: 6,
+    Carlos: 5,
+    Jesus: 6,
   };
   return member.id === memberMap[id];
 });
