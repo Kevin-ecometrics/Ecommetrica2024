@@ -111,13 +111,13 @@ export function DesktopCarousel({ team, URL }) {
                     onMouseEnter={() => setHovered(index)}
                     onMouseLeave={() => setHovered(null)}
                   >
-                    {/* <a href={`${teamMember}${member.name}`}> */}{" "}
+                    <a href={`${teamMember}${member.name}`}>{" "}
                     <img
                       src={hovered === index ? member.image2 : member.image}
                       alt={member.name}
                       className="absolute bottom-0 left-0 right-0 w-full rounded-3xl"
                     />
-                    {/* </a> */}
+                    </a>
                   </motion.div>
 
                   <div className="py-4 text-center">
