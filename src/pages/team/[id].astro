@@ -116,7 +116,7 @@ const member = teamMembers.find((member) => {
       {
         member.additionalDetails?.funFacts && (
           <div>
-            <h2 class="font-bold text-lg mb-2">Fun Facts</h2>
+            <h2 class="font-bold text-lg mb-2">Datos divertidos</h2>
             <ul class="list-disc list-inside">
               {member.additionalDetails.funFacts.map((fact) => (
                 <li class="text-justify">{fact}</li>
@@ -125,9 +125,7 @@ const member = teamMembers.find((member) => {
           </div>
         )
       }
-
-      {/* Puedes agregar más secciones aquí si lo deseas */}
     </div>
-    <!-- <VCF member={member} client:visible URL={URL} /> -->
+    <VCF member={member} client:visible URL={URL} />
   </section>
 </Layout>

@@ -14,14 +14,12 @@ function Navbar({ URL }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const year = new Date().getFullYear();
   const navItems = [
-    { href: "#home", label: t("nav.home") },
+    { href: "#package", label: t("nav.home") },
     { href: "#about", label: t("nav.about") },
     { href: "#skills", label: t("nav.skills") },
     { href: "#portfolio", label: t("nav.portfolio") },
     { href: "#service", label: t("nav.service") },
     { href: "#team", label: t("nav.team") },
-    // { href: "#testimonial", label: "Testimonio" },
-    // { href: "#blog", label: "Blog" },
     { href: "#contact", label: t("nav.contact") },
   ];
 
@@ -84,8 +82,13 @@ function Navbar({ URL }) {
       className={`fixed flex h-20 md:h-16 w-full items-center justify-between border ${border} z-40 ${bgClass}`}
     >
       <div className="md:pl-14 pl-4">
-        {logoSrc && <img src={logoSrc} alt="logo" title="logo" />}{" "}
-        {/* Renderizar solo si logoSrc no está vacío */}
+        {logoSrc && (
+          <a href="/">
+            {" "}
+            {/* Enlace que redirige al home */}
+            <img src={logoSrc} alt="logo" title="logo" />
+          </a>
+        )}
       </div>
       <div className="pr-8 flex md:space-x-4">
         <button
@@ -202,9 +205,6 @@ function Navbar({ URL }) {
               >
                 English
               </a>
-              {/* <button className="block w-full py-2 text-white bg-black">
-                
-              </button> */}
               <footer className="text-gray-500 absolute bottom-10">
                 <h1>&copy; {year} Ecommetrica</h1>
               </footer>

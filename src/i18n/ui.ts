@@ -20,7 +20,7 @@ export const ui = {
     "whatsapp.online": "En línea",
     "whatsapp.send": "Enviar",
     // Navegación
-    "nav.home": "Inicio",
+    "nav.home": "Comienza",
     "nav.about": "Nosotros",
     "nav.skills": "Habilidades",
     "nav.portfolio": "Portafolio",
@@ -376,7 +376,7 @@ export const ui = {
     "whatsapp.online": "Online",
     "whatsapp.send": "Send",
     // Navigation
-    "nav.home": "Home",
+    "nav.home": "Get started",
     "nav.about": "About",
     "nav.skills": "Skills",
     "nav.portfolio": "Portfolio",
