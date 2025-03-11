@@ -6,11 +6,11 @@ export function getStaticPaths() {
   return [
     { params: { id: "Juan-Manuel-Gonzalez-Castillo" } },
     { params: { id: "Karen-Valdez-Macias" } },
-    { params: { id: "Yazmín-Guardado-Méndez" } },
+    { params: { id: "Yazmin-Guardado-Mendez" } },
     { params: { id: "Kevin-Ortega-Okhuysen" } },
     { params: { id: "Juan-Carlos-Guerrero-Castro" } },
-    { params: { id: "Jesus-Emmanuel-Castillo-Martínez" } },
-    { params: { id: "María-José-Zuili-Almanza" } },
+    { params: { id: "Jesus-Emmanuel-Castillo-Martinez" } },
+    { params: { id: "Maria-Jose-Zuili-Almanza" } },
   ];
 }
 
@@ -22,11 +22,11 @@ const member = teamMembers.find((member) => {
   const memberMap = {
     "Kevin-Ortega-Okhuysen": 1,
     "Karen-Valdez-Macias": 2,
-    "Yazmín-Guardado-Méndez": 3,
-    "Juan-Manuel-González-Castillo": 4,
+    "Yazmin-Guardado-Mendez": 3,
+    "Juan-Manuel-Gonzalez-Castillo": 4,
     "Juan-Carlos-Guerrero-Castro": 5,
-    "Jesus-Emmanuel-Castillo-Martínez": 6,
-    "María-José-Zuili-Almanza": 7,
+    "Jesus-Emmanuel-Castillo-Martinez": 6,
+    "Maria-Jose-Zuili-Almanza": 7,
   };
   return member.id === memberMap[id];
 });
