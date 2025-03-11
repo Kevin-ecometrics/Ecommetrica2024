@@ -287,13 +287,10 @@ export const ui = {
       "Asesoramiento personalizado para expansión digital y crecimiento",
     "packages.personalizado.service2": "Automatización de Marketing",
     "packages.personalizado.service2desc":
-      "Flujos automatizados con IA y remarketing avanzado en múltiples plataformas",
+      "Estrategias omnicanal para posicionamiento premium en el mercado",
     "packages.personalizado.service3": "Producción Audiovisual",
     "packages.personalizado.service3desc":
       "Videograbación y edición profesional para campañas publicitarias",
-    "packages.personalizado.service4": "Rebranding & Posicionamiento de Marca",
-    "packages.personalizado.service4desc":
-      "Estrategias omnicanal para posicionamiento premium en el mercado",
     "packages.popular": "Más popular",
     "packages.servincl": "Servicios Incluidos:",
     "packages.paquetes": "Conoce nuestros paquetes",
@@ -643,13 +640,10 @@ export const ui = {
       "Personalized advice for digital expansion and growth",
     "packages.personalizado.service2": "Marketing Automation",
     "packages.personalizado.service2desc":
-      "Automated workflows with AI and advanced remarketing on multiple platforms",
+      "Omnichannel strategies for premium market positioning",
     "packages.personalizado.service3": "Audiovisual Production",
     "packages.personalizado.service3desc":
       "Professional video recording and editing for advertising campaigns",
-    "packages.personalizado.service4": "Rebranding & Brand Positioning",
-    "packages.personalizado.service4desc":
-      "Omnichannel strategies for premium market positioning",
     "packages.popular": "Most popular",
     "packages.servincl": "Included Services:",
     "packages.paquetes": "Discover our packages",

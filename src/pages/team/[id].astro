@@ -4,13 +4,13 @@ import VCF from "@components/team/VCF";
 import teamMembers from "@components/team/TeamMembers";
 export function getStaticPaths() {
   return [
-    { params: { id: "Juan" } },
-    { params: { id: "Karen" } },
-    { params: { id: "Yaz" } },
-    { params: { id: "Kevin" } },
-    { params: { id: "Carlos" } },
-    { params: { id: "Jesus" } },
-    { params: { id: "Maria" } },
+    { params: { id: "Juan-Manuel-Gonzalez-Castillo" } },
+    { params: { id: "Karen-Valdez-Macias" } },
+    { params: { id: "Yazmín-Guardado-Méndez" } },
+    { params: { id: "Kevin-Ortega-Okhuysen" } },
+    { params: { id: "Juan-Carlos-Guerrero-Castro" } },
+    { params: { id: "Jesus-Emmanuel-Castillo-Martínez" } },
+    { params: { id: "María-José-Zuili-Almanza" } },
   ];
 }
 
@@ -20,13 +20,13 @@ const URL = Astro.url;
 
 const member = teamMembers.find((member) => {
   const memberMap = {
-    Kevin: 1,
-    Karen: 2,
-    Yaz: 3,
-    Juan: 4,
-    Carlos: 5,
-    Jesus: 6,
-    Maria: 7,
+    "Kevin-Ortega-Okhuysen": 1,
+    "Karen-Valdez-Macias": 2,
+    "Yazmín-Guardado-Méndez": 3,
+    "Juan-Manuel-González-Castillo": 4,
+    "Juan-Carlos-Guerrero-Castro": 5,
+    "Jesus-Emmanuel-Castillo-Martínez": 6,
+    "María-José-Zuili-Almanza": 7,
   };
   return member.id === memberMap[id];
 });
@@ -76,10 +76,16 @@ const member = teamMembers.find((member) => {
         <strong>Habilidades:</strong>
         <span class="text-[#861453] font-semibold">{member.skills}</span>
       </div>
-      <div class="text-lg">
-        <strong>Experiencia:</strong>
-        <span class="text-[#861453] font-semibold">{member.experience}</span>
-      </div>
+      {
+        member.experience && (
+          <div class="text-lg">
+            <strong>Experiencia:</strong>
+            <span class="text-[#861453] font-semibold">
+              {member.experience}
+            </span>
+          </div>
+        )
+      }
       <div class="text-lg">
         <strong>Educación:</strong>
         <span class="text-[#861453] font-semibold whitespace-pre-wrap"
@@ -96,7 +102,8 @@ const member = teamMembers.find((member) => {
         member.extendedDescription && (
           <div>
             <h2 class="font-bold text-lg mb-2">Acerca de {member.fullName}</h2>
-            <p class="text-justify">{member.extendedDescription}</p>
+            <p class="text-justify mb-4">{member.extendedDescription}</p>
+            <p class="text-justify">{member.extendedDescription2}</p>
           </div>
         )
       }
