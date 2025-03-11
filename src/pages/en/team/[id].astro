@@ -130,9 +130,7 @@ const member = teamMembers.find((member) => {
           </div>
         )
       }
-
-      {/* You can add more sections here if needed */}
     </div>
-    <!-- <VCF member={member} client:visible URL={URL} /> -->
+    <VCF member={member} client:visible currentURL={URL} />
   </section>
 </Layout>
