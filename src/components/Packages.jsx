@@ -10,6 +10,7 @@ export default function PackagesPage({ URL }) {
       id: 1,
       name: t("packages.inicial"),
       description: t("packages.inicialdesc"),
+      incluye: t("packages.incluido1"),
       price: 675,
       month: t("packages.inicialmonths"),
       popular: false,
@@ -36,6 +37,7 @@ export default function PackagesPage({ URL }) {
       id: 2,
       name: t("packages.pro"),
       description: t("packages.prodesc"),
+      incluye: t("packages.incluido2"),
       price: 995,
       month: t("packages.promonths"),
       popular: true,
@@ -62,6 +64,7 @@ export default function PackagesPage({ URL }) {
       id: 3,
       name: t("packages.empresa"),
       description: t("packages.empresadesc"),
+      incluye: t("packages.incluido3"),
       price: 1185,
       month: t("packages.empresamonths"),
       popular: false,
@@ -88,6 +91,7 @@ export default function PackagesPage({ URL }) {
       id: 4,
       name: t("packages.personalizado"),
       description: t("packages.personalizadodesc"),
+      incluye: t("packages.incluido4"),
       price: 1555,
       month: t("packages.personalizadomonths"),
       popular: false,
@@ -143,9 +147,16 @@ export default function PackagesPage({ URL }) {
             <h1 className="text-xl font-extrabold bg-gradient-to-r from-[#861453] to-purple-600 bg-clip-text text-transparent mb-4">
               {item.name}
             </h1>
-            <p className="text-gray-600 mb-6 text-wrap">{item.description}</p>
+            <p className="text-gray-600  text-wrap">{item.description}</p>
           </div>
-
+          {item.incluye && (
+            <div className="mb-4">
+              <h3 className="text-sm font-semibold text-[#861453] mb-2 uppercase tracking-wide">
+                {t("incluye")}
+              </h3>
+              <p className="text-gray-700 text-sm">{item.incluye}</p>
+            </div>
+          )}
           {item.services && (
             <div className="mb-8 flex-1">
               <h3 className="text-sm font-semibold text-[#861453] mb-4 uppercase tracking-wide">

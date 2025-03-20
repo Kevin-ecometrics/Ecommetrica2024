@@ -236,10 +236,15 @@ export const ui = {
     // Paquetes
     "packages.inicial": "Plan Inicial",
     "packages.inicialdesc": "Para los recién llegados",
+    "packages.incluido1": "Paquete Básico",
+    "packages.incluido2": "Incluye Paquete Básico más:",
+    "packages.incluido3": "Incluye Paquete Pro más:",
+    "packages.incluido4": "Incluye Paquete Empresa más:",
+    "incluye": "Incluye:",
     "packages.inicialmonths": "/por 3 meses",
     "packages.inicial.service1": "Sitio Web Básico",
     "packages.inicial.service1desc":
-      "Desarrollo de una landing page en React o Astro según necesidad",
+      "Desarrollo de una landing page en React o Astro según necesidad o templete en Shopify",
     "packages.inicial.service2": "SEO Inicial",
     "packages.inicial.service2desc":
       "Optimización básica en motores de búsqueda para mejorar visibilidad",
@@ -258,9 +263,8 @@ export const ui = {
     "packages.pro.service2": "SEO Avanzado",
     "packages.pro.service2desc":
       "Optimización técnica y estrategia de contenido para posicionamiento orgánico",
-    "packages.pro.service3": "Google Tag Manager & GA4",
-    "packages.pro.service3desc":
-      "Implementación avanzada de Google Analytics 4 y Tag Manager",
+    "packages.pro.service3": "Sitio Web Avanzado",
+    "packages.pro.service3desc": "Desarrollo de una landing page en React o Astro según necesidad con desarrollo avanzado",
     "packages.pro.service4": "Diseño de Posts & Reels",
     "packages.pro.service4desc":
       "Creación de contenido visual optimizado para redes sociales",
@@ -283,14 +287,13 @@ export const ui = {
     "packages.personalizadodesc": "Para empresas grandes y corporativos",
     "packages.personalizadomonths": "/por 8 meses",
     "packages.personalizado.service1": "Consultoría Estratégica",
-    "packages.personalizado.service1desc":
-      "Asesoramiento personalizado para expansión digital y crecimiento",
+    "packages.personalizado.service1desc": "Asesoramiento personalizado para expansión digital y crecimiento",
     "packages.personalizado.service2": "Automatización de Marketing",
-    "packages.personalizado.service2desc":
-      "Estrategias omnicanal para posicionamiento premium en el mercado",
+    "packages.personalizado.service2desc": "Estrategias omnicanal para posicionamiento premium en el mercado",
     "packages.personalizado.service3": "Producción Audiovisual",
-    "packages.personalizado.service3desc":
-      "Videograbación y edición profesional para campañas publicitarias",
+    "packages.personalizado.service3desc": "Videograbación y edición profesional para campañas publicitarias",
+    "packages.personalizado.service4": "Desarrollo de Apps",
+    "packages.personalizado.service4desc": "Aplicaciones web y móviles personalizadas para optimizar procesos internos",
     "packages.popular": "Más popular",
     "packages.servincl": "Servicios Incluidos:",
     "packages.paquetes": "Conoce nuestros paquetes",
@@ -504,6 +507,9 @@ export const ui = {
     "service.planningdesc2":
       "We focus on the growth of your business, helping you identify improvement opportunities and implement strategies that allow you to achieve your goals.",
 
+
+
+
     // Team Section
     "team.title1": "Hello!",
     "team.title2": "Meet the Team",
@@ -650,6 +656,12 @@ export const ui = {
     "packages.ecommerce": "Meticulously Valued E-commerce",
     "packages.select": "Select",
     "packages.selected": "Selected",
+
+"packages.incluido1": "Basic Package",
+"packages.incluido2": "Pro Package (Includes basic package)",
+"packages.incluido3": "Business Package (Includes pro and basic packages)",
+"packages.incluido4": "Custom Package (Includes all packages for a unique experience tailored to the client's needs)",
+"incluye": "Includes",
 
     // Calendar Section
     "calendar.previous": "Previous",

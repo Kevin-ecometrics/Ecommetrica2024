@@ -29,3 +29,9 @@
   .animate-div-2 {
     animation: slideY 5s infinite;
   }
+  /* .draggable {
+    cursor: grab;
+  }
+
+  .draggable:active {
+    cursor: grabbing;  } */

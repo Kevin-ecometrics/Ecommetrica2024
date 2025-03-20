@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import "../KeyFrames.css";
 
 // Carrusel para escritorio
 export function DesktopCarousel({ team, URL }) {
   const [hovered, setHovered] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
   const lang = getLangFromUrl(URL);
   const t = useTranslations(lang);
   const teamMember = t("team");
@@ -19,6 +21,14 @@ export function DesktopCarousel({ team, URL }) {
   const prevSlide = () => {
     setDirection("left");
     setCurrentIndex((prev) => (prev === 0 ? team.length - 3 : prev - 3));
+  };
+
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x > 50) {
+      prevSlide();
+    } else if (info.offset.x < -50) {
+      nextSlide();
+    }
   };
 
   const visibleTeam = team.slice(currentIndex, currentIndex + 3);
@@ -83,7 +93,18 @@ export function DesktopCarousel({ team, URL }) {
           </svg>
         </button>
 
-        <div className="relative h-[600px] flex items-center">
+        <motion.div
+          className={`relative h-[600px] flex items-center  ${
+            isDragging ? "cursor-progress" : "cursor-crosshair"
+          }`}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDragStart={() => setIsDragging(true)} // Cuando comienza el arrastre
+          onDragEnd={(event, info) => {
+            setIsDragging(false); // Cuando termina el arrastre
+            handleDragEnd(event, info);
+          }}
+        >
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             {adjustedTeam.map((member, index) => (
               <motion.div
@@ -111,12 +132,12 @@ export function DesktopCarousel({ team, URL }) {
                     onMouseEnter={() => setHovered(index)}
                     onMouseLeave={() => setHovered(null)}
                   >
-                    <a href={`${teamMember}${member.name}`}>{" "}
-                    <img
-                      src={hovered === index ? member.image2 : member.image}
-                      alt={member.name}
-                      className="absolute bottom-0 left-0 right-0 w-full rounded-3xl"
-                    />
+                    <a href={`${teamMember}${member.name}`}>
+                      <img
+                        src={hovered === index ? member.image2 : member.image}
+                        alt={member.name}
+                        className="absolute bottom-0 left-0 right-0 w-full rounded-3xl"
+                      />
                     </a>
                   </motion.div>
 
@@ -147,23 +168,7 @@ export function DesktopCarousel({ team, URL }) {
               </motion.div>
             ))}
           </AnimatePresence>
-        </div>
-
-        {/* <div className="flex justify-center gap-2 mt-8">
-          {Array.from({ length: Math.ceil(team.length / 3) }).map(
-            (_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index * 3)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  currentIndex === index * 3
-                    ? "bg-[#861453] scale-125"
-                    : "bg-gray-300"
-                }`}
-              />
-            )
-          )}
-        </div> */}
+        </motion.div>
       </div>
     </div>
   );
@@ -176,6 +181,7 @@ export function MobileCarousel({ team, URL }) {
   const lang = getLangFromUrl(URL);
   const t = useTranslations(lang);
   const teamMember = t("team");
+
   const nextSlide = () => {
     setDirection("right");
     setCurrentIndex((prev) => (prev + 1 >= team.length ? 0 : prev + 1));
@@ -184,6 +190,14 @@ export function MobileCarousel({ team, URL }) {
   const prevSlide = () => {
     setDirection("left");
     setCurrentIndex((prev) => (prev === 0 ? team.length - 1 : prev - 1));
+  };
+
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x > 50) {
+      prevSlide();
+    } else if (info.offset.x < -50) {
+      nextSlide();
+    }
   };
 
   const variants = {
@@ -242,7 +256,12 @@ export function MobileCarousel({ team, URL }) {
           </svg>
         </button>
 
-        <div className="relative h-[600px] flex items-center">
+        <motion.div
+          className="relative h-[600px] flex items-center draggable"
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDragEnd={handleDragEnd}
+        >
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.div
               key={team[currentIndex].name}
@@ -294,7 +313,7 @@ export function MobileCarousel({ team, URL }) {
               </div>
             </motion.div>
           </AnimatePresence>
-        </div>
+        </motion.div>
 
         <div className="flex justify-center gap-2 mt-8">
           {team.map((_, index) => (

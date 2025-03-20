@@ -58,6 +58,14 @@ const PricingWizard = () => {
             </h1>
             <p className="text-gray-600 mb-6 text-wrap">{item.description}</p>
           </div>
+          {item.incluye && (
+            <div className="mb-4">
+              <h3 className="text-sm font-semibold text-[#861453] mb-2 uppercase tracking-wide">
+                Incluye:
+              </h3>
+              <p className="text-gray-700 text-sm">{item.incluye}</p>
+            </div>
+          )}
 
           {item.services && (
             <div className="mb-8 flex-1">
