@@ -95,7 +95,7 @@ export function DesktopCarousel({ team, URL }) {
 
         <motion.div
           className={`relative h-[600px] flex items-center  ${
-            isDragging ? "cursor-progress" : "cursor-crosshair"
+            isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
