@@ -650,6 +650,8 @@ export const ui = {
     "packages.personalizado.service3": "Audiovisual Production",
     "packages.personalizado.service3desc":
       "Professional video recording and editing for advertising campaigns",
+    "packages.personalizado.service4": "App Development",
+    "packages.personalizado.service4desc": "Custom web and mobile applications to optimize internal processes",
     "packages.popular": "Most popular",
     "packages.servincl": "Included Services:",
     "packages.paquetes": "Discover our packages",
