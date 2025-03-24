@@ -15,12 +15,12 @@ export function DesktopCarousel({ team, URL }) {
 
   const nextSlide = () => {
     setDirection("right");
-    setCurrentIndex((prev) => (prev + 3 >= team.length ? 0 : prev + 3));
+    setCurrentIndex((prev) => (prev + 1 >= team.length ? 0 : prev + 1));
   };
 
   const prevSlide = () => {
     setDirection("left");
-    setCurrentIndex((prev) => (prev === 0 ? team.length - 3 : prev - 3));
+    setCurrentIndex((prev) => (prev === 0 ? team.length - 1 : prev - 1));
   };
 
   const handleDragEnd = (event, info) => {
