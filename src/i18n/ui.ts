@@ -30,6 +30,7 @@ export const ui = {
 
     // Hero Section
     "hero.title": "Hola, somos",
+    "hero.title2": "Páginas web inteligentes. Consultoría y desarrollo en un solo lugar",
     "hero.button1": "Comienza",
     "hero.button2": "Nosotros",
     "hero.words": ["Innova", "Eleva", "Simplifica"],
