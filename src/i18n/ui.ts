@@ -387,6 +387,8 @@ export const ui = {
 
     // Hero Section
     "hero.title": "Hello, we are",
+    "hero.title2":
+      "Smart websites. Consulting and development in one place",
     "hero.button1": "Get Started",
     "hero.button2": "About Us",
     "hero.words": ["Innovate", "Elevate", "Simplify"],

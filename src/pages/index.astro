@@ -15,22 +15,39 @@ import Team from "@components/team/Hero.astro";
 import Banner from "@components/Banner.astro";
 import LanguageModal from "@components/LanguageModal";
 import teamMembers from "@components/team/TeamMembers";
+
 const URL = Astro.url;
 ---
 
 <Layout title="Ecommetrica - Innova - Eleva - Simplifica">
   <LanguageModal client:load />
-  <Hero />
-  <About />
-  <Skills />
-  <Portfolio client:visible URL={URL} />
-  <Service />
-  <!-- <Certification /> -->
-  <Team team={teamMembers} />
-  <Package client:visible URL={URL} />
-  <!-- <Testimonial client:visible /> -->
-  <!-- <Blog /> -->
-  <Consulting />
-  <Contact URL={URL} client:visible />
-  <Banner />
+
+  <!-- Envuelve todo el contenido en un div que se controlará desde el cliente -->
+  <div id="main-content" class="hidden">
+    <Hero />
+    <About />
+    <Skills />
+    <Portfolio client:visible URL={URL} />
+    <Service />
+    <!-- <Certification /> -->
+    <Team team={teamMembers} />
+    <Package client:visible URL={URL} />
+    <!-- <Testimonial client:visible /> -->
+    <!-- <Blog /> -->
+    <Consulting />
+    <Contact URL={URL} client:visible />
+    <Banner />
+  </div>
+
+  <script is:inline>
+    // Verificar localStorage solo en el cliente
+    document.addEventListener("DOMContentLoaded", () => {
+      const hasLanguage = localStorage.getItem("language");
+      const mainContent = document.getElementById("main-content");
+
+      if (hasLanguage) {
+        mainContent.classList.remove("hidden");
+      }
+    });
+  </script>
 </Layout>

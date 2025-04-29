@@ -80,7 +80,9 @@ const supportRoute = isEnglish ? "/en/soporte/" : "/soporte/";
     <ClientRouter />
   </head>
   <body class="overflow-x-hidden">
-    {isHomePage && <Navbar client:load URL={URL} />}
+    <section>
+      {isHomePage && <Navbar client:load URL={URL} />}
+    </section>
     <slot />
     {
       isHomePage && (
@@ -153,4 +155,23 @@ const supportRoute = isEnglish ? "/en/soporte/" : "/soporte/";
     scroll-behavior: smooth;
     font-family: "Montserrat Variable", sans-serif;
   }
+
+  /* Oculta el footer si la clase hide-footer está presente */
+  body.hide-footer footer {
+    display: none;
+  }
+
+  /* Oculta el navbar si la clase hide-navbar está presente */
+  body.hide-section section {
+    display: none;
+  }
 </style>
+<script is:inline>
+  if (typeof window !== "undefined") {
+    const checkout = localStorage.getItem("language");
+    if (!checkout) {
+      // Oculta el footer y el navbar si checkout es null
+      document.body.classList.add("hide-footer", "hide-section");
+    }
+  }
+</script>
