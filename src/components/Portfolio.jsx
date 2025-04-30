@@ -340,29 +340,68 @@ const Portfolio = ({ URL }) => {
         </select>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:px-8">
-        <AnimatePresence>
-          {currentProjects.map((proyecto) => (
+        <AnimatePresence mode="popLayout">
+          {currentProjects.map((proyecto, index) => (
             <motion.div
               key={proyecto.nombre}
-              className="relative bg-[#c2155C] rounded-lg overflow-hidden group"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.5 }}
+              className="relative bg-[#c2155C] rounded-2xl overflow-hidden group"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+                duration: 0.2,
+              }}
+              layout
+              layoutId={proyecto.nombre}
             >
-              <img
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70 z-10 opacity-0 group-hover:opacity-100"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+              />
+
+              <motion.img
                 src={proyecto.img}
                 alt={proyecto.nombre}
-                className="w-full h-full transition-transform duration-300 group-hover:scale-125"
+                className="w-full h-full object-cover"
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                  duration: 0.2,
+                }}
               />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button
+
+              <motion.div
+                className="absolute bottom-0 left-0 right-0 p-6 z-20 opacity-0 group-hover:opacity-100"
+                initial={{ y: 10 }}
+                whileHover={{ y: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 200,
+                  delay: 0.05,
+                }}
+              >
+                <motion.button
                   onClick={() => handleOpenProjectModal(proyecto)}
-                  className="bg-[#861453] text-white px-4 py-2 rounded-lg font-bold"
+                  className="bg-[#861453] text-white px-6 py-3 rounded-xl font-bold shadow-lg"
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0px 5px 15px rgba(0,0,0,0.3)",
+                  }}
+                  whileTap={{
+                    scale: 0.95,
+                    boxShadow: "0px 2px 5px rgba(0,0,0,0.2)",
+                  }}
                 >
                   {t("portfolio.button")}
-                </button>
-              </div>
+                </motion.button>
+              </motion.div>
             </motion.div>
           ))}
         </AnimatePresence>
