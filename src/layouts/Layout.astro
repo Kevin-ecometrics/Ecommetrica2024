@@ -161,7 +161,7 @@ const supportRoute = isEnglish ? "/en/soporte/" : "/soporte/";
     display: none;
   }
 
-  /* Oculta el navbar si la clase hide-navbar está presente */
+  /* Oculta el navbar si la clase hide-navbar está presente  */
   body.hide-section section {
     display: none;
   }
@@ -169,8 +169,12 @@ const supportRoute = isEnglish ? "/en/soporte/" : "/soporte/";
 <script is:inline>
   if (typeof window !== "undefined") {
     const checkout = localStorage.getItem("language");
+
+    // Limpia las clases previamente agregadas
+    document.body.classList.remove("hide-footer", "hide-section");
+
+    // Si checkout es null, agrega las clases para ocultar el contenido
     if (!checkout) {
-      // Oculta el footer y el navbar si checkout es null
       document.body.classList.add("hide-footer", "hide-section");
     }
   }

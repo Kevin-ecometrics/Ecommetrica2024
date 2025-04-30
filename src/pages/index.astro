@@ -23,7 +23,10 @@ const URL = Astro.url;
   <LanguageModal client:load />
 
   <!-- Envuelve todo el contenido en un div que se controlará desde el cliente -->
-  <div id="main-content" class="hidden">
+  <div
+    id="main-content"
+    class={`${typeof window !== "undefined" && !localStorage.getItem("language") ? "hidden" : ""}`}
+  >
     <Hero />
     <About />
     <Skills />
@@ -40,14 +43,27 @@ const URL = Astro.url;
   </div>
 
   <script is:inline>
-    // Verificar localStorage solo en el cliente
-    document.addEventListener("DOMContentLoaded", () => {
+    // Función para manejar la visibilidad
+    function updateVisibility() {
       const hasLanguage = localStorage.getItem("language");
       const mainContent = document.getElementById("main-content");
+      const languageModal = document.querySelector(".language-modal-container");
 
       if (hasLanguage) {
-        mainContent.classList.remove("hidden");
+        mainContent?.classList.remove("hidden");
+        languageModal?.style.setProperty("display", "none", "important");
+      } else {
+        mainContent?.classList.add("hidden");
+        languageModal?.style.setProperty("display", "flex", "important");
+        document.body.style.overflow = "hidden";
       }
-    });
+    }
+
+    // Ejecutar al cargar y cuando cambia la historia (navegación atrás/adelante)
+    document.addEventListener("DOMContentLoaded", updateVisibility);
+    window.addEventListener("pageshow", updateVisibility);
+
+    // También actualizar al cambiar el estado de localStorage
+    window.addEventListener("storage", updateVisibility);
   </script>
 </Layout>
