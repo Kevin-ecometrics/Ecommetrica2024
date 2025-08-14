@@ -117,7 +117,7 @@ export function DesktopCarousel({ team, URL }) {
                 transition={{
                   type: "spring",
                   stiffness: 300,
-                  damping: 30,
+                  damping: 20,
                 }}
                 className="absolute w-full max-w-[340px] mx-4"
                 style={{

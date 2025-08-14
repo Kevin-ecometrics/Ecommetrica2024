@@ -1,4 +1,3 @@
-
 import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
 const lang = getLangFromUrl(URL);

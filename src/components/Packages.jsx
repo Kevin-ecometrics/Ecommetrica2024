@@ -118,6 +118,8 @@ export default function PackagesPage({ URL }) {
 
   const [selectedItems, setSelectedItems] = useState({});
 
+  const namePackages = packages.map((item) => item.name.replace(/\s+/g, "-"));
+  console.log(namePackages);
   const handleSelect = (item) => {
     setSelectedItems((prev) => ({
       ...prev,
@@ -197,7 +199,7 @@ export default function PackagesPage({ URL }) {
                 </span>
               </p>
             </div>
-            <a href={t("calendar.api")}>
+            <a href={`/packages/${namePackages[item.id - 1]}`}>
               <div
                 className={`w-full bg-gradient-to-r text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 ${
                   selectedItems[item.id]

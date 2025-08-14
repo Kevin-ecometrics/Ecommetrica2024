@@ -42,13 +42,13 @@ const teamMembers = [
     image2: "/team2-2.webp",
     name: "Karen-Valdez-Macias",
     fullName: "Karen Valdez",
-    role: "Publisher & Copywriter",
-    skills: "Publisher, Copywriter, Content Creator",
+    role: "Copywriter & Video Editor",
+    skills: "Copywriter, Video Editor, Content Creator",
     transition: "imagen2",
     experience: "5 years of experience",
     education: "Bachelor's in Communication and Advertising",
     contact: "664 642 9633",
-    proyecto: "E-commetrica, Copywriter and video publisher.",
+    proyecto: "E-commetrica, Copywriter and video editor.",
     proyecto2: "HERFAVE, Community manager and sales.",
     proyecto3: "Distribuidora Landys, Web sales.",
     proyecto4: "Imprex Digital, General assistant.",
@@ -112,6 +112,42 @@ const teamMembers = [
     },
   },
   {
+    id: 7,
+    image: "/team7.webp",
+    image2: "/team7-2.webp",
+    name: "Maria-Jose-Zuili-Almanza",
+    fullName: "María J. Zuili",
+    role: "Editor",
+    skills: "Editing, Design, Content Creation",
+    transition: "imagen7",
+    experience: null,
+    education: "Studies in Architecture and Design",
+    contact: "664 642 9633",
+    proyecto: "E-commetrica, Content Editor and Creative.",
+    proyecto2: "Content creation for the architecture and marketing sector.",
+    proyecto3: null,
+    edu: "Studies in Architecture and Design.",
+    edu2: null,
+    testimonio:
+      "María José is a creative editor with a unique approach that brings ideas to life with an artistic touch.",
+    testimonio2:
+      "Her ability to conceptualize and execute visually appealing projects has elevated our content.",
+    description:
+      "With her fresh and original approach, provides new perspectives to clients, elevating each production with quality and style.",
+    extendedDescription: `María José Zuili Almanza resides in Querétaro and is a future architect and artist with an innovative approach. Currently, she is part of the team as an Editor, bringing her talent and creativity to every project. Her experience has focused on editing and design for independent creators and companies in the architecture and marketing sectors. Thanks to her academic training and her fascination with art, she constantly explores new techniques and mediums to execute each project with precision and originality.`,
+    extendedDescription2:
+      "Maria José is an editor with an artistic and creative approach who has worked on various design and marketing projects.",
+    detailedSkills: `<strong>Content Creation: </strong> Design, conceptualization of architectural plans, and image enhancement.<br><strong>Software:</strong> Adobe Premiere, Lightroom, Illustrator, AutoCAD. Where she conceptualizes architectural plans and designs aligned with client needs.<br><strong>Editing and Rendering:</strong> Image enhancement with bracketing in Photoshop and Lightroom to achieve professional finishes.<br><strong>Video Editing:</strong> Post-production, dynamic transitions, and precise assembly.`,
+    workEthic: `Working with María José means giving an artistic and sensitive sense to marketing. Her ability to reinvent the conventional and generate unique and fresh proposals allows clients to visually stand out in their industries. Her artistic spirit opens horizons to explore new perspectives, driving the growth of multiple brands in various sectors.`,
+    additionalDetails: {
+      funFacts: [
+        "She loves to illustrate.",
+        "Very skilled with crafts.",
+        "Loves exploring new places.",
+      ],
+    },
+  },
+  {
     id: 4,
     image: "/team4.webp",
     image2: "/team4-2.webp",
@@ -151,116 +187,80 @@ const teamMembers = [
       ],
     },
   },
-  {
-    id: 5,
-    image: "/team5.webp",
-    image2: "/team5-2.webp",
-    name: "Juan-Carlos-Guerrero-Castro",
-    fullName: "Juan C. Guerrero",
-    role: "Sales Associate",
-    skills: "Sales, Politics, Agriculture, Technology",
-    transition: "imagen5",
-    experience:
-      "18 years of experience in sales and technology, 20 years in politics and agriculture",
-    education: "Law Degree",
-    contact: "664 642 9633",
-    proyecto: "E-commetrica, E-commerce Consultant and Web Developer.",
-    proyecto2:
-      "Border Grower, E-commerce Director and Programmer in R and Liquid.",
-    proyecto3: "Digital Lab Agency, E-commerce Developer.",
-    proyecto4: "Guarantee Solar, Digital Marketing Specialist.",
-    edu: "Law Degree",
-    edu2: "Studies in Politics and Agriculture",
-    testimonio:
-      "Juan Carlos Guerrero is a multifaceted expert with a unique ability to integrate sales, politics, and agriculture into his strategic approach.",
-    testimonio2:
-      "His versatility and experience allow him to provide an integrated approach, helping companies reach their full potential across multiple areas.",
-    description:
-      "He's a tenacious strategist with a vision focused on growth and innovation. His analytical approach drives the success of every project.",
-    extendedDescription: `Originally from San Diego, California, Juan Carlos Guerrero is a clear example of cross-border talent, integrating his training as a lawyer with a multifaceted career in politics, advertising, and literary creation. His versatility has allowed him to venture into different sectors, providing a strategic vision and an innovative approach in each one.`,
-    //   extendedDescription2: "Juan Carlos is a tenacious sales strategist with a vision focused on growth and innovation. His approach to analytics, negotiation, and client relationships drives the success of each project",
-    detailedSkills: `<strong>Sales and Technology:</strong> 18 years of experience in companies in the US and Mexico, from part-time salesperson to sales director.<br><strong>Politics:</strong> 20 years in Mexico as a political operator and delegate, as well as having been a candidate and coordinator of multiple campaigns.<br><strong>Agriculture:</strong> 20 years in commercial, semi-industrial, and ornamental farming in Mexico and the US, combining production with his passion for the countryside.`,
-    workEthic: `Because he is much more than a salesperson: His knowledge in digital, political, cultural, and agricultural markets gives him deep empathy with clients and brands seeking to grow and expand. Working with Juan Carlos means going beyond the goal. His approach is constant feedback and support, becoming the ideal ally to drive any business toward success.`,
-    additionalDetails: {
-      funFacts: [
-        "A lover of oriental cuisine.",
-        "A fearless surfer.",
-        "A distinguished storyteller.",
-      ],
-    },
-  },
-  {
-    id: 6,
-    image: "/team6.webp",
-    image2: "/team6-2.webp",
-    name: "Jesus-Emmanuel-Castillo-Martinez",
-    fullName: "Jesus E. Castillo",
-    role: "Developer",
-    skills: "Web Development",
-    transition: "imagen6",
-    experience: "1 year of experience",
-    education: "Information and Communication Technologies",
-    contact: "664 642 9633",
-    proyecto: "E-commetrica, Junior Developer and development support.",
-    proyecto2: "Web development in small and medium-sized projects.",
-    proyecto3: null,
-    edu: "Studies in Engineering in ICTs.",
-    edu2: null,
-    testimonio:
-      "Jesus is a passionate programmer who has shown great ability to learn quickly and take on challenges in web development.",
-    testimonio2:
-      "Despite his limited experience, Jesus has contributed valuable solutions to our team. His passion for technology and programming shows in his work.",
-    description:
-      "He's an passionate about creating intuitive and efficient digital experiences for each client, with optimized and creative designs and development.",
-    extendedDescription: `Despite his short career, Jesus has shown a strong commitment and ability to solve complex problems in his projects. He is a key member of the growing, young team.`,
-    extendedDescription2:
-      "Jesús is a Jr Programmer at E-commetrica with experience in web and software development.",
-    detailedSkills: `<strong>Programming languages:</strong> HTML, CSS, JavaScript, React, Node.js.<br><strong>Software:</strong> VS Code, Git, GitHub.`,
-    workEthic: `Jesus is an enthusiastic person, committed to his professional growth, and always eager to learn new technologies to improve his skills.`,
-    additionalDetails: {
-      funFacts: [
-        "A technology and video game enthusiast.",
-        "Enjoys learning about artificial intelligence.",
-        "Always looking to improve his programming.",
-      ],
-    },
-  },
-  {
-    id: 7,
-    image: "/team7.webp",
-    image2: "/team7-2.webp",
-    name: "Maria-Jose-Zuili-Almanza",
-    fullName: "María J. Zuili",
-    role: "Editor",
-    skills: "Editing, Design, Content Creation",
-    transition: "imagen7",
-    experience: null,
-    education: "Studies in Architecture and Design",
-    contact: "664 642 9633",
-    proyecto: "E-commetrica, Content Editor and Creative.",
-    proyecto2: "Content creation for the architecture and marketing sector.",
-    proyecto3: null,
-    edu: "Studies in Architecture and Design.",
-    edu2: null,
-    testimonio:
-      "María José is a creative editor with a unique approach that brings ideas to life with an artistic touch.",
-    testimonio2:
-      "Her ability to conceptualize and execute visually appealing projects has elevated our content.",
-    description:
-      "With her fresh and original approach, provides new perspectives to clients, elevating each production with quality and style.",
-    extendedDescription: `María José Zuili Almanza resides in Querétaro and is a future architect and artist with an innovative approach. Currently, she is part of the team as an Editor, bringing her talent and creativity to every project. Her experience has focused on editing and design for independent creators and companies in the architecture and marketing sectors. Thanks to her academic training and her fascination with art, she constantly explores new techniques and mediums to execute each project with precision and originality.`,
-    extendedDescription2:
-      "Maria José is an editor with an artistic and creative approach who has worked on various design and marketing projects.",
-    detailedSkills: `<strong>Content Creation: </strong> Design, conceptualization of architectural plans, and image enhancement.<br><strong>Software:</strong> Adobe Premiere, Lightroom, Illustrator, AutoCAD. Where she conceptualizes architectural plans and designs aligned with client needs.<br><strong>Editing and Rendering:</strong> Image enhancement with bracketing in Photoshop and Lightroom to achieve professional finishes.<br><strong>Video Editing:</strong> Post-production, dynamic transitions, and precise assembly.`,
-    workEthic: `Working with María José means giving an artistic and sensitive sense to marketing. Her ability to reinvent the conventional and generate unique and fresh proposals allows clients to visually stand out in their industries. Her artistic spirit opens horizons to explore new perspectives, driving the growth of multiple brands in various sectors.`,
-    additionalDetails: {
-      funFacts: [
-        "She loves to illustrate.",
-        "Very skilled with crafts.",
-        "Loves exploring new places.",
-      ],
-    },
-  },
+  // {
+  //   id: 5,
+  //   image: "/team5.webp",
+  //   image2: "/team5-2.webp",
+  //   name: "Juan-Carlos-Guerrero-Castro",
+  //   fullName: "Juan C. Guerrero",
+  //   role: "Sales Associate",
+  //   skills: "Sales, Politics, Agriculture, Technology",
+  //   transition: "imagen5",
+  //   experience:
+  //     "18 years of experience in sales and technology, 20 years in politics and agriculture",
+  //   education: "Law Degree",
+  //   contact: "664 642 9633",
+  //   proyecto: "E-commetrica, E-commerce Consultant and Web Developer.",
+  //   proyecto2:
+  //     "Border Grower, E-commerce Director and Programmer in R and Liquid.",
+  //   proyecto3: "Digital Lab Agency, E-commerce Developer.",
+  //   proyecto4: "Guarantee Solar, Digital Marketing Specialist.",
+  //   edu: "Law Degree",
+  //   edu2: "Studies in Politics and Agriculture",
+  //   testimonio:
+  //     "Juan Carlos Guerrero is a multifaceted expert with a unique ability to integrate sales, politics, and agriculture into his strategic approach.",
+  //   testimonio2:
+  //     "His versatility and experience allow him to provide an integrated approach, helping companies reach their full potential across multiple areas.",
+  //   description:
+  //     "He's a tenacious strategist with a vision focused on growth and innovation. His analytical approach drives the success of every project.",
+  //   extendedDescription: `Originally from San Diego, California, Juan Carlos Guerrero is a clear example of cross-border talent, integrating his training as a lawyer with a multifaceted career in politics, advertising, and literary creation. His versatility has allowed him to venture into different sectors, providing a strategic vision and an innovative approach in each one.`,
+  //   //   extendedDescription2: "Juan Carlos is a tenacious sales strategist with a vision focused on growth and innovation. His approach to analytics, negotiation, and client relationships drives the success of each project",
+  //   detailedSkills: `<strong>Sales and Technology:</strong> 18 years of experience in companies in the US and Mexico, from part-time salesperson to sales director.<br><strong>Politics:</strong> 20 years in Mexico as a political operator and delegate, as well as having been a candidate and coordinator of multiple campaigns.<br><strong>Agriculture:</strong> 20 years in commercial, semi-industrial, and ornamental farming in Mexico and the US, combining production with his passion for the countryside.`,
+  //   workEthic: `Because he is much more than a salesperson: His knowledge in digital, political, cultural, and agricultural markets gives him deep empathy with clients and brands seeking to grow and expand. Working with Juan Carlos means going beyond the goal. His approach is constant feedback and support, becoming the ideal ally to drive any business toward success.`,
+  //   additionalDetails: {
+  //     funFacts: [
+  //       "A lover of oriental cuisine.",
+  //       "A fearless surfer.",
+  //       "A distinguished storyteller.",
+  //     ],
+  //   },
+  // },
+  // {
+  //   id: 6,
+  //   image: "/team6.webp",
+  //   image2: "/team6-2.webp",
+  //   name: "Jesus-Emmanuel-Castillo-Martinez",
+  //   fullName: "Jesus E. Castillo",
+  //   role: "Developer",
+  //   skills: "Web Development",
+  //   transition: "imagen6",
+  //   experience: "1 year of experience",
+  //   education: "Information and Communication Technologies",
+  //   contact: "664 642 9633",
+  //   proyecto: "E-commetrica, Junior Developer and development support.",
+  //   proyecto2: "Web development in small and medium-sized projects.",
+  //   proyecto3: null,
+  //   edu: "Studies in Engineering in ICTs.",
+  //   edu2: null,
+  //   testimonio:
+  //     "Jesus is a passionate programmer who has shown great ability to learn quickly and take on challenges in web development.",
+  //   testimonio2:
+  //     "Despite his limited experience, Jesus has contributed valuable solutions to our team. His passion for technology and programming shows in his work.",
+  //   description:
+  //     "He's an passionate about creating intuitive and efficient digital experiences for each client, with optimized and creative designs and development.",
+  //   extendedDescription: `Despite his short career, Jesus has shown a strong commitment and ability to solve complex problems in his projects. He is a key member of the growing, young team.`,
+  //   extendedDescription2:
+  //     "Jesús is a Jr Programmer at E-commetrica with experience in web and software development.",
+  //   detailedSkills: `<strong>Programming languages:</strong> HTML, CSS, JavaScript, React, Node.js.<br><strong>Software:</strong> VS Code, Git, GitHub.`,
+  //   workEthic: `Jesus is an enthusiastic person, committed to his professional growth, and always eager to learn new technologies to improve his skills.`,
+  //   additionalDetails: {
+  //     funFacts: [
+  //       "A technology and video game enthusiast.",
+  //       "Enjoys learning about artificial intelligence.",
+  //       "Always looking to improve his programming.",
+  //     ],
+  //   },
+  // },
 ];
 
 export default teamMembers;

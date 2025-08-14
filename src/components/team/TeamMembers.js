@@ -42,8 +42,8 @@ const teamMembers = [
     image2: "/team2-2.webp",
     name: "Karen-Valdez-Macias",
     fullName: "Karen Valdez",
-    role: "Editora & Copywriter",
-    skills: "Editora, Copywriter, Content Creator",
+    role: "Editora de video & Copywriter",
+    skills: "Editora de video, Copywriter, Content Creator",
     transition: "imagen2",
     experience: "5 años de experiencia",
     education: "Lic. en Comunicación y Publicidad",
@@ -110,6 +110,42 @@ const teamMembers = [
     },
   },
   {
+    id: 7,
+    image: "/team7.webp",
+    image2: "/team7-2.webp",
+    name: "Maria-Jose-Zuili-Almanza",
+    fullName: "María J. Zuili",
+    role: "Editora",
+    skills: "Edición, Diseño, Creación de contenido",
+    transition: "imagen7",
+    experience: null,
+    education: "Estudios en Arquitectura y Diseño",
+    contact: "664 642 9633",
+    proyecto: "E-commetrica, Editora de contenido y creativa.",
+    proyecto2:
+      "Creación de contenido para el sector arquitectónico y marketing.",
+    proyecto3: null,
+    edu: "Estudios en Arquitectura y Diseño.",
+    edu2: null,
+    testimonio:
+      "María José es una editora creativa con un enfoque único que da vida a las ideas con un toque artístico.",
+    testimonio2:
+      "Su habilidad para conceptualizar y ejecutar proyectos visualmente atractivos ha elevado nuestro contenido.",
+    description:
+      "Con su enfoque fresco y original brinda nuevas perspectivas a los clientes, elevando cada producción con calidad y estilo.",
+    extendedDescription: `María José Zuili Almanza reside en Querétaro y es una futura arquitecta y artista con un enfoque innovador. Actualmente, forma parte del equipo como editora, aportando su talento y creatividad a cada proyecto. Su experiencia se ha centrado en edición y diseño para creadores independientes y empresas en los sectores de arquitectura y marketing. Gracias a su formación académica y su fascinación por el arte, explora constantemente nuevas técnicas y medios para ejecutar cada proyecto con precisión y originalidad.`,
+    extendedDescription2: `María José es una editora con un enfoque artístico y creativo que ha trabajado en diversos proyectos de diseño y marketing.`,
+    detailedSkills: `<strong>Creación de contenido: </strong> Diseño, conceptualización de planos arquitectónicos y mejora de imágenes.<br><strong>Software:</strong> Adobe premier, LightRoom e Ilustrador, AutoCAD. Donde realiza conceptualización de planos y diseños arquitectónicos alineados a las necesidades del cliente.<br><strong>Edición y renderizado:</strong> Mejora de imágenes con horquillado en Photoshop y Lightroom para lograr acabados profesionales.<br><strong>Edición de video:</strong> Postproducción, transiciones dinámicas y montaje preciso.`,
+    workEthic: `Trabajar con María José significa dar un sentido artístico y sensible al marketing. Su capacidad para reinventar lo convencional y generar propuestas únicas y frescas permite que los clientes se diferencien visualmente en sus industrias. Su espíritu artístico abre horizontes para explorar nuevas perspectivas, impulsando el crecimiento de múltiples marcas en diversos sectores. `,
+    additionalDetails: {
+      funFacts: [
+        "Le fascina ilustrar.",
+        "Es muy hábil con las manualidades.",
+        "Ama explorar lugares nuevos.",
+      ],
+    },
+  },
+  {
     id: 4,
     image: "/team4.webp",
     image2: "/team4-2.webp",
@@ -152,118 +188,83 @@ const teamMembers = [
       ],
     },
   },
-  {
-    id: 5,
-    image: "/team5.webp",
-    image2: "/team5-2.webp",
-    name: "Juan-Carlos-Guerrero-Castro",
-    fullName: "Juan C. Guerrero",
-    role: "Director de Ventas",
-    skills: "Ventas, Política, Agricultura, Tecnología",
-    transition: "imagen5",
-    experience:
-      "18 años de experiencia en ventas y tecnología, 20 años en política y agricultura",
-    education: "Lic. en Derecho",
-    contact: "664 642 9633",
-    proyecto: "E-commetrica, Consultor de ecommerce y desarrollador web.",
-    proyecto2:
-      "Border Grower, Director de ecommerce y programador en R y Liquid.",
-    proyecto3: "Digital Lab Agency, Desarrollador de ecommerce.",
-    proyecto4: "Guarantee Solar, Especialista de mercadotecnia digital.",
-    edu: "Lic. en Derecho",
-    edu2: "Estudios en Política y Agricultura",
-    testimonio:
-      "Juan Carlos Guerrero es un experto multifacético con una capacidad única para integrar ventas, política y agricultura en su enfoque estratégico.",
-    testimonio2:
-      "Su versatilidad y experiencia le permiten aportar un enfoque integral, ayudando a empresas a alcanzar su máximo potencial en diversas áreas.",
-    description:
-      "Es un estratega tenaz con una visión enfocada en el crecimiento e innovación. Su enfoque analítico impulsa el éxito de cada proyecto.",
-    extendedDescription:
-      "Originario de San Diego, California. Juan Carlos Guerrero es un claro ejemplo de talento transfronterizo, integrando su formación como abogado con una trayectoria multifacética en política, publicidad y creación literaria. Su versatilidad le ha permitido incursionar en distintos sectores, aportando una visión estratégica y un enfoque innovador en cada uno.",
-    detailedSkills:
-      "<strong>Ventas y tecnología:</strong> 18 años de experiencia en empresas de EE.UU. y México, desde vendedor de medio tiempo hasta director de ventas.<br><strong>Política:</strong> Más de 20 años en México como operador político y delegado, además de haber sido candidato y coordinador de múltiples campañas.<br><strong>Agricultura:</strong> Más de 20 años en el cultivo comercial, semi-industrial y ornamental en México y EE.UU., combinando producción con su pasión por el campo.",
-    workEthic:
-      "Porque es mucho más que un vendedor: Su conocimiento en mercados digitales, políticos, culturales y agrícolas le otorga una profunda empatía con clientes y marcas que buscan crecer y expandirse. Trabajar con Juan Carlos significa ir más allá de la meta. Su enfoque es una constante retroalimentación y apoyo, convirtiéndose en el aliado ideal para impulsar cualquier negocio hacia el éxito.",
-    additionalDetails: {
-      funFacts: [
-        "Amante de la cocina oriental.",
-        "Intrépido surfista.",
-        "Cuentista ilustre.",
-      ],
-    },
-  },
-  {
-    id: 6,
-    image: "/team6.webp",
-    image2: "/team6-2.webp",
-    name: "Jesus-Emmanuel-Castillo-Martinez",
-    fullName: "Jesus E. Castillo",
-    role: "Programador",
-    skills: "Desarrollo Web",
-    transition: "imagen6",
-    experience: "1 año de experiencia",
-    education: "Tecnologías de la Información y la Comunicación",
-    contact: "664 642 9633",
-    proyecto: "E-commetrica, Programador Jr. y apoyo en desarrollo.",
-    proyecto2: "Desarrollo web en proyectos de pequeño y mediano tamaño.",
-    proyecto3: null,
-    edu: "Estudios en Ingeniería en TICs.",
-    edu2: null,
-    testimonio:
-      "Jesús es un programador apasionado que ha demostrado una gran capacidad para aprender rápidamente y afrontar retos en el desarrollo web.",
-    testimonio2:
-      "A pesar de su corta experiencia, Jesús ha aportado soluciones valiosas a nuestro equipo. Su pasión por la tecnología y la programación se nota en su trabajo.",
-    description:
-      "Apasionado por la creación de experiencias digitales intuitivas y eficientes para cada cliente con diseños y desarrollo optimizado y creativo.",
-    extendedDescription: `A pesar de su corta trayectoria, Jesús ha demostrado un fuerte compromiso y habilidad para resolver problemas complejos en sus proyectos. Es un miembro clave en el equipo joven y en crecimiento.`,
-    extendedDescription2:
-      "Jesús es un programador Jr. en E-commetrica con experiencia en desarrollo web y software.",
-    detailedSkills: `<strong>Lenguajes de programación:</strong> HTML, CSS, JavaScript, React, Node.js.<br><strong>Software:</strong> VS Code, Git, GitHub.`,
-    workEthic: `Jesús es una persona entusiasta, comprometida con su crecimiento profesional, y siempre en busca de aprender nuevas tecnologías para mejorar sus habilidades.`,
-    additionalDetails: {
-      funFacts: [
-        "Aficionado a la tecnología y videojuegos.",
-        "Le gusta aprender sobre inteligencia artificial.",
-        "Siempre busca mejorar en su programación.",
-      ],
-    },
-  },
-  {
-    id: 7,
-    image: "/team7.webp",
-    image2: "/team7-2.webp",
-    name: "Maria-Jose-Zuili-Almanza",
-    fullName: "María J. Zuili",
-    role: "Editora",
-    skills: "Edición, Diseño, Creación de contenido",
-    transition: "imagen7",
-    experience: null,
-    education: "Estudios en Arquitectura y Diseño",
-    contact: "664 642 9633",
-    proyecto: "E-commetrica, Editora de contenido y creativa.",
-    proyecto2:
-      "Creación de contenido para el sector arquitectónico y marketing.",
-    proyecto3: null,
-    edu: "Estudios en Arquitectura y Diseño.",
-    edu2: null,
-    testimonio:
-      "María José es una editora creativa con un enfoque único que da vida a las ideas con un toque artístico.",
-    testimonio2:
-      "Su habilidad para conceptualizar y ejecutar proyectos visualmente atractivos ha elevado nuestro contenido.",
-    description:
-      "Con su enfoque fresco y original brinda nuevas perspectivas a los clientes, elevando cada producción con calidad y estilo.",
-    extendedDescription: `María José Zuili Almanza reside en Querétaro y es una futura arquitecta y artista con un enfoque innovador. Actualmente, forma parte del equipo como editora, aportando su talento y creatividad a cada proyecto. Su experiencia se ha centrado en edición y diseño para creadores independientes y empresas en los sectores de arquitectura y marketing. Gracias a su formación académica y su fascinación por el arte, explora constantemente nuevas técnicas y medios para ejecutar cada proyecto con precisión y originalidad.`,
-    extendedDescription2: `María José es una editora con un enfoque artístico y creativo que ha trabajado en diversos proyectos de diseño y marketing.`,
-    detailedSkills: `<strong>Creación de contenido: </strong> Diseño, conceptualización de planos arquitectónicos y mejora de imágenes.<br><strong>Software:</strong> Adobe premier, LightRoom e Ilustrador, AutoCAD. Donde realiza conceptualización de planos y diseños arquitectónicos alineados a las necesidades del cliente.<br><strong>Edición y renderizado:</strong> Mejora de imágenes con horquillado en Photoshop y Lightroom para lograr acabados profesionales.<br><strong>Edición de video:</strong> Postproducción, transiciones dinámicas y montaje preciso.`,
-    workEthic: `Trabajar con María José significa dar un sentido artístico y sensible al marketing. Su capacidad para reinventar lo convencional y generar propuestas únicas y frescas permite que los clientes se diferencien visualmente en sus industrias. Su espíritu artístico abre horizontes para explorar nuevas perspectivas, impulsando el crecimiento de múltiples marcas en diversos sectores. `,
-    additionalDetails: {
-      funFacts: [
-        "Le fascina ilustrar.",
-        "Es muy hábil con las manualidades.",
-        "Ama explorar lugares nuevos.",
-      ],
-    },
-  },
+
+  // {
+  //   id: 5,
+  //   image: "/team5.webp",
+  //   image2: "/team5-2.webp",
+  //   name: "Juan-Carlos-Guerrero-Castro",
+  //   fullName: "Juan C. Guerrero",
+  //   role: "Director de Ventas",
+  //   skills: "Ventas, Política, Agricultura, Tecnología",
+  //   transition: "imagen5",
+  //   experience:
+  //     "18 años de experiencia en ventas y tecnología, 20 años en política y agricultura",
+  //   education: "Lic. en Derecho",
+  //   contact: "664 642 9633",
+  //   proyecto: "E-commetrica, Consultor de ecommerce y desarrollador web.",
+  //   proyecto2:
+  //     "Border Grower, Director de ecommerce y programador en R y Liquid.",
+  //   proyecto3: "Digital Lab Agency, Desarrollador de ecommerce.",
+  //   proyecto4: "Guarantee Solar, Especialista de mercadotecnia digital.",
+  //   edu: "Lic. en Derecho",
+  //   edu2: "Estudios en Política y Agricultura",
+  //   testimonio:
+  //     "Juan Carlos Guerrero es un experto multifacético con una capacidad única para integrar ventas, política y agricultura en su enfoque estratégico.",
+  //   testimonio2:
+  //     "Su versatilidad y experiencia le permiten aportar un enfoque integral, ayudando a empresas a alcanzar su máximo potencial en diversas áreas.",
+  //   description:
+  //     "Es un estratega tenaz con una visión enfocada en el crecimiento e innovación. Su enfoque analítico impulsa el éxito de cada proyecto.",
+  //   extendedDescription:
+  //     "Originario de San Diego, California. Juan Carlos Guerrero es un claro ejemplo de talento transfronterizo, integrando su formación como abogado con una trayectoria multifacética en política, publicidad y creación literaria. Su versatilidad le ha permitido incursionar en distintos sectores, aportando una visión estratégica y un enfoque innovador en cada uno.",
+  //   detailedSkills:
+  //     "<strong>Ventas y tecnología:</strong> 18 años de experiencia en empresas de EE.UU. y México, desde vendedor de medio tiempo hasta director de ventas.<br><strong>Política:</strong> Más de 20 años en México como operador político y delegado, además de haber sido candidato y coordinador de múltiples campañas.<br><strong>Agricultura:</strong> Más de 20 años en el cultivo comercial, semi-industrial y ornamental en México y EE.UU., combinando producción con su pasión por el campo.",
+  //   workEthic:
+  //     "Porque es mucho más que un vendedor: Su conocimiento en mercados digitales, políticos, culturales y agrícolas le otorga una profunda empatía con clientes y marcas que buscan crecer y expandirse. Trabajar con Juan Carlos significa ir más allá de la meta. Su enfoque es una constante retroalimentación y apoyo, convirtiéndose en el aliado ideal para impulsar cualquier negocio hacia el éxito.",
+  //   additionalDetails: {
+  //     funFacts: [
+  //       "Amante de la cocina oriental.",
+  //       "Intrépido surfista.",
+  //       "Cuentista ilustre.",
+  //     ],
+  //   },
+  // },
+  // {
+  //   id: 6,
+  //   image: "/team6.webp",
+  //   image2: "/team6-2.webp",
+  //   name: "Jesus-Emmanuel-Castillo-Martinez",
+  //   fullName: "Jesus E. Castillo",
+  //   role: "Programador",
+  //   skills: "Desarrollo Web",
+  //   transition: "imagen6",
+  //   experience: "1 año de experiencia",
+  //   education: "Tecnologías de la Información y la Comunicación",
+  //   contact: "664 642 9633",
+  //   proyecto: "E-commetrica, Programador Jr. y apoyo en desarrollo.",
+  //   proyecto2: "Desarrollo web en proyectos de pequeño y mediano tamaño.",
+  //   proyecto3: null,
+  //   edu: "Estudios en Ingeniería en TICs.",
+  //   edu2: null,
+  //   testimonio:
+  //     "Jesús es un programador apasionado que ha demostrado una gran capacidad para aprender rápidamente y afrontar retos en el desarrollo web.",
+  //   testimonio2:
+  //     "A pesar de su corta experiencia, Jesús ha aportado soluciones valiosas a nuestro equipo. Su pasión por la tecnología y la programación se nota en su trabajo.",
+  //   description:
+  //     "Apasionado por la creación de experiencias digitales intuitivas y eficientes para cada cliente con diseños y desarrollo optimizado y creativo.",
+  //   extendedDescription: `A pesar de su corta trayectoria, Jesús ha demostrado un fuerte compromiso y habilidad para resolver problemas complejos en sus proyectos. Es un miembro clave en el equipo joven y en crecimiento.`,
+  //   extendedDescription2:
+  //     "Jesús es un programador Jr. en E-commetrica con experiencia en desarrollo web y software.",
+  //   detailedSkills: `<strong>Lenguajes de programación:</strong> HTML, CSS, JavaScript, React, Node.js.<br><strong>Software:</strong> VS Code, Git, GitHub.`,
+  //   workEthic: `Jesús es una persona entusiasta, comprometida con su crecimiento profesional, y siempre en busca de aprender nuevas tecnologías para mejorar sus habilidades.`,
+  //   additionalDetails: {
+  //     funFacts: [
+  //       "Aficionado a la tecnología y videojuegos.",
+  //       "Le gusta aprender sobre inteligencia artificial.",
+  //       "Siempre busca mejorar en su programación.",
+  //     ],
+  //   },
+  // },
 ];
 
 export default teamMembers;

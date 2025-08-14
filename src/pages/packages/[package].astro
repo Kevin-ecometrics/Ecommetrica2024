@@ -1,0 +1,472 @@
+---
+import Layout from "@layouts/Layout.astro";
+import PackageComponent from "@components/package/PackageComponent";
+
+export function getStaticPaths() {
+  return [
+    // Rutas en inglés
+    { params: { package: "Initial-Plan" }, props: { lang: "en" } },
+    { params: { package: "Pro-Plan" }, props: { lang: "en" } },
+    { params: { package: "Business" }, props: { lang: "en" } },
+    { params: { package: "Custom" }, props: { lang: "en" } },
+
+    // Rutas en español
+    { params: { package: "Plan-Inicial" }, props: { lang: "es" } },
+    { params: { package: "Plan-Pro" }, props: { lang: "es" } },
+    { params: { package: "Empresa" }, props: { lang: "es" } },
+    { params: { package: "Personalizado" }, props: { lang: "es" } },
+  ];
+}
+
+const { package: selectedPackage } = Astro.params;
+const { lang } = Astro.props;
+
+// Datos de los paquetes organizados por idioma
+const packagesData = {
+  en: {
+    "Initial-Plan": {
+      title: "Initial Plan",
+      price: 675,
+      duration: "3 months",
+      description: "Perfect for starting your online presence",
+      includedServices: [
+        "1 landing page",
+        "Basic SEO setup",
+        "Social media profiles",
+        "Google Analytics integration",
+      ],
+      features: [
+        "30-day support",
+        "Basic documentation",
+        "2 revisions included",
+        "Email support",
+      ],
+      addons: [
+        {
+          category: "Design",
+          items: [
+            {
+              id: "premium-design",
+              name: "Premium Design",
+              price: 150,
+              description: "Enhanced visual design package",
+            },
+            {
+              id: "custom-illustrations",
+              name: "Custom Illustrations",
+              price: 200,
+              description: "5 custom illustrations",
+            },
+          ],
+        },
+        {
+          category: "Development",
+          items: [
+            {
+              id: "extra-page",
+              name: "Additional Page",
+              price: 75,
+              description: "Add one more page to your website",
+            },
+            {
+              id: "contact-form",
+              name: "Contact Form",
+              price: 100,
+              description: "Integrated contact form with email",
+            },
+          ],
+        },
+      ],
+    },
+    "Pro-Plan": {
+      title: "Pro Plan",
+      price: 995,
+      duration: "4 months",
+      description: "Complete solution for small businesses",
+      includedServices: [
+        "Up to 5 pages",
+        "E-commerce functionality",
+        "Advanced SEO",
+        "Content management system",
+      ],
+      features: [
+        "60-day support",
+        "Comprehensive documentation",
+        "4 revisions included",
+        "Priority email support",
+      ],
+      addons: [
+        {
+          category: "E-commerce",
+          items: [
+            {
+              id: "product-upload",
+              name: "Product Upload",
+              price: 50,
+              description: "Add 10 products to your store",
+            },
+            {
+              id: "payment-gateway",
+              name: "Payment Gateway",
+              price: 100,
+              description: "Secure payment processing",
+            },
+          ],
+        },
+        {
+          category: "Marketing",
+          items: [
+            {
+              id: "seo-optimization",
+              name: "SEO Optimization",
+              price: 200,
+              description: "Advanced search engine optimization",
+            },
+            {
+              id: "social-media-setup",
+              name: "Social Media Setup",
+              price: 150,
+              description: "3 social media profiles setup",
+            },
+          ],
+        },
+      ],
+    },
+    Business: {
+      title: "Business",
+      price: 1185,
+      duration: "6 months",
+      description: "For established businesses with ambitious goals",
+      includedServices: [
+        "Unlimited pages",
+        "Custom web development",
+        "Digital advertising setup",
+        "Brand identity design",
+      ],
+      features: [
+        "90-day support",
+        "Premium documentation",
+        "6 revisions included",
+        "24/7 chat support",
+      ],
+      addons: [
+        {
+          category: "Advanced",
+          items: [
+            {
+              id: "custom-cms",
+              name: "Custom CMS",
+              price: 300,
+              description: "Tailored content management system",
+            },
+            {
+              id: "api-integration",
+              name: "API Integration",
+              price: 400,
+              description: "Connect with third-party services",
+            },
+          ],
+        },
+        {
+          category: "Analytics",
+          items: [
+            {
+              id: "advanced-analytics",
+              name: "Advanced Analytics",
+              price: 250,
+              description: "Detailed traffic analysis",
+            },
+            {
+              id: "monthly-reports",
+              name: "Monthly Reports",
+              price: 150,
+              description: "Performance reports each month",
+            },
+          ],
+        },
+      ],
+    },
+    Custom: {
+      title: "Custom",
+      price: 1555,
+      duration: "8 months",
+      description: "Tailored solution for your specific needs",
+      includedServices: [
+        "Strategic consulting",
+        "Marketing automation",
+        "Audiovisual production",
+        "App development",
+      ],
+      features: [
+        "120-day support",
+        "Custom documentation",
+        "Unlimited revisions",
+        "Dedicated account manager",
+      ],
+      addons: [
+        {
+          category: "Enterprise",
+          items: [
+            {
+              id: "dedicated-team",
+              name: "Dedicated Team",
+              price: 500,
+              description: "Personal development team",
+            },
+            {
+              id: "priority-support",
+              name: "Priority Support",
+              price: 300,
+              description: "24/7 priority assistance",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  es: {
+    "Plan-Inicial": {
+      title: "Plan Inicial",
+      price: 675,
+      duration: "3 meses",
+      description: "Perfecto para comenzar tu presencia en línea",
+      includedServices: [
+        "1 página de destino",
+        "Configuración SEO básica",
+        "Perfiles en redes sociales",
+        "Integración con Google Analytics",
+      ],
+      features: [
+        "Soporte por 30 días",
+        "Documentación básica",
+        "2 revisiones incluidas",
+        "Soporte por email",
+      ],
+      addons: [
+        {
+          category: "Diseño",
+          items: [
+            {
+              id: "diseno-premium",
+              name: "Diseño Premium",
+              price: 150,
+              description: "Paquete de diseño visual mejorado",
+            },
+            {
+              id: "ilustraciones-personalizadas",
+              name: "Ilustraciones Personalizadas",
+              price: 200,
+              description: "5 ilustraciones personalizadas",
+            },
+          ],
+        },
+        {
+          category: "Desarrollo",
+          items: [
+            {
+              id: "pagina-extra",
+              name: "Página Adicional",
+              price: 75,
+              description: "Añadir una página más a tu sitio web",
+            },
+            {
+              id: "formulario-contacto",
+              name: "Formulario de Contacto",
+              price: 100,
+              description: "Formulario de contacto con email integrado",
+            },
+          ],
+        },
+      ],
+    },
+    "Plan-Pro": {
+      title: "Plan Pro",
+      price: 995,
+      duration: "4 meses",
+      description: "Solución completa para pequeños negocios",
+      includedServices: [
+        "Hasta 5 páginas",
+        "Funcionalidad e-commerce",
+        "SEO avanzado",
+        "Sistema de gestión de contenidos",
+      ],
+      features: [
+        "Soporte por 60 días",
+        "Documentación completa",
+        "4 revisiones incluidas",
+        "Soporte prioritario por email",
+      ],
+      addons: [
+        {
+          category: "E-commerce",
+          items: [
+            {
+              id: "carga-productos",
+              name: "Carga de Productos",
+              price: 50,
+              description: "Añadir 10 productos a tu tienda",
+            },
+            {
+              id: "pasarela-pago",
+              name: "Pasarela de Pago",
+              price: 100,
+              description: "Procesamiento de pagos seguro",
+            },
+          ],
+        },
+        {
+          category: "Marketing",
+          items: [
+            {
+              id: "seo-avanzado",
+              name: "SEO Avanzado",
+              price: 200,
+              description: "Optimización avanzada para motores de búsqueda",
+            },
+            {
+              id: "config-redes",
+              name: "Configuración Redes",
+              price: 150,
+              description: "Configuración de 3 perfiles en redes sociales",
+            },
+          ],
+        },
+      ],
+    },
+    Empresa: {
+      title: "Empresa",
+      price: 1185,
+      duration: "6 meses",
+      description: "Para negocios establecidos con metas ambiciosas",
+      includedServices: [
+        "Páginas ilimitadas",
+        "Desarrollo web personalizado",
+        "Configuración de publicidad digital",
+        "Diseño de identidad de marca",
+      ],
+      features: [
+        "Soporte por 90 días",
+        "Documentación premium",
+        "6 revisiones incluidas",
+        "Soporte por chat 24/7",
+      ],
+      addons: [
+        {
+          category: "Avanzado",
+          items: [
+            {
+              id: "cms-personalizado",
+              name: "CMS Personalizado",
+              price: 300,
+              description: "Sistema de gestión de contenidos a medida",
+            },
+            {
+              id: "integracion-api",
+              name: "Integración API",
+              price: 400,
+              description: "Conexión con servicios externos",
+            },
+          ],
+        },
+        {
+          category: "Analítica",
+          items: [
+            {
+              id: "analitica-avanzada",
+              name: "Analítica Avanzada",
+              price: 250,
+              description: "Análisis detallado de tráfico",
+            },
+            {
+              id: "informes-mensuales",
+              name: "Informes Mensuales",
+              price: 150,
+              description: "Informes de rendimiento cada mes",
+            },
+          ],
+        },
+      ],
+    },
+    Personalizado: {
+      title: "Personalizado",
+      price: 1555,
+      duration: "8 meses",
+      description: "Solución a medida para tus necesidades específicas",
+      includedServices: [
+        "Consultoría estratégica",
+        "Automatización de marketing",
+        "Producción audiovisual",
+        "Desarrollo de aplicaciones",
+      ],
+      features: [
+        "Soporte por 120 días",
+        "Documentación personalizada",
+        "Revisiones ilimitadas",
+        "Gestor de cuenta dedicado",
+      ],
+      addons: [
+        {
+          category: "Empresa",
+          items: [
+            {
+              id: "equipo-dedicado",
+              name: "Equipo Dedicado",
+              price: 500,
+              description: "Equipo de desarrollo personal",
+            },
+            {
+              id: "soporte-prioritario",
+              name: "Soporte Prioritario",
+              price: 300,
+              description: "Asistencia prioritaria 24/7",
+            },
+          ],
+        },
+      ],
+    },
+  },
+};
+
+const packageData = packagesData[lang]?.[selectedPackage];
+const defaultPackage = lang === "es" ? "Plan-Inicial" : "Initial-Plan";
+---
+
+<Layout title={`Ecommetrica - ${packageData?.title || "Paquete"}`}>
+  {
+    packageData ? (
+      <PackageComponent
+        packageData={packageData}
+        selectedPackage={selectedPackage}
+        lang={lang}
+        client:visible
+      />
+    ) : (
+      <div class="text-center py-12">
+        <h1 class="text-3xl font-bold mb-4">
+          {lang === "es" ? "Paquete no encontrado" : "Package not found"}
+        </h1>
+        <a
+          href={`/packages/${defaultPackage}`}
+          class="inline-block bg-[#c2155C] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#861453] transition-colors"
+        >
+          {lang === "es"
+            ? "Ver paquetes disponibles"
+            : "View available packages"}
+        </a>
+      </div>
+    )
+  }
+</Layout>
+
+<style>
+  .addon-item {
+    transition: all 0.3s ease;
+  }
+  .addon-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .package-header {
+    background: linear-gradient(135deg, #c2155c 0%, #861453 100%);
+  }
+</style>
