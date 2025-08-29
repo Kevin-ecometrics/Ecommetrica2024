@@ -1,0 +1,232 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Video from "@components/condor/Hero.astro";
+
+const nav = [
+  { name: "Nosotros", href: "/condor/about/" },
+  { name: "Servicios", href: "/condor/services/" },
+  { name: "Contacto", href: "/condor/contact/" },
+];
+---
+
+<Layout title="TheCondorVision">
+  <div class="hidden md:block">
+    <main>
+      <aside class="absolute z-10">
+        <img src="/condor/dronlogo.png" class="w-32 h-32 p-8" alt="logo" />
+        <div class="px-8 mt-8">
+          <ol class="uppercase *:font-bold">
+            {
+              nav.map((item) => (
+                <a
+                  href={item.href}
+                  class="text-white p-2 block hover:text-[#2d83c3] relative overflow-hidden"
+                >
+                  {item.name}
+                  <span class="absolute h-[2px] bg-[#2d83c3] " />
+                </a>
+              ))
+            }
+          </ol>
+        </div>
+      </aside>
+      <div
+        class="z-10 absolute w-[30%] md:w-[80%] mx-auto h-screen text-center md:flex justify-center items-center inset-0"
+      >
+        <h1
+          class="md:text-[55px] break-words text-white mb-36 font-bold absolute"
+        >
+          Revoluciona tu visión, vive la experiencia
+        </h1>
+        <p class="text-[30px] font-bold left-1/2 mt-24 text-white">
+          Sumérgete a una aventura sensorial única en México.
+        </p>
+        <div
+          class="absolute flex items-center justify-center mt-56 inset-0 gap-4"
+        >
+          <a href="#" target="_blank" class="p-2 bg-blue-500 rounded-full">
+            <img
+              src="https://cdn.simpleicons.org/facebook/ffffff"
+              class="size-8"
+            />
+          </a>
+          <a href="#" target="_blank" class="p-2 bg-blue-500 rounded-full">
+            <img
+              src="https://cdn.simpleicons.org/instagram/ffffff"
+              class="size-8"
+            />
+          </a>
+          <a href="#" target="_blank" class="p-2 bg-blue-500 rounded-full">
+            <img
+              src="https://cdn.simpleicons.org/youtube/ffffff"
+              class="size-8"
+            />
+          </a>
+        </div>
+      </div>
+    </main>
+    <Video />
+    <div class="linea-vertical">
+      <div class="circulo">
+        <a href="/condor/gallery/">
+          <svg
+            width="90"
+            height="90"
+            viewBox="0 0 75 75"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="75" height="75" rx="37.5" fill=""></rect>
+            <path
+              d="M44.9996 29.1156L42.8879 25.8297C42.4429 25.3188 41.8328 25 41.149 25H33.851C33.1672 25 32.5571 25.3188 32.1121 25.8297L30.0004 29.1156C29.5554 29.6273 28.9819 30 28.2981 30H23.5385C22.8652 30 22.2196 30.2634 21.7435 30.7322C21.2674 31.2011 21 31.837 21 32.5V47.5C21 48.163 21.2674 48.7989 21.7435 49.2678C22.2196 49.7366 22.8652 50 23.5385 50H51.4615C52.1348 50 52.7804 49.7366 53.2565 49.2678C53.7326 48.7989 54 48.163 54 47.5V32.5C54 31.837 53.7326 31.2011 53.2565 30.7322C52.7804 30.2634 52.1348 30 51.4615 30H46.7812C46.0951 30 45.4446 29.6273 44.9996 29.1156Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M37.5 45C41.0899 45 44 42.3137 44 39C44 35.6863 41.0899 33 37.5 33C33.9101 33 31 35.6863 31 39C31 42.3137 33.9101 45 37.5 45Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-miterlimit="10"></path>
+            <path
+              d="M27 30V28H25V30"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="circulo">
+        <a href="/condor/video/">
+          <svg
+            width="90"
+            height="90"
+            viewBox="0 0 73 74"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="73" height="74" rx="36.5" fill="#"></rect>
+            <path
+              d="M37.4861 48H21.5139C20.3178 47.9966 19.1717 47.5247 18.3259 46.6874C17.4801 45.8501 17.0034 44.7154 17 43.5312V30.4688C17.0034 29.2846 17.4801 28.1499 18.3259 27.3126C19.1717 26.4753 20.3178 26.0034 21.5139 26H37.5278C38.7128 26.0036 39.8482 26.4713 40.6861 27.3008C41.524 28.1303 41.9963 29.2544 42 30.4275V43.5312C41.9966 44.7154 41.5199 45.8501 40.6741 46.6874C39.8283 47.5247 38.6822 47.9966 37.4861 48Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-miterlimit="10"></path>
+            <path
+              d="M46.6063 41.6966L53.9911 46.8772C54.2086 46.9736 54.4468 47.0143 54.6841 46.9956C54.9214 46.9769 55.1502 46.8994 55.3498 46.7701C55.5494 46.6409 55.7134 46.4639 55.827 46.2555C55.9405 46.047 56 45.8135 56 45.5763V28.4237C56 28.1865 55.9405 27.953 55.827 27.7445C55.7134 27.5361 55.5494 27.3591 55.3498 27.2299C55.1502 27.1006 54.9214 27.0231 54.6841 27.0044C54.4468 26.9857 54.2086 27.0264 53.9911 27.1228L46.6063 32.3034C46.419 32.4348 46.2662 32.6091 46.1607 32.8117C46.0551 33.0142 46 33.2391 46 33.4673V40.5327C46 40.7609 46.0551 40.9858 46.1607 41.1883C46.2662 41.3909 46.419 41.5652 46.6063 41.6966Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="md:hidden block">
+    <Video />
+    <div class="absolute z-10 left-[10%] top-[30%] bottom-[50%] right-[10%]">
+      <h1 class="text-[45px] text-white font-bold text-center">
+        Revoluciona tu visión, vive la experiencia
+      </h1>
+      <p class="text-[30px] font-semibold text-center mt-12 text-white">
+        Sumérgete a una aventura sensorial única en México.
+      </p>
+      <div class="flex items-center justify-center inset-0 gap-2">
+        <a href="#" target="_blank" class="p-2 bg-blue-500 rounded-full">
+          <img
+            src="https://cdn.simpleicons.org/facebook/ffffff"
+            class="size-4"
+          />
+        </a>
+        <a href="#" target="_blank" class="p-2 bg-blue-500 rounded-full">
+          <img
+            src="https://cdn.simpleicons.org/instagram/ffffff"
+            class="size-4"
+          />
+        </a>
+        <a href="#" target="_blank" class="p-2 bg-blue-500 rounded-full">
+          <img
+            src="https://cdn.simpleicons.org/youtube/ffffff"
+            class="size-4"
+          />
+        </a>
+      </div>
+      <div class="flex justify-center items-center gap-8 mt-12">
+        <a class="bg-blue-500 hover:bg-blue-700 px-16" href="/condor/gallery/">
+          <svg
+            width="90"
+            height="90"
+            viewBox="0 0 75 75"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="75" height="75" rx="37.5" fill=""></rect>
+            <path
+              d="M44.9996 29.1156L42.8879 25.8297C42.4429 25.3188 41.8328 25 41.149 25H33.851C33.1672 25 32.5571 25.3188 32.1121 25.8297L30.0004 29.1156C29.5554 29.6273 28.9819 30 28.2981 30H23.5385C22.8652 30 22.2196 30.2634 21.7435 30.7322C21.2674 31.2011 21 31.837 21 32.5V47.5C21 48.163 21.2674 48.7989 21.7435 49.2678C22.2196 49.7366 22.8652 50 23.5385 50H51.4615C52.1348 50 52.7804 49.7366 53.2565 49.2678C53.7326 48.7989 54 48.163 54 47.5V32.5C54 31.837 53.7326 31.2011 53.2565 30.7322C52.7804 30.2634 52.1348 30 51.4615 30H46.7812C46.0951 30 45.4446 29.6273 44.9996 29.1156Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M37.5 45C41.0899 45 44 42.3137 44 39C44 35.6863 41.0899 33 37.5 33C33.9101 33 31 35.6863 31 39C31 42.3137 33.9101 45 37.5 45Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-miterlimit="10"></path>
+            <path
+              d="M27 30V28H25V30"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <a class="bg-blue-500 hover:bg-blue-700 px-16" href="/condor/video/">
+          <svg
+            width="90"
+            height="90"
+            viewBox="0 0 73 74"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="73" height="74" rx="36.5" fill="#"></rect>
+            <path
+              d="M37.4861 48H21.5139C20.3178 47.9966 19.1717 47.5247 18.3259 46.6874C17.4801 45.8501 17.0034 44.7154 17 43.5312V30.4688C17.0034 29.2846 17.4801 28.1499 18.3259 27.3126C19.1717 26.4753 20.3178 26.0034 21.5139 26H37.5278C38.7128 26.0036 39.8482 26.4713 40.6861 27.3008C41.524 28.1303 41.9963 29.2544 42 30.4275V43.5312C41.9966 44.7154 41.5199 45.8501 40.6741 46.6874C39.8283 47.5247 38.6822 47.9966 37.4861 48Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-miterlimit="10"></path>
+            <path
+              d="M46.6063 41.6966L53.9911 46.8772C54.2086 46.9736 54.4468 47.0143 54.6841 46.9956C54.9214 46.9769 55.1502 46.8994 55.3498 46.7701C55.5494 46.6409 55.7134 46.4639 55.827 46.2555C55.9405 46.047 56 45.8135 56 45.5763V28.4237C56 28.1865 55.9405 27.953 55.827 27.7445C55.7134 27.5361 55.5494 27.3591 55.3498 27.2299C55.1502 27.1006 54.9214 27.0231 54.6841 27.0044C54.4468 26.9857 54.2086 27.0264 53.9911 27.1228L46.6063 32.3034C46.419 32.4348 46.2662 32.6091 46.1607 32.8117C46.0551 33.0142 46 33.2391 46 33.4673V40.5327C46 40.7609 46.0551 40.9858 46.1607 41.1883C46.2662 41.3909 46.419 41.5652 46.6063 41.6966Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .linea-vertical {
+      position: fixed;
+      top: 0;
+      right: 5%;
+      height: 100%;
+      width: 4px;
+      background-color: #2d83c3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .circulo {
+      width: 90px;
+      height: 90px;
+      background-color: #2d83c3;
+      border-radius: 50%;
+      margin: 20px;
+    }
+  </style>
+</Layout>

@@ -1,0 +1,189 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import { fade } from "astro:transitions";
+import AnimationImage from "@components/condor/AnimationImage";
+
+let services = [
+  {
+    title: "Eventos deportivos",
+
+    image: "/condor/deportivos.png",
+    description:
+      "Competencias de atletismo, natación, gimnasia, box, futbol, americano, basquetbol, beisbol, tenis, golf, ya no se van a limitar solo desde las gradas, ve todos los movimientos claves. Carreras automovilistas, exhibición. Ya es posible seguirles la pista, ver todo el trayecto y no solo la meta final.",
+  },
+  {
+    title: "Conciertos",
+    image: "/condor/conciertos.png",
+    description:
+      "¿Te perdiste a tu artista favorito? peor aún acudiste al concierto y no pudiste ver nada ya podrás verlo y escucharlo en primera fila.",
+  },
+  {
+    title: "Eventos escolares",
+    image: "/condor/escolares.png",
+    description: "No te pierdas de ningún recuerdo ni detalle importante.",
+  },
+  {
+    title: "Excursiones",
+    image: "/condor/excursiones.png",
+    description: "Conoce lugares mágicos desde todos sus ángulos.",
+  },
+  {
+    title: "Eventos sociales",
+    image: "/condor/sociales.png",
+    description:
+      "Todos los momentos más cautivadores desde diferentes perspectivas.",
+  },
+  {
+    title: "Eventos públicos",
+    image: "/condor/publicos.png",
+    description:
+      "Además de tener tomas panorámicas puedes tener seguridad de todo lo que se concentra en el espacio, permitiendo mayor control logístico.",
+  },
+  {
+    title: "Publicidad",
+    image: "/condor/publicidad.png",
+
+    description:
+      "Impacta y atrae a tu audiencia con vistas originales y diferentes.",
+  },
+  {
+    title: "Rescate y rutas",
+    image: "/condor/rescate.png",
+    description:
+      "Tener ojos en todas partes permiten ahorrar tiempo valioso velocidad, control atraviesa las nubes.",
+  },
+  {
+    title: "Construcción y residencia",
+    image: "/condor/construccion.png",
+    description:
+      "Ve el avance del proyecto, desde un lugar seguro inspecciona cada hueco, tubería y viga.",
+  },
+  {
+    title: "Cobertura",
+    image: "/condor/cobertura.png",
+    description: "Toda Baja California, Republica mexica y USA.",
+  },
+  {
+    title: "Carreras automovilísticas",
+    image: "/condor/carreras.png",
+    description:
+      "Ya es posible seguirles la pista, ver todo el trayecto y no solo la meta final.",
+  },
+];
+---
+
+<Layout title="TheCondorVision - Service">
+  <main
+    transition:animate={fade({ duration: "0.8s" })}
+    style={{
+      backgroundImage: "url('/condor/fondo.png')",
+      backgroundPosition: "center", // Centra la imagen de fondo
+      backgroundRepeat: "no-repeat", // Evita que la imagen de fondo se repita
+      backgroundSize: "cover", // Asegura que la imagen de fondo cubra completamente el área del contenedor
+    }}
+  >
+    <a
+      href="/condor/"
+      class="fixed top-4 right-4 w-8 h-8 hover:text-white text-blue-600"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg
+      >
+    </a>
+    <div class="grid grid-cols-1 md:grid-cols-2 px-16 py-8 md:h-screen">
+      <div class="mask">
+        <AnimationImage
+          image="/condor/services.png"
+          className=""
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+          client:load
+        />
+      </div>
+      <div class="w-[90%]">
+        <h1 class="text-[20px] text-[#2D83C3] font-bold mb-4">SERVICIOS</h1>
+        <h2 class="text-[#FAFBFF] text-[35px] font-normal mb-8">
+          ¡Nuestra tecnología!
+        </h2>
+        <p class="font-semibold text-[#A8A9AC] text-[14px] mb-8">
+          Imagina tener resolución de 4k en cada ojo, con un campo de visión
+          ultra amplio de 150 grados, si ese es el vuelo que experimentaras, una
+          calidad de imagen inmersiva.
+        </p>
+        <div class="services-container md:block hidden">
+          {
+            services.map((item, index) => (
+              <>
+                <div class="flex gap-2 text-white py-4 ">
+                  <img src={item.image} alt={item.title} class="size-12" />
+                  <div class="flex-col">
+                    <h1 class="mb-4">{item.title}</h1>
+                    <p class="mb-2 text-[#A8A9AC]">{item.description}</p>
+                  </div>
+                </div>
+                <hr class="w-full" />
+              </>
+            ))
+          }
+        </div>
+        <div class="block md:hidden">
+          {
+            services.map((item, index) => (
+              <>
+                <div class="flex gap-2 text-white py-4 ">
+                  <img src={item.image} alt={item.title} class="size-12" />
+                  <div class="flex-col">
+                    <h1 class="mb-4">{item.title}</h1>
+                    <p class="mb-2 text-[#A8A9AC]">{item.description}</p>
+                  </div>
+                </div>
+                <hr class="w-full" />
+              </>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .mask {
+    mask-image: linear-gradient(to left, black 80%, transparent);
+  }
+  .services-container {
+    max-height: calc(
+      4 * 6rem
+    ); /* Ajusta este valor según el tamaño de tus elementos */
+    overflow-y: auto;
+
+    /* Cambia el color del scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #2d83c3 #f5f5f5;
+  }
+
+  /* Para Chrome, Edge y Safari */
+  .services-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  .services-container::-webkit-scrollbar-track {
+    background: #f5f5f5;
+  }
+  .services-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 20px;
+    border: 3px solid #f5f5f5;
+  }
+</style>

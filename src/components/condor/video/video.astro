@@ -1,0 +1,27 @@
+---
+const videoIds = [
+  "Nyh0vvo_PoE",
+  "pttbwoSPEmw",
+  "QxSSY9d3pqc",
+  "7dJU7xJovss",
+  "7ontVfYxok0",
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+  {
+    videoIds.map((id) => (
+      <div class="overflow-hidden rounded-lg shadow-lg">
+        <iframe
+          width="660"
+          height="515"
+          src={`https://www.youtube.com/embed/${id}`}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
+    ))
+  }
+</div>

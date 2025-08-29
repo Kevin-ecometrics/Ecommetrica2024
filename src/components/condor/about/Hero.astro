@@ -1,0 +1,38 @@
+---
+import AnimationImage from "@components/condor/AnimationImage";
+---
+
+<div class="hidden md:block">
+  <img src="/condor/Parallax.png" class="w-full" alt="Background Image" />
+  <div class="absolute inset-0 justify-center items-center flex-col flex mb-96">
+    <a href="/">
+      <AnimationImage
+        image="/condor/dronlogo.png"
+        className="z-10 size-64"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+        client:load
+      />
+    </a>
+    <h1 class="text-2xl text-white w-[80%] text-center">
+      Bienvenido a nuestra plataforma. Explora nuevas experiencias, descubre
+      paisajes increíbles y disfruta de la innovación en cada momento.
+    </h1>
+  </div>
+</div>
+
+<div class="block md:hidden flex justify-center items-center">
+  <img
+    src="/condor/Parallax.png"
+    class="w-full h-full"
+    alt="Background Image"
+  />
+  <div class="absolute z-10 top-10">
+    <img
+      src="/condor/logofull.svg"
+      class="size-64 animate-fade-up delay-500"
+      alt="Logo"
+    />
+  </div>
+</div>

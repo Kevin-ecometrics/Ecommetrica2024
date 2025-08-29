@@ -12,7 +12,10 @@ const t = useTranslations(lang);
 const words = t("hero.words");
 ---
 
-<section id="home" class="relative bg-cover bg-center bg-[#33244C]">
+<section
+  id="home"
+  class="relative bg-cover bg-center bg-[#33244C] overflow-hidden"
+>
   <div class="flex justify-between items-center px-16 h-screen">
     <div class="flex flex-col text-white">
       <h1 class="font-bold text-2xl mb-10">{t("hero.title")}</h1>
@@ -67,61 +70,364 @@ const words = t("hero.words");
       </div>
     </div>
 
-    <!-- Imagen Hero con efecto parallax -->
+    <!-- Imagen Hero con efecto parallax mejorado -->
     <div
-      class="hidden lg:flex items-center justify-center absolute bottom-0 right-20 z-30 parallax-active"
-      data-speed="0.5"
+      class="hidden lg:flex items-center justify-center absolute bottom-0 right-20 z-40 parallax-hero"
+      data-speed="0.8"
     >
-      <Image
-        src={HeroImage}
-        alt="Hero"
-        class="flex justify-center items-center image-hover"
+      <div class="relative">
+        <Image
+          src={HeroImage}
+          alt="Hero"
+          class="flex justify-center items-center image-hover relative z-10"
+        />
+        <!-- Aura brillante detrás de la imagen -->
+        <div
+          class="absolute inset-0 bg-gradient-radial from-[#C2155C]/30 via-transparent to-transparent blur-xl scale-110 animate-pulse-slow"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sistema de partículas mejorado -->
+  <div class="hidden lg:block">
+    <!-- Partículas flotantes animadas -->
+    <div class="particle-container">
+      <!-- Partículas grandes con movimiento orbital -->
+      <div class="particle particle-large particle-1 bg-[#C2155C] opacity-80">
+      </div>
+      <div
+        class="particle particle-large particle-2 bg-gradient-to-br from-[#C2155C] to-[#861453] opacity-70"
+      >
+      </div>
+      <div class="particle particle-large particle-3 bg-[#D9D9D9] opacity-60">
+      </div>
+
+      <!-- Partículas medianas con rotación -->
+      <div class="particle particle-medium particle-4 bg-[#C2155C] opacity-90">
+      </div>
+      <div
+        class="particle particle-medium particle-5 bg-gradient-to-tr from-[#861453] to-[#C2155C] opacity-75"
+      >
+      </div>
+      <div class="particle particle-medium particle-6 bg-[#D9D9D9] opacity-80">
+      </div>
+      <div class="particle particle-medium particle-7 bg-[#C2155C] opacity-65">
+      </div>
+
+      <!-- Partículas pequeñas con movimiento errático -->
+      <div class="particle particle-small particle-8 bg-[#C2155C]"></div>
+      <div class="particle particle-small particle-9 bg-[#861453]"></div>
+      <div class="particle particle-small particle-10 bg-[#D9D9D9]"></div>
+      <div class="particle particle-small particle-11 bg-[#C2155C]"></div>
+      <div
+        class="particle particle-small particle-12 bg-gradient-to-r from-[#C2155C] to-transparent"
+      >
+      </div>
+    </div>
+
+    <!-- Marco decorativo con efecto parallax -->
+    <div
+      class="border-2 border-[#D9D9D9] absolute top-[25%] right-36 w-[25%] h-[55%] z-20 parallax-frame backdrop-blur-sm border-dashed animate-border-flow"
+      data-speed="0.3"
+    >
+      <!-- Esquinas brillantes -->
+      <div class="absolute -top-1 -left-1 w-4 h-4 bg-[#C2155C] animate-pulse">
+      </div>
+      <div
+        class="absolute -top-1 -right-1 w-4 h-4 bg-[#C2155C] animate-pulse delay-300"
+      >
+      </div>
+      <div
+        class="absolute -bottom-1 -left-1 w-4 h-4 bg-[#C2155C] animate-pulse delay-600"
+      >
+      </div>
+      <div
+        class="absolute -bottom-1 -right-1 w-4 h-4 bg-[#C2155C] animate-pulse delay-900"
+      >
+      </div>
+    </div>
+
+    <!-- Elemento de fondo con gradiente animado -->
+    <div
+      class="absolute bottom-[15%] right-24 h-[70%] w-[25%] z-10 parallax-bg bg-gradient-to-t from-[#C2155C] via-[#861453] to-[#C2155C]/50 animate-gradient-shift"
+      data-speed="0.2"
+    >
+    </div>
+
+    <!-- Logo contorno con efecto de respiración -->
+    <div class="absolute top-[30%] right-48 z-30 animate-breathe">
+      <img
+        src="/contorno.png"
+        alt="Contorno Logo"
+        title="Contorno Logo"
+        class="opacity-30"
       />
     </div>
   </div>
 
-  <!-- Elementos flotantes con parallax -->
-  <div class="hidden lg:block">
-    <div
-      class="border-l-[6px] border-t-[6px] border-b-[6px] border-r-[6px] absolute top-[25%] border-[#D9D9D9] z-20 right-36 w-[25%] h-[55%] parallax-active"
-      data-speed="0.2"
-    >
-    </div>
-
-    <div
-      class="absolute bottom-[15%] right-24 h-[70%] w-[25%] bg-[#C2155C] z-10 parallax-active"
-      data-speed="0.2"
-    >
-    </div>
-
-    <div
-      class="absolute bottom-[5%] right-[27%] h-40 w-40 bg-[#C2155C] z-30 parallax-active"
-      data-speed="0.3"
-    >
-    </div>
-
-    <div
-      class="absolute top-[35%] right-[35%] h-32 w-20 bg-[#C2155C] z-20 parallax-active"
-      data-speed="0.2"
-    >
-    </div>
-
-    <div
-      class="absolute bottom-[5%] right-[2%] h-20 w-20 bg-[#C2155C] z-30 parallax-active"
-      data-speed="0.2"
-    >
-    </div>
-
-    <div class="absolute top-[30%] right-48 z-10">
-      <img src="/contorno.png" alt="Contorno Logo" title="Contorno Logo" />
-    </div>
-  </div>
-
   <style>
-    .parallax-active {
-      transition: transform 0.2s ease-out;
+    .parallax-hero,
+    .parallax-frame,
+    .parallax-bg {
+      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
+    .particle-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 15;
+    }
+
+    /* Partículas grandes */
+    .particle-large {
+      width: 120px;
+      height: 120px;
+      filter: blur(1px);
+    }
+
+    .particle-1 {
+      top: 20%;
+      right: 15%;
+      animation: orbit-1 8s ease-in-out infinite;
+    }
+
+    .particle-2 {
+      top: 60%;
+      right: 25%;
+      animation: orbit-2 12s ease-in-out infinite reverse;
+    }
+
+    .particle-3 {
+      top: 40%;
+      right: 5%;
+      animation: orbit-3 10s ease-in-out infinite;
+    }
+
+    /* Partículas medianas */
+    .particle-medium {
+      width: 60px;
+      height: 60px;
+      filter: blur(0.5px);
+    }
+
+    .particle-4 {
+      top: 15%;
+      right: 35%;
+      animation: float-1 6s ease-in-out infinite;
+    }
+
+    .particle-5 {
+      top: 70%;
+      right: 15%;
+      animation: float-2 8s ease-in-out infinite reverse;
+    }
+
+    .particle-6 {
+      top: 30%;
+      right: 45%;
+      animation: rotate-float 10s linear infinite;
+    }
+
+    .particle-7 {
+      bottom: 10%;
+      right: 40%;
+      animation: float-3 7s ease-in-out infinite;
+    }
+
+    /* Partículas pequeñas */
+    .particle-small {
+      width: 20px;
+      height: 20px;
+      opacity: 0.8;
+    }
+
+    .particle-8 {
+      top: 25%;
+      right: 20%;
+      animation: drift-1 4s ease-in-out infinite;
+    }
+
+    .particle-9 {
+      top: 55%;
+      right: 35%;
+      animation: drift-2 5s ease-in-out infinite reverse;
+    }
+
+    .particle-10 {
+      top: 35%;
+      right: 8%;
+      animation: drift-3 6s ease-in-out infinite;
+    }
+
+    .particle-11 {
+      bottom: 25%;
+      right: 30%;
+      animation: drift-4 4.5s ease-in-out infinite;
+    }
+
+    .particle-12 {
+      top: 80%;
+      right: 10%;
+      animation: drift-5 5.5s ease-in-out infinite reverse;
+    }
+
+    /* Animaciones de partículas */
+    @keyframes orbit-1 {
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+      25% {
+        transform: translate(-30px, -20px) scale(1.1);
+      }
+      50% {
+        transform: translate(-60px, 0) scale(0.9);
+      }
+      75% {
+        transform: translate(-30px, 20px) scale(1.05);
+      }
+    }
+
+    @keyframes orbit-2 {
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      33% {
+        transform: translate(40px, -30px) rotate(120deg);
+      }
+      66% {
+        transform: translate(-20px, -40px) rotate(240deg);
+      }
+    }
+
+    @keyframes orbit-3 {
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        transform: translate(-40px, -30px) scale(1.2);
+      }
+    }
+
+    @keyframes float-1 {
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(180deg);
+      }
+    }
+
+    @keyframes float-2 {
+      0%,
+      100% {
+        transform: translateY(0px) scale(1);
+      }
+      50% {
+        transform: translateY(-30px) scale(1.15);
+      }
+    }
+
+    @keyframes float-3 {
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+      33% {
+        transform: translate(-15px, -10px);
+      }
+      66% {
+        transform: translate(10px, -15px);
+      }
+    }
+
+    @keyframes rotate-float {
+      0% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-25px) rotate(180deg);
+      }
+      100% {
+        transform: translateY(0px) rotate(360deg);
+      }
+    }
+
+    @keyframes drift-1 {
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(-10px, -8px);
+      }
+      50% {
+        transform: translate(-20px, 0);
+      }
+      75% {
+        transform: translate(-10px, 8px);
+      }
+    }
+
+    @keyframes drift-2 {
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(-15px, -15px);
+      }
+    }
+
+    @keyframes drift-3 {
+      0%,
+      100% {
+        transform: translate(0, 0) opacity(0.8);
+      }
+      50% {
+        transform: translate(-12px, -10px) opacity(1);
+      }
+    }
+
+    @keyframes drift-4 {
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+      33% {
+        transform: translate(-8px, -12px);
+      }
+      66% {
+        transform: translate(-16px, -6px);
+      }
+    }
+
+    @keyframes drift-5 {
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+      50% {
+        transform: translate(-10px, -20px) scale(1.2);
+      }
+    }
+
+    /* Animaciones adicionales */
     @keyframes draw {
       from {
         stroke-dasharray: 5;
@@ -133,27 +439,110 @@ const words = t("hero.words");
       }
     }
 
+    @keyframes pulse-slow {
+      0%,
+      100% {
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 0.6;
+      }
+    }
+
+    @keyframes border-flow {
+      0%,
+      100% {
+        border-color: #d9d9d9;
+      }
+      50% {
+        border-color: #c2155c;
+      }
+    }
+
+    @keyframes gradient-shift {
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    @keyframes breathe {
+      0%,
+      100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.3;
+      }
+      50% {
+        transform: scale(1.05) rotate(2deg);
+        opacity: 0.5;
+      }
+    }
+
     .animate-draw {
       animation: draw 1s ease-in-out infinite alternate;
+    }
+
+    .animate-pulse-slow {
+      animation: pulse-slow 3s ease-in-out infinite;
+    }
+
+    .animate-border-flow {
+      animation: border-flow 4s ease-in-out infinite;
+    }
+
+    .animate-gradient-shift {
+      background-size: 200% 200%;
+      animation: gradient-shift 6s ease infinite;
+    }
+
+    .animate-breathe {
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    .bg-gradient-radial {
+      background: radial-gradient(circle, var(--tw-gradient-stops));
     }
   </style>
 </section>
 
-<!-- Script de Parallax -->
+<!-- Script de Parallax Mejorado -->
 <script>
   document.addEventListener("mousemove", (e) => {
-    const elements = document.querySelectorAll(".parallax-active");
+    const heroElement = document.querySelector(".parallax-hero");
+    const frameElement = document.querySelector(".parallax-frame");
+    const bgElement = document.querySelector(".parallax-bg");
     const { clientX: x, clientY: y } = e;
 
     window.requestAnimationFrame(() => {
-      elements.forEach((el) => {
-        const speed = parseFloat(el.getAttribute("data-speed")) / 15;
-        const offsetX = -(x - window.innerWidth / 2) * speed * 1.5; // Inverso en X
-        const offsetY = -(y - window.innerHeight / 2) * speed * 0.6; // Inverso en Y
-
-        (el as HTMLElement).style.transform =
+      // Efecto parallax para la imagen hero (más pronunciado)
+      if (heroElement) {
+        const speed = 0.8 / 15;
+        const offsetX = -(x - window.innerWidth / 2) * speed * 2;
+        const offsetY = -(y - window.innerHeight / 2) * speed * 1;
+        (heroElement as HTMLElement).style.transform =
           `translate(${offsetX}px, ${offsetY}px)`;
-      });
+      }
+
+      // Efecto parallax para el marco (sutil)
+      if (frameElement) {
+        const speed = 0.3 / 15;
+        const offsetX = -(x - window.innerWidth / 2) * speed * 1.2;
+        const offsetY = -(y - window.innerHeight / 2) * speed * 0.8;
+        (frameElement as HTMLElement).style.transform =
+          `translate(${offsetX}px, ${offsetY}px)`;
+      }
+
+      // Efecto parallax para el fondo (muy sutil)
+      if (bgElement) {
+        const speed = 0.2 / 15;
+        const offsetX = -(x - window.innerWidth / 2) * speed * 0.8;
+        const offsetY = -(y - window.innerHeight / 2) * speed * 0.4;
+        (bgElement as HTMLElement).style.transform =
+          `translate(${offsetX}px, ${offsetY}px)`;
+      }
     });
   });
 </script>

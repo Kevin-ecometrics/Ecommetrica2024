@@ -1,0 +1,28 @@
+---
+import Drone from "@components/condor/about/Dron";
+---
+
+<div class="py-16" style={{ backgroundImage: "url(/condor/background.webp)" }}>
+  <Drone client:visible />
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(
+            "animate-fade-left",
+            "animate-duration-[1500ms]",
+            "animate-ease-linear"
+          );
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelectorAll(".fade-in").forEach((image) => {
+      observer.observe(image);
+    });
+  });
+</script>
