@@ -61,7 +61,7 @@ const Portfolio = ({ URL }) => {
       nombre: "Doctorarturolopez.com",
       categoria: t("portfolio.category.doctorarturlopez"),
       img: "/projects/arturopage.webp",
-      url: "https://doctorarturolopez.com",
+      url: "https://ecommetrica.com/arturo/",
       description: t("portfolio.description.doctorarturlopez"),
       old: false,
       oldImage: "/old-doctorarturlopez.webp",
@@ -130,7 +130,7 @@ const Portfolio = ({ URL }) => {
       nombre: "thecondorvision.com",
       categoria: t("portfolio.category.thecondorvision"),
       img: "/projects/condorpage.webp",
-      url: "https://thecondorvision.com",
+      url: "https://ecommetrica.com/condor/",
       description: t("portfolio.description.thecondorvision"),
 
       old: false,
